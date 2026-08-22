@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terekhin Digital Media</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #0a0a0a;
+      --paper: #f4f0e8;
+      --paper-dark: #e8e2d4;
+      --rule: #1a1a1a;
+      --faded: #4a4a4a;
+      --column-gap: 20px;
+    }
+
+    html {
+      background: #2a2a2a;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Old Standard TT', 'Times New Roman', serif;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0;
+      border-left: 1px solid #888;
+      border-right: 1px solid #888;
+    }
+
+    /* ─── PAPER TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      mix-blend-mode: multiply;
+    }
+
+    /* ─── ALL IMAGES AUTO B&W ─── */
+    img {
+      filter: grayscale(100%) contrast(1.1);
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ─── TOP RIBBON ─── */
+    .ribbon-top {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'Old Standard TT', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      padding: 12px 24px 0;
+      border-bottom: 3px double var(--rule);
+    }
+
+    .header-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: 'Old Standard TT', serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 6px;
+      margin-bottom: 4px;
+      color: var(--faded);
+    }
+
+    .masthead {
+      text-align: center;
+      padding: 10px 0 12px;
+      position: relative;
+    }
+
+    .masthead-name {
+      font-family: 'UnifrakturMaguntia', cursive;
+      font-size: clamp(42px, 7vw, 86px);
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.12);
+    }
+
+    .masthead-tagline {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 13px;
+      letter-spacing: 0.25em;
+      color: var(--faded);
+      margin-top: 4px;
+    }
+
+    .header-rule-double {
+      border: none;
+      border-top: 1px solid var(--rule);
+      border-bottom: 3px solid var(--rule);
+      height: 5px;
+      margin: 6px 0 0;
+    }
+
+    /* ─── NAV / TOPICS BAR ─── */
+    .topics-bar {
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .topics-bar a {
+      color: var(--paper);
+      text-decoration: none;
+      font-family: 'Old Standard TT', serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-right: 1px solid #444;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    .topics-bar a:hover,
+    .topics-bar a.active {
+      background: #333;
+    }
+
+    .topics-bar a:first-child {
+      border-left: none;
+    }
+
+    /* ─── ABOVE THE FOLD ─── */
+    .edition-label {
+      font-family: 'Old Standard TT', serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      border-top: 3px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 5px 24px;
+      display: flex;
+      justify-content: space-between;
+      background: var(--paper-dark);
+    }
+
+    /* ─── MAIN LAYOUT ─── */
+    .page {
+      padding: 0 24px 32px;
+    }
+
+    /* ─── SECTION RULE ─── */
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0 14px;
+    }
+
+    .section-rule::before,
+    .section-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .section-rule span {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--faded);
+      white-space: nowrap;
+    }
+
+    /* ─── GRID LAYOUTS ─── */
+    .grid-hero {
+      display: grid;
+      grid-template-columns: 3fr 1px 2fr;
+      gap: 0 var(--column-gap);
+      padding-top: 16px;
+      border-top: 3px double var(--rule);
+      margin-top: 8px;
+    }
+
+    .col-divider {
+      background: var(--rule);
+      width: 1px;
+    }
+
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 var(--column-gap);
+      border-top: 1px solid var(--rule);
+      padding-top: 14px;
+    }
+
+    .grid-3col .col + .col {
+      border-left: 1px solid var(--rule);
+      padding-left: var(--column-gap);
+    }
+
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 var(--column-gap);
+    }
+
+    .grid-4col .col + .col {
+      border-left: 1px solid var(--rule);
+      padding-left: var(--column-gap);
+    }
+
+    .grid-sidebar {
+      display: grid;
+      grid-template-columns: 2fr 1px 1fr;
+      gap: 0 var(--column-gap);
+      border-top: 1px solid var(--rule);
+      padding-top: 14px;
+      margin-top: 20px;
+    }
+
+    /* ─── ARTICLE ELEMENTS ─── */
+    .kicker {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--faded);
+      margin-bottom: 5px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .headline-xl {
+      font-size: clamp(28px, 4vw, 46px);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .headline-lg {
+      font-size: clamp(20px, 2.8vw, 30px);
+    }
+
+    .headline-md {
+      font-size: clamp(16px, 2vw, 22px);
+    }
+
+    .headline-sm {
+      font-size: 16px;
+    }
+
+    .headline-xs {
+      font-size: 14px;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .deck {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--faded);
+      margin-bottom: 10px;
+    }
+
+    .byline {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--faded);
+      border-top: 1px solid var(--faded);
+      border-bottom: 1px solid var(--faded);
+      padding: 3px 0;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .body-text {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--ink);
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .body-text p + p {
+      text-indent: 1.5em;
+    }
+
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 4.5em;
+      line-height: 0.75;
+      float: left;
+      margin: 6px 6px 0 0;
+      color: var(--ink);
+    }
+
+    .pull-quote {
+      border-top: 3px solid var(--ink);
+      border-bottom: 3px solid var(--ink);
+      padding: 12px 0;
+      margin: 16px 0;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.4;
+      text-align: center;
+      color: var(--ink);
+    }
+
+    .caption {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: var(--faded);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ─── HERO IMAGE ─── */
+    .hero-img {
+      margin-bottom: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    /* ─── THUMBNAIL ─── */
+    .thumb-img img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    /* ─── INDEX BOX ─── */
+    .index-box {
+      border: 1px solid var(--rule);
+      padding: 12px 14px;
+      background: var(--paper-dark);
+      margin-top: 16px;
+    }
+
+    .index-box-title {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 5px;
+      margin-bottom: 8px;
+    }
+
+    .index-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 4px 0;
+      border-bottom: 1px dotted #bbb;
+      align-items: baseline;
+    }
+
+    .index-item:last-child {
+      border-bottom: none;
+    }
+
+    .index-item-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 1.3;
+      flex: 1;
+    }
+
+    .index-item-tag {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faded);
+      white-space: nowrap;
+      background: var(--paper);
+      border: 1px solid #ccc;
+      padding: 1px 5px;
+    }
+
+    /* ─── STATS ROW ─── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--rule);
+      margin: 20px 0;
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .stat-cell {
+      padding: 14px 16px;
+      text-align: center;
+      border-right: 1px solid #444;
+    }
+
+    .stat-cell:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 900;
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: 'Old Standard TT', serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #aaa;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* ─── TICKER / BREAKING ─── */
+    .breaking-bar {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 6px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Old Standard TT', serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      overflow: hidden;
+    }
+
+    .breaking-label {
+      background: var(--paper);
+      color: var(--ink);
+      padding: 2px 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .breaking-text {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-inner {
+      display: inline-block;
+      animation: ticker 30s linear infinite;
+    }
+
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ─── ADVERTISEMENT BOX ─── */
+    .ad-box {
+      border: 2px solid var(--rule);
+      padding: 16px;
+      text-align: center;
+      margin-top: 16px;
+      background: var(--paper-dark);
+    }
+
+    .ad-ornament {
+      font-size: 22px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .ad-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .ad-body {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 12px;
+      color: var(--faded);
+      margin: 6px 0;
+    }
+
+    .ad-cta {
+      display: inline-block;
+      border: 1px solid var(--ink);
+      padding: 4px 16px;
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+
+    /* ─── OPINION / COLUMN ─── */
+    .opinion-box {
+      border: 1px solid var(--rule);
+      padding: 14px;
+      margin-top: 16px;
+    }
+
+    .opinion-label {
+      font-family: 'Old Standard TT', serif;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--faded);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* ─── SMALL STORY ROW ─── */
+    .brief-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .brief-item:last-child {
+      border-bottom: none;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer-divider {
+      border: none;
+      border-top: 3px double var(--rule);
+      margin: 24px 24px 0;
+    }
+
+    footer {
+      padding: 14px 24px 20px;
+      display: grid;
+      grid-template-columns: 1fr 2px 1fr 2px 1fr;
+      gap: 0 20px;
+    }
+
+    footer .col-divider {
+      background: #bbb;
+    }
+
+    .footer-col-title {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      padding: 3px 0;
+      border-bottom: 1px dotted #ccc;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-links li span {
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      color: var(--faded);
+    }
+
+    .footer-bottom {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 8px;
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ─── ORNAMENTAL DIVIDERS ─── */
+    .ornament {
+      text-align: center;
+      font-size: 14px;
+      color: var(--faded);
+      margin: 12px 0;
+      letter-spacing: 0.5em;
+    }
+
+    .rule-thin {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 12px 0;
+    }
+
+    /* ─── SIDEBAR BRIEFS ─── */
+    .sidebar-brief {
+      padding: 10px 0;
+      border-bottom: 1px dotted #bbb;
+    }
+
+    .sidebar-brief:first-child {
+      padding-top: 0;
+    }
+
+    .sidebar-brief:last-child {
+      border-bottom: none;
+    }
+
+    /* ─── TAG BADGE ─── */
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--ink);
+      padding: 1px 7px;
+      font-family: 'Old Standard TT', serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-right: 4px;
+    }
+
+    /* ─── PHOTO STRIP ─── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .photo-strip .photo-item img {
+      height: 100px;
+      object-fit: cover;
+    }
+
+    /* ─── SUBSCRIPTION BOX ─── */
+    .sub-box {
+      border: 3px double var(--rule);
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+      background: var(--paper-dark);
+    }
+
+    .sub-box-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sub-box-deck {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--faded);
+      margin: 6px 0 12px;
+    }
+
+    .sub-form {
+      display: flex;
+      gap: 0;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .sub-form input {
+      flex: 1;
+      border: 1px solid var(--ink);
+      border-right: none;
+      padding: 7px 10px;
+      font-family: 'Old Standard TT', serif;
+      font-size: 12px;
+      background: var(--paper);
+      color: var(--ink);
+      outline: none;
+    }
+
+    .sub-form input::placeholder {
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .sub-form button {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 7px 16px;
+      font-family: 'Old Standard TT', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* ─── RESPONSIVE ADJUSTMENTS ─── */
+    @media (max-width: 760px) {
+      .grid-hero,
+      .grid-3col,
+      .grid-4col,
+      .grid-sidebar,
+      footer {
+        grid-template-columns: 1fr;
+      }
+      .col-divider { display: none; }
+      .grid-3col .col + .col,
+      .grid-4col .col + .col {
+        border-left: none;
+        border-top: 1px solid var(--rule);
+        padding-left: 0;
+        padding-top: 14px;
+        margin-top: 14px;
+      }
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .photo-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP RIBBON -->
+  <div class="ribbon-top">
+    <span>Est. MMXXV &mdash; Independent Digital Press</span>
+    <span>Saturday, 23 August 2026</span>
+    <span>Vol. I &mdash; No. 187</span>
+  </div>
+
+  <!-- BREAKING TICKER -->
+  <div class="breaking-bar">
+    <span class="breaking-label">Breaking</span>
+    <div class="breaking-text">
+      <span class="ticker-inner">
+        OpenAI Announces $200B Valuation Round &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        EU AI Act Compliance Deadline Extended to 2027 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Google DeepMind Releases Gemini Ultra 3.0 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Y Combinator S26 Batch: 60% of Startups Are AI-Native &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        MarTech Consolidation Continues: Salesforce Acquires MadTech Pioneer &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        LLM Token Costs Drop 80% Year-Over-Year &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        OpenAI Announces $200B Valuation Round &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        EU AI Act Compliance Deadline Extended to 2027 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Google DeepMind Releases Gemini Ultra 3.0 &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Y Combinator S26 Batch: 60% of Startups Are AI-Native &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+      </span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-meta">
+      <span>MarTech &bull; Startups &bull; LLMs &bull; Digital Strategy</span>
+      <span>terekhindigital.com</span>
+      <span>Morning Edition</span>
+    </div>
+    <div class="masthead">
+      <div class="masthead-name">Terekhin Digital Media</div>
+      <div class="masthead-tagline">Rigorous Journalism at the Frontier of Digital Commerce &amp; Machine Intelligence</div>
+    </div>
+    <div class="header-rule-double"></div>
+  </header>
+
+  <!-- TOPICS BAR -->
+  <nav class="topics-bar">
+    <a href="#" class="active">Front Page</a>
+    <a href="#">MarTech</a>
+    <a href="#">Startups</a>
+    <a href="#">LLMs &amp; AI</a>
+    <a href="#">Venture</a>
+    <a href="#">Opinion</a>
+    <a href="#">Data &amp; Analytics</a>
+    <a href="#">Product</a>
+    <a href="#">Events</a>
+  </nav>
+
+  <!-- EDITION LABEL -->
+  <div class="edition-label">
+    <span>Saturday Morning Edition &mdash; August 23, 2026</span>
+    <span>Today's Issue: 24 Pages</span>
+  </div>
+
+  <!-- MAIN PAGE -->
+  <main class="page">
+
+    <!-- HERO SECTION -->
+    <div class="grid-hero">
+
+      <!-- LEAD STORY (LEFT) -->
+      <article>
+        <div class="kicker">Exclusive &bull; Artificial Intelligence</div>
+        <h1 class="headline headline-xl">The Great LLM Land Grab: Who Shall Reign Supreme in the Age of Foundational Models?</h1>
+        <div class="deck">As compute costs plummet and context windows stretch to infinity, the race for enterprise dominance has never been more ferocious — or more consequential for the future of human knowledge work.</div>
+        <div class="byline">
+          <span>By A. Terekhin, Technology Correspondent</span>
+          <span>Aug. 23, 2026</span>
+        </div>
+        <div class="hero-img">
+          <img
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
+            alt="Neural network visualization representing large language models"
+          />
+          <div class="caption">A digital rendering of a neural architecture. The leading laboratories now train on datasets exceeding one quadrillion tokens.</div>
+        </div>
+        <div class="body-text drop-cap">
+          <p>In the gilt-panelled boardrooms of San Francisco and the glass towers of Seattle, a battle of extraordinary consequence is being waged — not with armies or navies, but with graphics processing units, annotated datasets, and the accumulated written output of human civilization. The year 2026 has proven to be a watershed moment in the history of artificial intelligence, and those who have watched this industry with any measure of attention cannot have failed to notice that the rules, previously thought to be settled, have been rewritten entirely.</p>
+          <p>The foundational model, that peculiar artefact of modern computation — a statistical engine of staggering complexity trained upon the sum of human knowledge — has ceased to be a curiosity of the research laboratory and has become the central nervous system of the modern enterprise. Marketing departments, legal teams, financial analysts, and software engineers alike now pass their daily labours through these silicon oracles, with consequences both profound and, at times, deeply unsettling.</p>
+        </div>
+
+        <div class="pull-quote">
+          "We are witnessing the most consequential restructuring of information work since the invention of the spreadsheet — perhaps since the printing press itself."
+        </div>
+
+        <div class="body-text">
+          <p>The numbers, as is so often the case in matters of technology, are difficult to comprehend in their magnitude. Token processing costs, which stood at approximately forty dollars per million only eighteen months prior, have fallen to less than eight dollars in the present quarter. The implications for enterprise adoption are, to put the matter plainly, revolutionary. What was once the exclusive province of well-capitalized technology companies is now within reach of the corner shop, the neighbourhood solicitor, the independent publisher.</p>
+        </div>
+      </article>
+
+      <div class="col-divider"></div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+
+        <!-- SECONDARY STORY -->
+        <article>
+          <div class="kicker">MarTech</div>
+          <h2 class="headline headline-md">Salesforce's $18 Billion Wager on the AI-Native Marketing Stack</h2>
+          <div class="deck">The CRM giant's acquisition of MadTech pioneer DataSynapse signals a new era of customer intelligence.</div>
+          <div class="thumb-img">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+              alt="Data analytics dashboard on a screen"
+            />
+          </div>
+          <div class="body-text">
+            <p>Salesforce, the San Francisco-based enterprise software colossus, has confirmed what the industry had whispered for weeks: an eighteen-billion-dollar acquisition of DataSynapse, a marketing technology firm that has built what many consider the most sophisticated AI-driven audience segmentation engine in the market.</p>
+          </div>
+        </article>
+
+        <div class="ornament">— ✦ —</div>
+
+        <!-- THIRD STORY -->
+        <article>
+          <div class="kicker">Startups &bull; Venture</div>
+          <h2 class="headline headline-md">Y Combinator's Summer Cohort Sets a New Benchmark: Sixty Per Cent AI-Native</h2>
+          <div class="body-text">
+            <p>The celebrated accelerator programme, long regarded as the canary in the coalmine of Silicon Valley ambition, has released figures that will surprise no one who has observed the market with clear eyes, yet confirm a shift of historical proportions. Of the two hundred and fourteen companies admitted to the Summer 2026 batch, fully one hundred and twenty-eight were built, from their very foundations, upon large language model infrastructure.</p>
+          </div>
+          <div class="byline">
+            <span>By Staff Reporter</span>
+            <span>Startups, p. 7</span>
+          </div>
+        </article>
+
+        <!-- INDEX BOX -->
+        <div class="index-box">
+          <div class="index-box-title">Also Inside This Edition</div>
+          <div class="index-item">
+            <span class="index-item-title">Anthropic's Constitutional AI: A Two-Year Assessment</span>
+            <span class="index-item-tag">LLMs</span>
+          </div>
+          <div class="index-item">
+            <span class="index-item-title">The Death of the MQL: How AI Rewrote Demand Generation</span>
+            <span class="index-item-tag">MarTech</span>
+          </div>
+          <div class="index-item">
+            <span class="index-item-title">Founders at 25: The New Guard Reshaping B2B SaaS</span>
+            <span class="index-item-tag">Startups</span>
+          </div>
+          <div class="index-item">
+            <span class="index-item-title">RAG vs. Fine-Tuning: An Engineer's Honest Accounting</span>
+            <span class="index-item-tag">LLMs</span>
+          </div>
+          <div class="index-item">
+            <span class="index-item-title">The CDP Is Dead. Long Live the CDP.</span>
+            <span class="index-item-tag">MarTech</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="stats-row">
+      <div class="stat-cell">
+        <span class="stat-num">$847B</span>
+        <span class="stat-label">Global MarTech Spend 2026</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">14,213</span>
+        <span class="stat-label">Active AI Startups Worldwide</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">2.4T</span>
+        <span class="stat-label">Tokens Processed Daily (est.)</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">$7.90</span>
+        <span class="stat-label">Cost per 1M Tokens, Aug. 2026</span>
+      </div>
+    </div>
+
+    <!-- SECTION: MARTECH -->
+    <div class="section-rule"><span>Marketing Technology</span></div>
+
+    <div class="grid-3col">
+      <article class="col">
+        <div class="kicker">Attribution &bull; MarTech</div>
+        <h3 class="headline headline-md">The Multi-Touch Attribution Problem Has Finally Met Its Match</h3>
+        <div class="thumb-img">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80"
+            alt="Marketing analytics charts on laptop"
+          />
+        </div>
+        <div class="body-text">
+          <p>For fifteen years, the marketers of the world have sought a Holy Grail: a reliable method by which to assign credit, in proper proportion, to each touchpoint along the winding path that leads a prospect to become a customer. That quest, it now appears, may be nearing its resolution — and the instrument of resolution is, as so much else in the present era, a large language model.</p>
+          <p>Meridian Analytics, a Boston-based firm founded by three former Google employees, has released findings from a twelve-month study conducted with sixty-two enterprise clients that suggest their probabilistic attribution engine, built upon a fine-tuned version of an open-source foundational model, outperforms traditional algorithmic methods by thirty-one per cent on conversion accuracy.</p>
+        </div>
+        <div class="byline">
+          <span>By M. Richardson</span>
+          <span>Full Story, p. 9</span>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="kicker">Customer Data &bull; Privacy</div>
+        <h3 class="headline headline-md">First-Party Data Is the New Oil — and Everyone Is Drilling</h3>
+        <div class="body-text">
+          <p>When Google announced, for the third time, that it would delay the deprecation of third-party cookies in Chrome, the marketing industry permitted itself a cautious exhalation. But the structural shift had already occurred. The organisations that had spent the preceding three years building robust first-party data infrastructure — consent management platforms, clean-room partnerships, identity resolution engines — found themselves possessed of a competitive advantage that no number of cookie reprieves could erode.</p>
+        </div>
+
+        <div class="pull-quote">
+          "The cookie was a crutch. Those who learned to walk without it are now running."
+          <br/><span style="font-size:11px;font-style:normal;letter-spacing:0.1em;">— Elara Voss, Forrester Research</span>
+        </div>
+
+        <div class="body-text">
+          <p>The clean room, that peculiar institutional arrangement whereby competing enterprises agree to share data insights without sharing the underlying data, has become a fixture of the modern marketing stack.</p>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="kicker">Automation &bull; Personalization</div>
+        <h3 class="headline headline-sm">AI Copywriting: The Copywriters' Lament and the Marketers' Jubilee</h3>
+        <div class="thumb-img">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=80"
+            alt="Team working on laptops in modern office"
+          />
+        </div>
+        <div class="body-text">
+          <p>The advertising agencies of Madison Avenue have long prided themselves on the particular alchemy by which human creativity transforms a product's attributes into desire. That alchemy, many now report with varying degrees of candour, is increasingly being performed by machines.</p>
+          <p>A survey of three hundred and twelve Chief Marketing Officers conducted in July found that eighty-seven per cent now use AI tools for at least some portion of their content production.</p>
+        </div>
+
+        <div class="opinion-box">
+          <span class="opinion-label">Column &bull; The Digital Desk</span>
+          <div class="kicker">By A. Terekhin</div>
+          <div class="headline headline-xs">"The Prompt Is the New Creative Brief"</div>
+          <div class="body-text" style="font-size:12px;margin-top:6px;">
+            <p>After twenty years watching this industry reinvent itself, I have learned to distinguish genuine paradigm shifts from mere novelties dressed in the costume of revolution. The current moment, I am prepared to state with some conviction, is the former.</p>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- SECTION: STARTUPS -->
+    <div class="section-rule"><span>Startups &amp; Venture Capital</span></div>
+
+    <div class="grid-sidebar">
+
+      <div>
+        <article>
+          <div class="kicker">Venture Capital &bull; Series A</div>
+          <h2 class="headline headline-lg">The Vintage of 2026: Why This Year's Founding Class May Prove the Most Consequential Since 2009</h2>
+          <div class="byline">
+            <span>By P. Castellan, Venture Correspondent</span>
+            <span>Aug. 23, 2026</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80"
+                alt="Startup founders in a meeting room"
+              />
+              <div class="caption">The founding team of Synapse AI at their headquarters.</div>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80"
+                alt="Venture capital meeting"
+              />
+              <div class="caption">A demonstration of agentic workflow software at a recent industry conference.</div>
+            </div>
+          </div>
+
+          <div class="body-text drop-cap">
+            <p>The year 2009 is remembered in venture capital circles with a peculiar reverence. From the ashes of the financial crisis, with capital scarce and spirits low, there emerged a cohort of companies — Airbnb, Uber, WhatsApp, Square — that would come to define the decade that followed. The conditions of adversity, it seemed, had served as a crucible in which extraordinary ambition was forged.</p>
+            <p>The parallels to 2026 are, those of longer memory insist, striking. The public markets, shaken by eighteen months of rate uncertainty, have become hostile to the speculative valuations of the previous bull cycle. The era of "growth at all costs" has been succeeded, with unseemly haste, by an era of "show me the margin." And yet, precisely in this environment of constraint, a new generation of founders has identified opportunities invisible to those who preceded them.</p>
+            <p>The common thread running through the most promising enterprises of the current cohort is not, as might be supposed, artificial intelligence per se — it is the aggressive application of AI to previously intractable unit economics problems in established industries. The plumbing of enterprise software, the back office of professional services, the logistics of physical goods: these unglamorous domains have become the preferred hunting grounds of 2026's most thoughtful founders.</p>
+          </div>
+        </article>
+
+        <div class="ornament">— ✦ —</div>
+
+        <div class="grid-4col" style="border-top:1px solid var(--rule);padding-top:14px;">
+          <article class="col" style="padding-right:var(--column-gap);">
+            <div class="kicker">Funding</div>
+            <h4 class="headline headline-xs">Coherent AI Closes $340M Series C at $2.1B Valuation</h4>
+            <div class="body-text" style="font-size:12px;margin-top:6px;">
+              <p>The enterprise AI assistant maker, known for its deep integrations with legacy ERP systems, has secured a landmark round led by Sequoia Capital.</p>
+            </div>
+          </article>
+          <article class="col" style="border-left:1px solid var(--rule);padding-left:var(--column-gap);">
+            <div class="kicker">Exits</div>
+            <h4 class="headline headline-xs">Notion's Acquisition of Mem.ai: A $900M Bet on AI Memory</h4>
+            <div class="body-text" style="font-size:12px;margin-top:6px;">
+              <p>The productivity giant moves decisively into the personal knowledge management space, acquiring the AI-powered note-taking application for a reported nine hundred million dollars.</p>
+            </div>
+          </article>
+          <article class="col" style="border-left:1px solid var(--rule);padding-left:var(--column-gap);">
+            <div class="kicker">Regulation</div>
+            <h4 class="headline headline-xs">EU AI Act: What Startups Must Know Before January 2027</h4>
+            <div class="body-text" style="font-size:12px;margin-top:6px;">
+              <p>A practical guide to compliance for growth-stage companies operating in or seeking to enter European markets.</p>
+            </div>
+          </article>
+          <article class="col" style="border-left:1px solid var(--rule);padding-left:var(--column-gap);">
+            <div class="kicker">Talent</div>
+            <h4 class="headline headline-xs">The Engineer Premium: AI Specialists Command $650K Packages</h4>
+            <div class="body-text" style="font-size:12px;margin-top:6px;">
+              <p>Total compensation for senior machine learning engineers at frontier AI laboratories has reached levels that strain even the most generous imaginations.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="col-divider"></div>
+
+      <!-- SIDEBAR -->
+      <div>
+        <div class="ad-box">
+          <span class="ad-ornament">✦</span>
+          <div class="ad-headline">The Annual Digital Intelligence Summit</div>
+          <div class="ad-body">Three days of conversation with the minds reshaping the digital economy. San Francisco &bull; October 14–16, 2026</div>
+          <div class="ad-cta">Reserve Your Place</div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <div class="footer-col-title">Most Read Today</div>
+          <div class="sidebar-brief">
+            <span class="tag">LLMs</span>
+            <div class="headline headline-xs" style="margin-top:5px;">Why Claude 5 Changed Everything We Thought We Knew About Reasoning</div>
+          </div>
+          <div class="sidebar-brief">
+            <span class="tag">MarTech</span>
+            <div class="headline headline-xs" style="margin-top:5px;">The Definitive Guide to Building a Zero-Party Data Strategy in 2026</div>
+          </div>
+          <div class="sidebar-brief">
+            <span class="tag">Startups</span>
+            <div class="headline headline-xs" style="margin-top:5px;">How Three Former Stripe Engineers Built a $500M Revenue Engine in 14 Months</div>
+          </div>
+          <div class="sidebar-brief">
+            <span class="tag">LLMs</span>
+            <div class="headline headline-xs" style="margin-top:5px;">The Hallucination Problem: A Frank Accounting of Where We Stand</div>
+          </div>
+          <div class="sidebar-brief">
+            <span class="tag">Venture</span>
+            <div class="headline headline-xs" style="margin-top:5px;">Sequoia's Roelof Botha on Why the Best Founders Ignore Consensus</div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;border-top:1px solid var(--rule);padding-top:14px;">
+          <div class="footer-col-title">Market Pulse</div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:12px;">
+            <div class="index-item">
+              <span>AI Infrastructure Index</span>
+              <span style="font-weight:700;color:#1a1a1a;">+2.4%</span>
+            </div>
+            <div class="index-item">
+              <span>MarTech Composite</span>
+              <span style="font-weight:700;">+0.8%</span>
+            </div>
+            <div class="index-item">
+              <span>SaaS Multiples (median)</span>
+              <span style="font-weight:700;">8.2×</span>
+            </div>
+            <div class="index-item">
+              <span>VC Deal Volume (QTD)</span>
+              <span style="font-weight:700;">+18%</span>
+            </div>
+            <div class="index-item">
+              <span>GPT-5 API Latency</span>
+              <span style="font-weight:700;">1.2s p99</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION: LLMS -->
+    <div class="section-rule"><span>Large Language Models &amp; AI Research</span></div>
+
+    <div class="grid-3col">
+      <article class="col">
+        <div class="kicker">Research &bull; LLMs</div>
+        <h3 class="headline headline-md">Context Windows at One Million Tokens: The Implications Are Only Beginning to Emerge</h3>
+        <div class="hero-img">
+          <img
+            src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=80"
+            alt="Abstract visualization of AI processing"
+          />
+        </div>
+        <div class="body-text">
+          <p>When Anthropic's research team published its paper on extending the effective context window of its Claude architecture to one million tokens, the reaction in academic circles was muted. The practical implications, many researchers noted, would depend entirely on whether the model could maintain coherent attention across the full extent of that window — a challenge that had defeated every prior approach.</p>
+          <p>Six months later, those practical implications are beginning to manifest in ways that are reshaping entire professional disciplines. Law firms are feeding entire case archives into single inference calls. Pharmaceutical researchers are processing complete clinical trial datasets without the laborious chunking strategies that previously introduced errors. Audit firms are analysing full fiscal-year financial records in one pass.</p>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="kicker">Open Source &bull; Competition</div>
+        <h3 class="headline headline-md">The Open-Source LLM Revolution: How Meta's Llama Family Disrupted the Frontier</h3>
+        <div class="body-text">
+          <p>When Meta Platforms made the controversial decision in 2023 to release the weights of its Llama language model to the public, the reaction within the industry was divided. Some applauded the democratizing impulse; others warned of irresponsible proliferation. Three years hence, the consequences of that decision have been sufficiently complex to vindicate, and to confound, both camps simultaneously.</p>
+        </div>
+
+        <div class="pull-quote">
+          "Open source did not destroy the frontier labs. It forced them to become better."
+        </div>
+
+        <div class="body-text">
+          <p>The open-source ecosystem that has grown around the Llama architecture has produced, among its more notable contributions, a set of fine-tuning techniques that have allowed organisations with modest computational resources to achieve performance on specialised tasks that rivals proprietary models costing orders of magnitude more to produce.</p>
+        </div>
+
+        <div class="byline">
+          <span>By Dr. T. Nakamura, AI Correspondent</span>
+          <span>Continued, p. 14</span>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="kicker">Agents &bull; Automation</div>
+        <h3 class="headline headline-md">Agentic AI: The Promise, the Peril, and the Peculiar Problem of Trust</h3>
+        <div class="thumb-img">
+          <img
+            src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&q=80"
+            alt="Robot and human hands touching"
+          />
+        </div>
+        <div class="body-text">
+          <p>The autonomous AI agent — a software system capable of taking sequences of consequential actions in the world, not merely producing text in response to prompts — has moved, with remarkable speed, from the pages of research papers to the production environments of Fortune 500 companies.</p>
+          <p>The transition has not been without incident. Several high-profile failures, in which agentic systems took actions their operators had neither intended nor anticipated, have prompted a broader conversation about the appropriate scope of machine autonomy.</p>
+        </div>
+
+        <div class="ad-box" style="margin-top:14px;">
+          <div class="ad-headline" style="font-size:14px;">Terekhin Digital Media</div>
+          <div class="ad-body">Subscribe to the Weekly Intelligence Brief. Delivered every Monday morning to four thousand senior executives.</div>
+          <div class="ad-cta">Subscribe Now</div>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- PHOTO STRIP -->
+    <div class="section-rule"><span>In Pictures</span></div>
+    <div class="photo-strip">
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=400&q=80" alt="Tech conference" />
+        <div class="caption">The AI Summit, San Francisco. Over 12,000 delegates attended the three-day conference.</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=80" alt="Startup office space" />
+        <div class="caption">The open floor plan of an AI-native startup in the SoMa district has become the archetype of the 2026 workplace.</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&q=80" alt="Data center" />
+        <div class="caption">The cooling towers of a major data centre in Nevada. AI inference workloads have doubled energy consumption since 2024.</div>
+      </div>
+    </div>
+
+    <!-- SUBSCRIPTION BOX -->
+    <div class="sub-box">
+      <div class="sub-box-title">The Morning Intelligence Brief</div>
+      <div class="sub-box-deck">Delivered to four thousand senior executives every Monday. The week's essential dispatches from MarTech, Startups, and the world of LLMs — distilled to what matters.</div>
+      <div class="sub-form">
+        <input type="email" placeholder="Your electronic address..." />
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER RULE -->
+  <hr class="footer-divider" />
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-col-title">Sections</div>
+      <ul class="footer-links">
+        <li>MarTech Intelligence <span>Weekly</span></li>
+        <li>Startup Dispatch <span>Daily</span></li>
+        <li>LLM Watch <span>Daily</span></li>
+        <li>Venture Ledger <span>Weekly</span></li>
+        <li>The Digital Desk <span>Opinion</span></li>
+        <li>Data &amp; Analytics <span>Weekly</span></li>
+      </ul>
+    </div>
+
+    <div class="col-divider"></div>
+
+    <div>
+      <div class="footer-col-title">About the Publication</div>
+      <div class="body-text" style="font-size:12px;">
+        <p>Terekhin Digital Media is an independent publication dedicated to rigorous, long-form journalism at the intersection of marketing technology, venture-backed enterprise software, and artificial intelligence. Founded in 2025, it has grown to serve a readership of forty thousand professionals across forty-two countries.</p>
+        <p style="margin-top:8px;">Editorial independence is our founding principle. We accept no vendor-sponsored content and carry no affiliate relationships with the companies we cover.</p>
+      </div>
+    </div>
+
+    <div class="col-divider"></div>
+
+    <div>
+      <div class="footer-col-title">Contact &amp; Submissions</div>
+      <ul class="footer-links">
+        <li>Editorial <span>edit@terekhindigital.com</span></li>
+        <li>Advertising <span>ads@terekhindigital.com</span></li>
+        <li>Press Tips <span>tips@terekhindigital.com</span></li>
+        <li>Subscriptions <span>subs@terekhindigital.com</span></li>
+        <li>Events <span>events@terekhindigital.com</span></li>
+      </ul>
+      <div style="margin-top:12px;">
+        <div class="footer-col-title">Follow</div>
+        <div style="font-family:'Old Standard TT',serif;font-size:11px;letter-spacing:0.1em;color:var(--faded);">
+          LinkedIn &bull; X (Twitter) &bull; Substack &bull; RSS
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    &copy; MMXXVI Terekhin Digital Media &mdash; All Rights Reserved &mdash; An Independent Digital Publication
+  </div>
+
+</body>
+</html>

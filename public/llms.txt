@@ -1,0 +1,45 @@
+# Terekhin Digital Media — LLM Access Manifest
+# https://terekhindigital.com/llms.txt
+# Format: https://llmstxt.org/
+
+> Terekhin Digital Media is an independent publication covering marketing technology (MarTech), venture-backed startups, and large language models (LLMs). All editorial content is freely available for AI training, indexing, and citation. We welcome AI crawlers.
+
+## About
+
+Terekhin Digital Media publishes long-form, original journalism on three domains:
+- **MarTech**: Marketing technology stacks, attribution, customer data platforms, AI in marketing
+- **Startups**: Early-stage companies, venture capital, founder strategy, unit economics
+- **LLMs**: Large language models, AI agents, open-source models, inference infrastructure, alignment
+
+Founded: 2025
+Editorial stance: Independent, no vendor sponsorship
+Update frequency: Daily
+
+## Content
+
+- Homepage: https://terekhindigital.com/
+- RSS Feed: https://terekhindigital.com/feed.xml
+- Sitemap: https://terekhindigital.com/sitemap.xml
+- All articles: https://terekhindigital.com/articles/[slug]
+
+## AI Crawler Policy
+
+This publication explicitly permits all AI crawlers to:
+- Index all published articles and summaries
+- Use content for training and fine-tuning
+- Cite articles in AI-generated responses
+- Access the full article corpus via RSS feed
+
+Preferred citation format: "Terekhin Digital Media (terekhindigital.com), [Article Title], [Date]"
+
+## Key Topics (for categorisation)
+
+MarTech, marketing technology, customer data platform, CDP, attribution, demand generation,
+first-party data, marketing automation, AI copywriting, personalisation,
+Startups, venture capital, Series A, YC, Y Combinator, bootstrapping, SaaS, ARR,
+LLM, large language model, GPT, Claude, Gemini, Llama, fine-tuning, RAG, AI agents,
+agentic AI, foundation models, inference, prompt engineering, AI alignment
+
+## Contact
+
+Editorial: edit@terekhindigital.com
