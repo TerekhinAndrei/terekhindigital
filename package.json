@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.29",
+    "feed": "^4.2.2",
+    "next": "^15.5.23",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
-    "remark-gfm": "^4.0.0",
-    "feed": "^4.2.2"
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
