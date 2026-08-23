@@ -73,7 +73,7 @@ export default async function ArticlePage({ params }: Props) {
     description: article.teaser,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
-    author: { "@type": "Person", name: article.author ?? "Terekhin Digital Media" },
+    author: article.author ? { "@type": "Person", name: article.author } : undefined,
     publisher: {
       "@type": "NewsMediaOrganization",
       name: "Terekhin Digital Media",
@@ -133,7 +133,7 @@ export default async function ArticlePage({ params }: Props) {
               <p className="deck" style={{ fontSize: 15, marginBottom: 14 }}>{article.teaser}</p>
             )}
             <div className="byline">
-              <span>By {article.author ?? "Staff Reporter"}</span>
+              {article.author && <span>By {article.author}</span>}
               {article.publishedAt && <span>{formatDate(article.publishedAt)}</span>}
             </div>
           </header>
