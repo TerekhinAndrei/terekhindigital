@@ -63,6 +63,10 @@ export default async function HomePage() {
   const llmArticles = allArticles.filter((a) => a.category === "LLMs").slice(0, 3)
   const martechArticles = allArticles.filter((a) => a.category === "MarTech").slice(0, 3)
   const startupArticles = allArticles.filter((a) => a.category === "Startups" || a.category === "Venture").slice(0, 3)
+  const ventureArticles = allArticles.filter((a) => a.category === "Venture").slice(0, 3)
+  const opinionArticles = allArticles.filter((a) => a.category === "Opinion").slice(0, 1)
+  const dataArticles = allArticles.filter((a) => a.category === "Data & Analysis").slice(0, 3)
+  const eventArticles = allArticles.filter((a) => a.category === "Events").slice(0, 4)
   const mostRead = allArticles.slice(0, 5)
 
   return (
@@ -349,6 +353,110 @@ export default async function HomePage() {
           ))}
         </div>
 
+        {/* ── VENTURE LEDGER ── */}
+        {ventureArticles.length > 0 && (
+          <>
+            <SectionRule label="Venture Ledger" />
+            <div className="grid-3col" id="venture">
+              {ventureArticles.map((a, i) => (
+                <article key={a.slug} className="col">
+                  <div className="kicker">Venture Capital</div>
+                  <Link href={`/articles/${a.slug}`} style={{ textDecoration: "none" }}>
+                    <h3 className={i === 0 ? "headline-md" : "headline-sm"} style={{ marginBottom: 8 }}>
+                      {a.title}
+                    </h3>
+                  </Link>
+                  {a.teaser && <p className="deck" style={{ marginBottom: 8 }}>{a.teaser}</p>}
+                  <div className="byline" style={{ marginTop: 8 }}>
+                    <span>By {a.author ?? "P. Castellan"}</span>
+                    <span>{a.publishedAt ? formatDateShort(a.publishedAt) : ""}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* ── THE DIGITAL DESK (Opinion) ── */}
+        {opinionArticles[0] && (
+          <>
+            <SectionRule label="The Digital Desk — Opinion" />
+            <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 16, marginBottom: 24 }}>
+              <article style={{ maxWidth: 720 }}>
+                <div className="kicker" style={{ fontStyle: "italic" }}>Commentary &bull; {opinionArticles[0].author ?? "A. Terekhin"}</div>
+                <Link href={`/articles/${opinionArticles[0].slug}`} style={{ textDecoration: "none" }}>
+                  <h2 className="headline-lg" style={{ marginBottom: 10 }}>{opinionArticles[0].title}</h2>
+                </Link>
+                {opinionArticles[0].teaser && (
+                  <p className="deck" style={{ marginBottom: 12, fontStyle: "italic" }}>{opinionArticles[0].teaser}</p>
+                )}
+                <div className="body-text drop-cap">
+                  {opinionArticles[0].content.split(/\n\n+/).slice(0, 3).map((p, i) => <p key={i}>{p.trim()}</p>)}
+                </div>
+                <div className="byline" style={{ marginTop: 10 }}>
+                  <span>{opinionArticles[0].author ?? "A. Terekhin"}, Editor-at-Large</span>
+                  <Link href={`/articles/${opinionArticles[0].slug}`} style={{ textDecoration: "none", color: "var(--faded)", fontSize: 10 }}>
+                    Continue reading →
+                  </Link>
+                </div>
+              </article>
+            </div>
+          </>
+        )}
+
+        {/* ── DATA & ANALYSIS ── */}
+        {dataArticles.length > 0 && (
+          <>
+            <SectionRule label="Data &amp; Analysis" />
+            <div style={{ display: "grid", gridTemplateColumns: dataArticles.length === 1 ? "1fr" : "2fr 1fr", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }} id="data">
+              {dataArticles.map((a, i) => (
+                <article key={a.slug} style={{ paddingRight: i < dataArticles.length - 1 ? 12 : 0, borderRight: i < dataArticles.length - 1 ? "1px solid var(--rule)" : "none", paddingLeft: i > 0 ? 12 : 0 }}>
+                  <div className="kicker">Data &amp; Analysis</div>
+                  <Link href={`/articles/${a.slug}`} style={{ textDecoration: "none" }}>
+                    <h3 className={i === 0 ? "headline-md" : "headline-sm"} style={{ marginBottom: 8 }}>{a.title}</h3>
+                  </Link>
+                  {a.imageUrl && i === 0 && (
+                    <div className="thumb-img">
+                      <Image src={a.imageUrl} alt={a.imageAlt ?? a.title} width={600} height={120}
+                        style={{ width: "100%", height: 120, objectFit: "cover", filter: "grayscale(100%) contrast(1.08)" }}
+                        unoptimized />
+                    </div>
+                  )}
+                  <div className="body-text">
+                    {a.content.split(/\n\n+/).slice(0, i === 0 ? 2 : 1).map((p, pi) => <p key={pi}>{p.trim()}</p>)}
+                  </div>
+                  <div className="byline" style={{ marginTop: 8 }}>
+                    <span>{a.author ?? "Editorial Research Desk"}</span>
+                    <span>{a.publishedAt ? formatDateShort(a.publishedAt) : ""}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* ── EVENTS ── */}
+        {eventArticles.length > 0 && (
+          <>
+            <SectionRule label="Events &amp; Conferences" />
+            <div style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(eventArticles.length, 4)}, 1fr)`, gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }} id="events">
+              {eventArticles.map((a, i) => (
+                <div key={a.slug} style={{ borderRight: i < eventArticles.length - 1 ? "1px solid var(--rule)" : "none", paddingRight: 12, paddingLeft: i > 0 ? 12 : 0 }}>
+                  <div className="kicker">Events</div>
+                  <Link href={`/articles/${a.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+                    <div className="headline-xs" style={{ marginBottom: 6 }}>{a.title}</div>
+                  </Link>
+                  {a.teaser && (
+                    <p style={{ fontFamily: "var(--font-baskerville), serif", fontSize: 11, color: "var(--faded)", lineHeight: 1.5, margin: 0 }}>
+                      {a.teaser}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         {/* ── ISSUE ARCHIVE ── */}
         <SectionRule label="Recent Issues" />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
@@ -400,6 +508,8 @@ export default async function HomePage() {
               ["LLM Watch", "Daily"],
               ["Venture Ledger", "Weekly"],
               ["The Digital Desk", "Opinion"],
+              ["Data & Analysis", "Weekly"],
+              ["Events & Conferences", "Weekly"],
             ].map(([title, freq]) => (
               <li key={title} style={{ fontFamily: "var(--font-baskerville), serif", fontSize: 12, padding: "3px 0", borderBottom: "1px dotted #ccc", display: "flex", justifyContent: "space-between" }}>
                 {title}

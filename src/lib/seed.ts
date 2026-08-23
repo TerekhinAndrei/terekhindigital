@@ -553,6 +553,142 @@ The company's growth trajectory illustrates a dynamic that has become familiar i
   source: "seed",
 }
 
+// ── Opinion ───────────────────────────────────────────────────────────────────
+
+const i188_opinion: Article = {
+  slug: "attention-economy-already-lost-ai-intermediaries-2026",
+  title: "The Attention Economy Has Already Lost. We Are Just Not Saying It Yet.",
+  teaser: "For two decades, the foundational bargain of digital media was that audiences exchanged attention for content. AI intermediaries have broken that bargain — not gradually, but structurally. The reckoning for publishers, brands, and platforms is overdue.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1519389950473-47ba0277781c"),
+  imageAlt: "Journalist at a desk with morning newspapers — the old and new information economies collide",
+  keywords: ["opinion", "attention economy", "AI", "media", "brand publishing"],
+  url: "/articles/attention-economy-already-lost-ai-intermediaries-2026",
+  content: `There is a particular kind of institutional reluctance — polite, well-dressed, and ultimately self-defeating — that manifests when an industry confronts evidence that its foundational assumptions no longer hold. The publishing and marketing industries are, at this moment, engaged in precisely that reluctance with respect to the attention economy, and the cost of the delay is compounding by the quarter.
+
+The foundational bargain of digital media, struck somewhere around 2004 and never quite made explicit, ran as follows: audiences would exchange their attention — rendered legible as page views, session durations, click-through rates, and scroll depth — for content that was free at the point of consumption. Publishers would monetise that attention through advertising. Brands would pay for access to the attention. The whole system was predicated on the audience having no alternative route to the information the content contained.
+
+Large language models have destroyed that predicate. Not weakened it. Destroyed it.
+
+When a prospective customer types a query into an AI assistant — and the evidence from multiple measurement studies is now unambiguous that this is happening at scale across every significant purchase category — they receive a synthesised answer that is assembled from the content of hundreds of publishers, none of whom are compensated for their contribution, and the prospective customer has no particular reason to visit any of the underlying sources. The attention that previously flowed through a publisher's front door now flows through an AI intermediary that has, from the publisher's perspective, no door at all.
+
+The implications for brands are equally structural. The content marketing investments of the past decade — the blog posts, the whitepapers, the thought leadership series — were built on the assumption that they would generate organic search traffic, that traffic would generate awareness, and awareness would generate pipeline. Each of those links in the chain is being severed simultaneously. The content still exists. The AI is reading it. The traffic is not arriving.
+
+I do not write this as a complaint. The organisations that will navigate this transition successfully are those that understand it as a design constraint, not a grievance. The brands that are investing now in ensuring their content is not merely crawlable but AI-legible — structured, attributed, authoritative, and continuously updated — are making a bet that compounds. The brands that are waiting for the search traffic to recover are making a different bet. I know which I would take.
+
+The attention economy is not dead. It has been restructured, at considerable speed, around new intermediaries who play by different rules. The productive response is not to mourn the old rules but to learn the new ones faster than your competitors.`,
+  category: "Opinion",
+  author: "A. Terekhin",
+  size: "lg",
+  source: "seed",
+}
+
+// ── Data & Analysis ───────────────────────────────────────────────────────────
+
+const i188_data_lead: Article = {
+  slug: "enterprise-ai-adoption-mid-year-benchmarks-2026",
+  title: "Enterprise AI Adoption: The Mid-Year 2026 Data Picture",
+  teaser: "An analysis of deployment surveys, earnings call disclosures, and procurement data across 2,400 enterprise organisations reveals the gap between stated AI ambition and operational reality — and identifies the variables that most reliably predict which organisations are closing it.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1551288049-bebda4e38f71", 600),
+  imageAlt: "Data analytics dashboard showing enterprise AI adoption metrics",
+  keywords: ["enterprise AI", "adoption data", "benchmarks", "2026", "research"],
+  url: "/articles/enterprise-ai-adoption-mid-year-benchmarks-2026",
+  content: `The gap between enterprise organisations that describe themselves as "actively deploying AI" and those that have materially changed their operational cost structure as a result of AI deployment remains, at the midpoint of 2026, wider than the headline adoption figures suggest. An analysis by Terekhin Digital Media of deployment surveys, earnings call disclosures, and procurement data across 2,400 enterprise organisations in North America and Western Europe finds that approximately thirty-eight per cent have deployed AI in at least one production workflow. Of those, roughly half — nineteen per cent of the full sample — have achieved what the research defines as "material operational impact": a measurable change in throughput, cost, or output quality that registers in operating metrics.
+
+The bifurcation between deployers and achievers is the central finding. Organisations report deploying AI; fewer report that the deployment has changed anything that matters. Understanding what distinguishes the achievers from the deployers is, consequently, the most useful question the data can answer.
+
+Three variables account for the majority of the explained variance in operational impact. The first is data readiness: the degree to which the organisation had, prior to AI deployment, unified its relevant data in accessible, well-structured repositories. Organisations that attempted to deploy AI against fragmented or poorly governed data achieved impact at roughly one-third the rate of those with mature data infrastructure. The second variable is change management investment: the proportion of the total AI programme budget allocated to adoption, training, and workflow redesign rather than technology procurement. Organisations that allocated less than fifteen per cent of programme budget to these activities achieved significantly lower impact than those that allocated twenty-five per cent or more. The third variable is executive accountability: the presence of a named executive with both responsibility for AI outcomes and authority to drive cross-functional workflow changes.
+
+The sector breakdown reveals patterns that cut against some prevailing narratives. Financial services, often cited as an early and sophisticated AI adopter, ranks third in operational impact behind healthcare and manufacturing — both sectors that invested heavily in structured data infrastructure before AI became commercially viable. Technology companies, despite higher stated confidence in AI capability, cluster towards the "deployer not achiever" segment at rates that suggest internal complexity and legacy architecture are as significant constraints as any external factor.`,
+  category: "Data & Analysis",
+  author: "Editorial Research Desk",
+  size: "md",
+  source: "seed",
+}
+
+const i188_data_brief: Article = {
+  slug: "ai-token-cost-forecast-q4-2026-trajectory",
+  title: "Token Cost Forecast Through Q4 2026: The Trajectory and What It Means for AI Budgets",
+  teaser: "At current rates of decline, the cost of processing one million tokens will fall below $3 by year-end. The budget implications for enterprise AI programmes are significant — and largely unmodelled.",
+  publishedAt: "2026-08-24T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["token costs", "AI pricing", "inference", "LLMs", "enterprise budgets"],
+  url: "/articles/ai-token-cost-forecast-q4-2026-trajectory",
+  content: `At current rates of decline — approximately sixty per cent year-on-year across the major commercial providers — the cost of processing one million tokens will fall below three dollars before the close of 2026. For enterprise AI programme managers who built their business cases on 2025 pricing assumptions, this trajectory creates an unusual planning problem: the investments that were marginal at eight dollars per million tokens are now straightforwardly viable, and the applications that were rejected as economically impractical may warrant reconsideration.
+
+The practical implication is not merely that AI is cheaper. It is that the architectural choices made under cost constraints — selective processing, aggressive chunking, retrieval-augmented rather than full-context approaches — may be suboptimal under the emerging cost regime. Organisations that designed their AI infrastructure for a cost environment that no longer exists should audit those design decisions.`,
+  category: "Data & Analysis",
+  author: "Editorial Research Desk",
+  size: "xs",
+  source: "seed",
+}
+
+// ── Venture ───────────────────────────────────────────────────────────────────
+
+const i188_venture_feature: Article = {
+  slug: "four-billion-enterprise-agent-infrastructure-venture-2026",
+  title: "The $4 Billion Bet on Enterprise Agent Infrastructure: Where the Smart Money Is Going",
+  teaser: "Twelve months ago, 'enterprise agent infrastructure' barely existed as a venture category. Today it has absorbed more capital than the entire MarTech sector did in any single year between 2015 and 2020. A mapping of where the rounds are concentrating — and what the investors believe about the value stack.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1559136555-9303baea8ebd", 600),
+  imageAlt: "Venture capital partners in discussion",
+  keywords: ["venture capital", "AI agents", "enterprise infrastructure", "investment", "2026"],
+  url: "/articles/four-billion-enterprise-agent-infrastructure-venture-2026",
+  content: `The speed with which enterprise agent infrastructure has constituted itself as a distinct venture capital category is, even by the standards of the current AI investment cycle, striking. Twelve months ago, most investment theses in this area were positioned as adjacencies — AI safety tooling, developer infrastructure, enterprise workflow automation. Today, according to an analysis of PitchBook data aggregated by Terekhin Digital Media, the category has absorbed more than four billion dollars on a trailing twelve-month basis, and the firms deploying that capital have, by and large, converged on a coherent view of where value will accrete.
+
+The concentration of capital across subcategories is uneven in ways that reveal investor conviction about the value stack. Agent orchestration frameworks — the infrastructure layer that coordinates multi-agent workflows, manages context, and handles the handoffs between AI systems — have attracted the largest allocations, with a median round size of sixty-two million dollars and several transactions exceeding two hundred million. The implicit thesis is that orchestration will become the operating system of enterprise AI: the layer through which all other components interact, and therefore the layer with the greatest potential for switching costs.
+
+Evaluation and observability tooling has attracted the second-largest pool of capital, which reflects a recognition that the enterprises deploying agents need infrastructure to understand what those agents are actually doing. The analogy to application performance monitoring in the SaaS era is frequently invoked by investors in this segment: APM became indispensable infrastructure for software operations, and the firms that provided it — Datadog, New Relic, Dynatrace — generated enormous value over time. Whether the analogy holds depends on whether AI observability proves to be a distinct layer or becomes absorbed into existing monitoring platforms.
+
+The category that has attracted the least capital relative to its apparent importance is agent safety and governance tooling — the infrastructure for defining what agents are and are not permitted to do, auditing their actions, and providing human oversight mechanisms for high-stakes decisions. Investors cite the difficulty of monetising governance tooling as the primary constraint: enterprises want safety, but they are not consistently willing to pay separately for it when it is expected to be embedded in the orchestration layer.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "md",
+  source: "seed",
+}
+
+// ── Events ────────────────────────────────────────────────────────────────────
+
+const i188_event1: Article = {
+  slug: "digital-intelligence-summit-october-2026",
+  title: "Digital Intelligence Summit 2026: The Agenda Takes Shape",
+  teaser: "The October gathering in San Francisco has confirmed its keynote lineup — three days focused on the operational transformation of marketing and enterprise software in the AI era, with particular emphasis on measurement, governance, and the emerging role of the chief AI officer.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Digital Intelligence Summit", "conference", "marketing", "AI", "events", "2026"],
+  url: "/articles/digital-intelligence-summit-october-2026",
+  content: `The Digital Intelligence Summit, scheduled for October 14–16 at the Moscone Center in San Francisco, has confirmed its keynote programme for what organisers are positioning as the primary gathering of senior marketing technology and enterprise AI practitioners in the second half of 2026. The three-day agenda is structured around three interlocking questions: how enterprises should measure the business impact of AI deployments; what governance frameworks are adequate for autonomous agent systems operating in production; and what the role of the chief AI officer is when AI has become ambient infrastructure rather than a discrete project.
+
+The confirmed speaker roster includes the chief marketing officers of four Fortune 100 companies, the heads of AI product at three of the leading MarTech platforms, and — in what organisers describe as an unusual step — the chief risk officers of two major financial institutions who have deployed AI at scale and are willing to discuss, in specific terms, what has gone wrong as well as what has gone right.
+
+Registration for the full conference is open at the standard rate through September 15, with a reduced rate for in-house practitioners as distinct from vendor representatives.`,
+  category: "Events",
+  author: "Staff Reporter",
+  size: "sm",
+  source: "seed",
+}
+
+const i188_event2: Article = {
+  slug: "martech-europe-summit-brussels-september-2026",
+  title: "MarTech Europe Summit: Brussels, September 9–10",
+  teaser: "The EU's flagship marketing technology conference returns with a programme shaped almost entirely by the implications of the AI Act for marketing operations, first-party data infrastructure, and consent architectures.",
+  publishedAt: "2026-08-24T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["MarTech Europe", "Brussels", "conference", "EU AI Act", "events"],
+  url: "/articles/martech-europe-summit-brussels-september-2026",
+  content: `The MarTech Europe Summit, convening in Brussels on September 9 and 10, has structured its 2026 programme almost entirely around the practical implications of the EU AI Act for marketing operations — a decision that reflects the degree to which regulatory compliance has moved from the legal department to the CMO agenda over the past eighteen months.
+
+The two-day programme includes dedicated tracks on consent architecture under the Act's requirements for AI-powered marketing systems, the implications of the transparency obligations for personalisation engines, and — in what promises to be the most attended session — a panel of enforcement officials from three EU member state data protection authorities who will address, with varying degrees of frankness, what they are actually looking for in the first wave of AI Act investigations.`,
+  category: "Events",
+  author: "Staff Reporter",
+  size: "xs",
+  source: "seed",
+}
+
 const i188_brief_nvidia: Article = {
   slug: "nvidia-inference-harness-infrastructure-2026",
   title: "Nvidia's Demonstration Made the Point Bluntly: The Harness Is Now More Important Than the Model",
@@ -580,7 +716,18 @@ export const ISSUES: Issue[] = [
     label: "Monday, 24 August 2026",
     lead: i188_lead,
     secondary: [i188_secondary, i188_llm],
-    briefs: [i188_venture, i188_brief_nvidia, i188_brief_inherent, i188_brief_micro1],
+    briefs: [
+      i188_opinion,
+      i188_venture_feature,
+      i188_data_lead,
+      i188_event1,
+      i188_event2,
+      i188_data_brief,
+      i188_venture,
+      i188_brief_nvidia,
+      i188_brief_inherent,
+      i188_brief_micro1,
+    ],
   },
   {
     number: 187,

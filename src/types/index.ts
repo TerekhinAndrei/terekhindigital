@@ -1,4 +1,4 @@
-export type Category = "LLMs" | "MarTech" | "Startups" | "Venture" | "Opinion"
+export type Category = "LLMs" | "MarTech" | "Startups" | "Venture" | "Opinion" | "Data & Analysis" | "Events"
 
 export interface Article {
   slug: string
