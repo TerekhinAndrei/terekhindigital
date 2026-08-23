@@ -7,6 +7,7 @@ import { getArticleBySlug, getAllArticles, LATEST_ISSUE } from "@/lib/seed"
 import { formatDate } from "@/lib/utils"
 import Masthead from "@/components/Masthead"
 import BreakingTicker from "@/components/BreakingTicker"
+import MarkdownContent from "@/components/MarkdownContent"
 
 export const revalidate = 300
 
@@ -64,11 +65,6 @@ export default async function ArticlePage({ params }: Props) {
   const related = getAllArticles()
     .filter((a) => a.slug !== slug && a.category === article.category)
     .slice(0, 4)
-
-  const paragraphs = article.content
-    .split(/\n\n+/)
-    .map((p) => p.trim())
-    .filter(Boolean)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -159,18 +155,7 @@ export default async function ArticlePage({ params }: Props) {
           )}
 
           {/* Article body */}
-          <div className="body-text">
-            {paragraphs.map((p, i) => (
-              <>
-                <p key={i} className={i === 0 ? "drop-cap" : ""}>{p}</p>
-                {i === 2 && paragraphs.length > 5 && (
-                  <div key="pq" className="pull-quote">
-                    &ldquo;{paragraphs[3]?.slice(0, 120)}&hellip;&rdquo;
-                  </div>
-                )}
-              </>
-            ))}
-          </div>
+          <MarkdownContent content={article.content} />
 
           {/* Keywords */}
           {article.keywords?.length > 0 && (

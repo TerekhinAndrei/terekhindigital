@@ -7,6 +7,7 @@ import { getArticleBySlug, LATEST_ISSUE } from "@/lib/seed"
 import { formatDate } from "@/lib/utils"
 import Masthead from "@/components/Masthead"
 import BreakingTicker from "@/components/BreakingTicker"
+import MarkdownContent from "@/components/MarkdownContent"
 
 export const revalidate = 60
 
@@ -58,11 +59,6 @@ export default async function SlugPage({ params }: Props) {
 
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
   const issue = LATEST_ISSUE
-
-  const paragraphs = article.content
-    .split(/\n\n+/)
-    .map((p) => p.trim())
-    .filter(Boolean)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -122,18 +118,7 @@ export default async function SlugPage({ params }: Props) {
             </div>
           )}
 
-          <div className="body-text">
-            {paragraphs.map((p, i) => (
-              <>
-                <p key={i} className={i === 0 ? "drop-cap" : ""}>{p}</p>
-                {i === 2 && paragraphs.length > 5 && (
-                  <div key="pq" className="pull-quote">
-                    &ldquo;{paragraphs[3]?.slice(0, 130)}&hellip;&rdquo;
-                  </div>
-                )}
-              </>
-            ))}
-          </div>
+          <MarkdownContent content={article.content} />
 
           {article.keywords?.length > 0 && (
             <div style={{ marginTop: 20, borderTop: "1px solid var(--rule)", paddingTop: 10 }}>

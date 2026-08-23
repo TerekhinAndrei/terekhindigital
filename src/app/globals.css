@@ -392,6 +392,15 @@ img { filter: grayscale(100%) contrast(1.08); display: block; width: 100%; heigh
 /* ── article body prose ── */
 .prose-newspaper p { margin-bottom: 0; }
 .prose-newspaper p + p { text-indent: 1.5em; }
+.prose-newspaper h1 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 900;
+  font-size: clamp(20px, 3vw, 32px);
+  text-transform: uppercase;
+  margin: 28px 0 10px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
 .prose-newspaper h2 {
   font-family: var(--font-playfair), serif;
   font-weight: 700;
@@ -418,6 +427,54 @@ img { filter: grayscale(100%) contrast(1.08); display: block; width: 100%; heigh
   line-height: 1.45;
   text-align: center;
 }
+.prose-newspaper blockquote p { text-indent: 0; }
+.prose-newspaper hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 20px auto;
+  width: 40%;
+}
+.prose-newspaper ul, .prose-newspaper ol {
+  padding-left: 1.4em;
+  margin: 10px 0;
+}
+.prose-newspaper li { margin-bottom: 4px; }
+.prose-newspaper li p { text-indent: 0; }
+.prose-newspaper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-old-standard), serif;
+  font-size: 11px;
+  margin: 16px 0;
+}
+.prose-newspaper th {
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 5px 8px;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.prose-newspaper td {
+  border-bottom: 1px solid var(--rule);
+  padding: 4px 8px;
+  vertical-align: middle;
+}
+.prose-newspaper tr:last-child td { border-bottom: 2px solid var(--ink); }
+.prose-newspaper a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+/* first paragraph drop-cap when content comes from react-markdown */
+.prose-newspaper.drop-cap-first > p:first-of-type::first-letter {
+  font-family: var(--font-playfair), serif;
+  font-size: 4.2em;
+  font-weight: 900;
+  float: left;
+  line-height: 0.82;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+.prose-newspaper strong { font-weight: 700; }
+.prose-newspaper em { font-style: italic; }
 
 /* ── responsive ── */
 @media (max-width: 760px) {
