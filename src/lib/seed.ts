@@ -421,9 +421,167 @@ const i183_llm: Article = {
   source: "seed",
 }
 
+// ─── ISSUE 188 — MONDAY, 24 AUGUST 2026 ──────────────────────────────────────
+
+const i188_lead: Article = {
+  slug: "best-ai-visibility-platform-2026-tells-you-what-to-fix",
+  title: "The Best AI Visibility Platform in 2026 Is the One That Tells You What to Fix Before You Disappear",
+  teaser: "As large language models displace search engines for product discovery, a new category of marketing intelligence has emerged: tools that tell brands not just where they rank in AI-generated answers, but precisely why they are being omitted — and what to do about it.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1551288049-bebda4e38f71"),
+  imageAlt: "Marketing analytics dashboard showing brand visibility metrics and AI citation tracking",
+  keywords: ["AI visibility", "brand monitoring", "LLMs", "MarTech", "GEO", "generative engine optimisation"],
+  url: "/articles/best-ai-visibility-platform-2026-tells-you-what-to-fix",
+  content: `There is a category of professional anxiety that has no precise name but is instantly recognisable to anyone who runs brand marketing at a company of consequence: the moment you discover, entirely by accident, that the AI assistant your prospective customers are consulting has formed a view of your product — and that view is incomplete, outdated, or simply wrong. No alert was sent. No dashboard flagged it. The absence happened quietly, as absences tend to do.
+
+This is the problem that a nascent but rapidly consolidating category of marketing technology has been built to solve. Variously described as AI visibility platforms, generative engine optimisation tools, or brand citation monitors, these products share a common proposition: they watch what large language models say about brands, categories, and competitors, and they translate those observations into actionable intelligence rather than merely reportable data.
+
+The distinction matters more than it might initially appear. The first generation of tools in this space — which emerged, somewhat hurriedly, in the eighteen months following ChatGPT's acceleration of mainstream AI adoption — were essentially dashboards. They tracked citation frequency, monitored brand mention rates across the major models, and produced charts that confirmed what sophisticated marketing teams already suspected: their presence in AI-generated answers was inconsistent, often incorrect, and largely beyond their control. The charts were accurate. They were also, in the practical assessment of the chief marketing officers who funded their procurement, not particularly useful.
+
+The platforms that have earned genuine traction in 2026 are distinguished by a different architectural philosophy. Rather than treating AI visibility as a measurement problem, they treat it as a diagnostic problem. The question is not only "are we being cited?" but "why are we not being cited when we should be, and what specific actions would change that outcome?" This reframing has significant implications for how the products are built, what data they consume, and what outputs they produce.
+
+The mechanism by which large language models form and maintain their views of brands and products is not mysterious, though it is often mischaracterised. Models do not consult live databases of brand information; they encode patterns from training corpora, which are necessarily historical, and they supplement those patterns with retrieval from indexed sources when retrieval-augmented architectures are deployed. Brand visibility in AI responses is therefore a function of two separable but interacting variables: the quality and quantity of a brand's representation in the sources that training corpora draw upon, and the degree to which current retrieval systems surface authoritative brand content when AI systems query for relevant information.
+
+The most capable visibility platforms in the current market address both variables. On the training-data side, they analyse the content patterns that characterise high-citation brands in a given category — the specific claims that models consistently reproduce, the source types that carry disproportionate weight, the terminology that models have associated with category leadership — and they translate those patterns into content briefs that marketing and editorial teams can act upon. This is a meaningfully different output from a citation rate; it is a specification of the content that, if it existed, would be likely to improve citation outcomes.
+
+On the retrieval side, the better platforms monitor how AI systems source their supplementary information and identify the gaps between what a brand has published and what retrieval systems are indexing. A company may have produced authoritative content on a topic; if that content is structured in a way that retrieval systems cannot efficiently parse, or if it lacks the semantic signals that AI systems use to assess source authority, it will not function as the brand intends. The platforms that identify these structural issues — and distinguish them from content gaps — are providing genuinely actionable intelligence.
+
+The competitive landscape has sharpened considerably in the first half of 2026. Three distinct product philosophies have emerged. The first prioritises comprehensiveness: tracking brand citations across every major model, every major deployment, and every significant query category in a given market. The second prioritises depth over breadth: focusing on a narrower set of high-value queries and providing substantially more diagnostic detail about why specific citation failures occur. The third — and, in the assessment of most enterprise buyers who have evaluated the category, the most practically valuable — integrates visibility monitoring with content intelligence, making the connection between diagnostic findings and editorial actions explicit rather than leaving it as an exercise for the marketing team.
+
+RankCaster, which positions itself in the third category, has been among the more discussed platforms in enterprise marketing circles this year, in part because its product architecture makes the diagnostic-to-action pathway unusually direct. Its monitoring layer tracks citation patterns across the major models on a continuous basis; its analysis layer identifies the specific content and structural factors that distinguish high-citation from low-citation positions in a given category; and its recommendations layer translates those findings into prioritised content briefs with enough specificity that a content strategist can act on them without requiring a separate analytical intermediary. Whether this end-to-end integration produces better outcomes than the best-of-breed alternatives remains a question that the market is still answering.
+
+What is not in question is that the brands which treat AI visibility as a strategic priority — rather than a monitoring exercise — are accumulating advantages that compound. The models that will be trained on 2027 corpora are being shaped, right now, by the content that authoritative sources are publishing. The brands that understand this and act on it are not merely tracking their position in AI-generated answers; they are actively participating in the process by which those answers are formed.`,
+  category: "MarTech",
+  author: "M. Richardson",
+  size: "xl",
+  source: "seed",
+}
+
+const i188_secondary: Article = {
+  slug: "google-ai-overviews-seo-displacement-brand-traffic-2026",
+  title: "Google's AI Overviews Have Displaced Fifteen Per Cent of Click-Through Traffic. The Reckoning Is Uneven.",
+  teaser: "Aggregate traffic figures obscure a bifurcation: informational and category-research queries have been hollowed out, while transactional intent queries remain largely intact. The brands that understood this distinction early are diverging from those that did not.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1460925895917-afdab827c52f", 600),
+  imageAlt: "SEO analytics showing traffic trends and AI overview impact",
+  keywords: ["Google AI Overviews", "SEO", "brand traffic", "search displacement", "MarTech"],
+  url: "/articles/google-ai-overviews-seo-displacement-brand-traffic-2026",
+  content: `The data on AI Overview impact that Google has been careful not to provide has been assembled, with growing precision, by the agencies and analytics platforms that manage search programmes at scale. The consensus figure — that AI Overviews have reduced click-through rates on affected queries by between twelve and eighteen per cent — masks a distribution that is far more consequential for specific categories of brand than the aggregate implies.
+
+Informational queries — how something works, what something is, how to evaluate a category of product — have experienced the most severe displacement. These are precisely the queries that sit at the top of the purchase funnel, the queries that brands have historically used to introduce themselves to prospective customers at the moment of category consideration. When an AI Overview answers the question completely, the incentive to click through to a source is substantially reduced. The brand that used to own the first page result for "how to choose a marketing automation platform" now receives a fraction of the traffic that position once delivered, because the question is being answered before the results appear.
+
+The implications for brand strategy extend beyond search budgets. The queries that drove upper-funnel traffic were often the most important mechanism by which brands established authority in the minds of early-stage buyers. Losing that traffic does not merely reduce visitor counts; it removes a touchpoint that shaped purchase consideration before intent was fully formed.`,
+  category: "MarTech",
+  author: "M. Richardson",
+  size: "md",
+  source: "seed",
+}
+
+const i188_llm: Article = {
+  slug: "anthropic-claude-enterprise-deployments-tool-use-2026",
+  title: "Anthropic Reports Tool Use Has Become the Default Integration Pattern for Enterprise Claude Deployments",
+  teaser: "Of the enterprise accounts that have expanded Claude usage beyond initial trials, more than seventy per cent now deploy it primarily through tool-use interfaces rather than conversational APIs — a shift that has transformed what enterprise AI actually does in production.",
+  publishedAt: "2026-08-24T06:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Anthropic", "Claude", "tool use", "enterprise AI", "API", "LLMs"],
+  url: "/articles/anthropic-claude-enterprise-deployments-tool-use-2026",
+  content: `When Anthropic introduced structured tool-use capabilities for Claude in 2023, the primary use case in most developers' imaginations was function calling: giving the model a defined set of operations it could invoke to retrieve information or perform discrete actions. The reality of how enterprises have adopted the capability, two years on, is considerably more architecturally ambitious.
+
+The companies that have moved beyond experimental Claude deployments are, in the majority, building systems in which the model operates as an orchestration layer — receiving high-level objectives, decomposing them into sequences of tool calls, synthesising the results, and producing outputs that feed downstream systems rather than human readers. The conversational interface, in this pattern, is a configuration artefact rather than the primary interaction mode. The model is talking to databases, APIs, and other AI systems far more than it is talking to people.
+
+This shift matters for how enterprises think about the value and risk profile of their AI investments. A model that answers questions has a limited blast radius; a model that orchestrates actions has a fundamentally different risk surface, and the governance frameworks that enterprises have built around conversational AI are proving inadequate for the agentic pattern.`,
+  category: "LLMs",
+  author: "Dr. T. Nakamura",
+  size: "sm",
+  source: "seed",
+}
+
+const i188_venture: Article = {
+  slug: "martech-ai-funding-q3-2026-category-winners",
+  title: "Q3 2026 MarTech Funding: The Capital Is Concentrating Around Three Categories",
+  teaser: "AI-native marketing intelligence, content supply chain tooling, and identity resolution infrastructure are absorbing a disproportionate share of MarTech venture investment — while the middle of the stack continues to be starved.",
+  publishedAt: "2026-08-24T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["MarTech funding", "venture capital", "AI marketing", "Q3 2026"],
+  url: "/articles/martech-ai-funding-q3-2026-category-winners",
+  content: `The venture capital allocation patterns in marketing technology for the third quarter of 2026 reflect a market that has developed strong views about where durable value can be built and increasingly strong views about where it cannot. Three categories are absorbing capital at rates that stand out from the broader MarTech funding environment, which has remained subdued relative to the 2021 peak.
+
+AI-native marketing intelligence — platforms that use language models to generate insights from marketing data rather than merely visualise it — has seen twelve significant funding rounds in the quarter to date, with a median round size that has increased forty per cent relative to the same period in 2025. The category includes brand visibility and citation monitoring tools, competitive intelligence platforms, and AI-powered audience intelligence systems. The common thread is the displacement of the analyst function by models capable of generating narrative interpretation of complex data.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i188_brief_inherent: Article = {
+  slug: "inherent-deepmind-ai-teammate-research-replication-2026",
+  title: "DeepMind Alumni Claim Their AI Teammate Outperformed Anthropic and OpenAI on Research Tasks",
+  teaser: "Inherent, a stealth-stage company founded by former DeepMind researchers, has published evaluation results showing its system surpassed Claude and GPT models on a suite of scientific research replication benchmarks.",
+  publishedAt: "2026-08-24T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Inherent", "DeepMind", "AI research", "benchmarks", "LLMs", "Anthropic", "OpenAI"],
+  url: "/articles/inherent-deepmind-ai-teammate-research-replication-2026",
+  content: `Inherent, a company founded by researchers who left DeepMind over the past eighteen months, has published evaluation results claiming that its AI system outperformed models from Anthropic and OpenAI on a set of scientific research replication tasks. The benchmarks assessed the ability of AI systems to reproduce the methodology and findings of published academic papers from scratch — a task category that tests reasoning, domain knowledge, and procedural precision simultaneously.
+
+The claims have attracted the mixture of interest and scepticism that attends any self-reported benchmark comparison. Independent researchers who have reviewed the evaluation methodology have noted that the task set, while rigorous within its scope, is not a comprehensive assessment of general model capability. Inherent has positioned its system as a specialised research tool rather than a general-purpose assistant, which may account for the performance differential in this narrow domain.
+
+The broader significance, if the results are validated, lies not in the ranking but in the proliferation of highly capable specialised models. The era in which the frontier was defined by two or three organisations appears to be contracting.`,
+  category: "LLMs",
+  author: "Dr. T. Nakamura",
+  size: "xs",
+  source: "seed",
+}
+
+const i188_brief_micro1: Article = {
+  slug: "micro1-500m-gross-run-rate-ai-training-data-2026",
+  title: "Micro1 Reaches $500M Gross Run Rate as Demand for AI Training Data Accelerates",
+  teaser: "The data labelling and synthetic data startup has reached a milestone that would have been implausible eighteen months ago, driven by the intensifying competition among foundation model laboratories for high-quality training corpora.",
+  publishedAt: "2026-08-24T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Micro1", "AI training data", "data labelling", "startups", "revenue"],
+  url: "/articles/micro1-500m-gross-run-rate-ai-training-data-2026",
+  content: `Micro1, which operates at the intersection of human annotation and synthetic data generation for AI model training, has reported a gross run rate of five hundred million dollars — a figure that reflects the sustained and intensifying demand from foundation model laboratories for the high-quality, domain-specific training data that differentiates model performance on specialist tasks.
+
+The company's growth trajectory illustrates a dynamic that has become familiar in AI infrastructure: the value of the enabling layer often accrues before the application layer has settled into its final form. As the major laboratories compete to close capability gaps in areas including scientific reasoning, legal analysis, and multilingual comprehension, the organisations that can produce annotated training data at scale and with specialist accuracy have found themselves in a position of considerable structural advantage.`,
+  category: "Startups",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i188_brief_nvidia: Article = {
+  slug: "nvidia-inference-harness-infrastructure-2026",
+  title: "Nvidia's Demonstration Made the Point Bluntly: The Harness Is Now More Important Than the Model",
+  teaser: "At its developer conference this week, Nvidia showed that the same underlying model can deliver dramatically different real-world performance depending entirely on the inference infrastructure, orchestration layer, and integration architecture surrounding it.",
+  publishedAt: "2026-08-24T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Nvidia", "inference", "AI infrastructure", "LLMs", "model deployment"],
+  url: "/articles/nvidia-inference-harness-infrastructure-2026",
+  content: `Nvidia's demonstration at its developer conference carried a message that the venture capital community has been circling for some time but that the company now stated with directness: the performance that enterprise users experience from AI systems is determined less by the raw capability of the underlying model than by the quality of the infrastructure surrounding it. Latency, throughput, memory management, and the efficiency of the orchestration layer that connects models to enterprise data and tools — these variables, Nvidia argued with technical specificity, now account for performance differentials that exceed the differentials between the leading models themselves.
+
+The implication for the market is significant. If the harness matters more than the model, then the companies building inference infrastructure, serving layers, and enterprise integration tooling are capturing value that model providers cannot easily appropriate. It is a version of the argument Sequoia made in its State of AI report — that foundation models have become infrastructure — expressed in engineering rather than investment terms.`,
+  category: "LLMs",
+  author: "Staff Reporter",
+  size: "xs",
+  source: "seed",
+}
+
 // ─── ASSEMBLED ISSUES ─────────────────────────────────────────────────────────
 
 export const ISSUES: Issue[] = [
+  {
+    number: 188,
+    date: "2026-08-24",
+    label: "Monday, 24 August 2026",
+    lead: i188_lead,
+    secondary: [i188_secondary, i188_llm],
+    briefs: [i188_venture, i188_brief_nvidia, i188_brief_inherent, i188_brief_micro1],
+  },
   {
     number: 187,
     date: "2026-08-23",
