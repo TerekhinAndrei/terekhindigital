@@ -10,8 +10,9 @@ export interface Article {
   keywords: string[]
   url: string
   content: string
-  category?: Category
   author?: string
+  jsonld?: Record<string, unknown> | null
+  category?: Category
   size?: "xl" | "lg" | "md" | "sm" | "xs"
   source?: "rankcaster" | "seed"
 }

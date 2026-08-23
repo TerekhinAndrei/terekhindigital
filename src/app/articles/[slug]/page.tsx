@@ -66,7 +66,7 @@ export default async function ArticlePage({ params }: Props) {
     .filter((a) => a.slug !== slug && a.category === article.category)
     .slice(0, 4)
 
-  const jsonLd = {
+  const jsonLd = article.jsonld ?? {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     headline: article.title,

@@ -60,7 +60,8 @@ export default async function SlugPage({ params }: Props) {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
   const issue = LATEST_ISSUE
 
-  const jsonLd = {
+  // Prefer JSON-LD from RankCaster (already validated), fall back to generated
+  const jsonLd = article.jsonld ?? {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     headline: article.title,

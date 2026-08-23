@@ -5,12 +5,11 @@ import remarkGfm from "remark-gfm"
 
 interface Props {
   content: string
-  dropCap?: boolean
 }
 
-export default function MarkdownContent({ content, dropCap = true }: Props) {
+export default function MarkdownContent({ content }: Props) {
   return (
-    <div className={`prose-newspaper body-text${dropCap ? " drop-cap-first" : ""}`}>
+    <div className="prose-newspaper body-text">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
@@ -18,13 +17,7 @@ export default function MarkdownContent({ content, dropCap = true }: Props) {
           h1: ({ children }) => <h2>{children}</h2>,
           h2: ({ children }) => <h2>{children}</h2>,
           h3: ({ children }) => <h3>{children}</h3>,
-          // paragraphs: first one gets drop-cap class
-          p: ({ children, node, ...props }) => {
-            const isFirst =
-              dropCap &&
-              node?.position?.start.line === 1
-            return <p className={isFirst ? "drop-cap" : ""} {...props}>{children}</p>
-          },
+          p: ({ children }) => <p>{children}</p>,
           // blockquote → pull-quote style
           blockquote: ({ children }) => <blockquote>{children}</blockquote>,
           // *** → ornamental rule
