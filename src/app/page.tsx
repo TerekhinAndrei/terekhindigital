@@ -57,7 +57,7 @@ export default async function HomePage() {
     ...allSeed.filter((s) => !liveArticles.find((l) => l.slug === s.slug)),
   ]
 
-  const lead = liveArticles[0] ?? issue.lead
+  const lead = issue.lead
   const secondary = issue.secondary
   const briefs = issue.briefs
 
