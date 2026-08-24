@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og"
 import { playfairB64 } from "@/lib/og-font"
 
+export const runtime = "nodejs"
 export const alt = "Terekhin Digital Media — MarTech · Startups · LLMs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"

@@ -3,6 +3,7 @@ import { playfairB64 } from "@/lib/og-font"
 import { fetchArticle } from "@/lib/api"
 import { getArticleBySlug } from "@/lib/seed"
 
+export const runtime = "nodejs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
