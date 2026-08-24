@@ -19,11 +19,7 @@ export default async function Image({ params }: Props) {
   const category = article?.category ?? ""
   const author = article?.author ?? ""
 
-  const playfair = await fetch(
-    "https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2"
-  ).then((r) => r.arrayBuffer())
-
-  const titleSize = title.length > 80 ? 44 : title.length > 50 ? 54 : 64
+  const titleSize = title.length > 80 ? 42 : title.length > 50 ? 52 : 62
 
   return new ImageResponse(
     (
@@ -34,7 +30,7 @@ export default async function Image({ params }: Props) {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          fontFamily: "Playfair, Georgia, serif",
+          fontFamily: "Georgia, serif",
         }}
       >
         {/* Top ribbon */}
@@ -56,7 +52,7 @@ export default async function Image({ params }: Props) {
           <span>Morning Edition</span>
         </div>
 
-        {/* Article content area */}
+        {/* Article content */}
         <div
           style={{
             flex: 1,
@@ -65,43 +61,38 @@ export default async function Image({ params }: Props) {
             padding: "36px 60px 28px",
           }}
         >
-          {/* Top rule */}
           <div style={{ display: "flex", flexDirection: "column", gap: 3, marginBottom: 24 }}>
             <div style={{ height: 3, background: "#0a0a0a" }} />
             <div style={{ height: 1, background: "#0a0a0a" }} />
           </div>
 
-          {/* Category kicker */}
-          {category && (
+          {category ? (
             <div
               style={{
                 color: "#4a4a4a",
                 fontSize: 15,
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                marginBottom: 16,
-                fontFamily: "Playfair, Georgia, serif",
+                marginBottom: 18,
               }}
             >
               {category}
             </div>
-          )}
+          ) : null}
 
-          {/* Article title */}
           <div
             style={{
               color: "#0a0a0a",
               fontSize: titleSize,
-              fontWeight: 900,
-              lineHeight: 1.15,
-              fontFamily: "Playfair, Georgia, serif",
+              fontWeight: 700,
+              lineHeight: 1.2,
+              fontFamily: "Georgia, serif",
               flex: 1,
             }}
           >
             {title}
           </div>
 
-          {/* Bottom rule + byline */}
           <div>
             <div style={{ display: "flex", flexDirection: "column", gap: 3, marginBottom: 16 }}>
               <div style={{ height: 1, background: "#0a0a0a" }} />
@@ -119,15 +110,12 @@ export default async function Image({ params }: Props) {
               }}
             >
               {author ? <span>By {author}</span> : <span />}
-              <span style={{ letterSpacing: "0.2em" }}>terekhindigital.com</span>
+              <span>terekhindigital.com</span>
             </div>
           </div>
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [{ name: "Playfair", data: playfair, style: "normal", weight: 900 }],
-    }
+    { ...size }
   )
 }
