@@ -10,103 +10,105 @@ export default function Image() {
     (
       <div
         style={{
-          background: "#f4f0e8",
+          background: "#0a0a0a",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
           fontFamily: "Georgia, serif",
+          padding: "0 80px",
         }}
       >
-        {/* Top black ribbon */}
+        {/* Top rule */}
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginBottom: 40 }}>
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+          <div style={{ height: 3, background: "#f4f0e8" }} />
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+        </div>
+
+        {/* Overline */}
         <div
           style={{
-            background: "#0a0a0a",
-            color: "#f4f0e8",
-            fontSize: 15,
-            letterSpacing: "0.18em",
+            color: "#a09070",
+            fontSize: 14,
+            letterSpacing: "0.35em",
             textTransform: "uppercase",
-            padding: "10px 48px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            marginBottom: 24,
           }}
         >
-          <span>Est. MMXXV</span>
-          <span>Independent Digital Press</span>
-          <span>Morning Edition</span>
+          Est. MMXXV — Independent Digital Press
         </div>
 
-        {/* Masthead area */}
+        {/* Publication name */}
         <div
           style={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "0 60px",
+            color: "#f4f0e8",
+            fontSize: 88,
+            fontWeight: 700,
+            lineHeight: 1,
+            textAlign: "center",
+            fontFamily: "Georgia, serif",
           }}
         >
-          <div style={{ width: "100%", height: 1, background: "#0a0a0a", marginBottom: 22 }} />
-
-          <div
-            style={{
-              color: "#0a0a0a",
-              fontSize: 96,
-              fontWeight: 700,
-              letterSpacing: "0.01em",
-              textAlign: "center",
-              lineHeight: 1,
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Terekhin Digital Media
-          </div>
-
-          <div style={{ width: "100%", marginTop: 18, display: "flex", flexDirection: "column", gap: 4 }}>
-            <div style={{ height: 3, background: "#0a0a0a" }} />
-            <div style={{ height: 1, background: "#0a0a0a" }} />
-          </div>
-
-          <div
-            style={{
-              color: "#4a4a4a",
-              fontSize: 18,
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              textAlign: "center",
-              marginTop: 16,
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Rigorous Journalism at the Frontier of Digital Commerce &amp; Machine Intelligence
-          </div>
-
-          <div style={{ fontSize: 26, color: "#0a0a0a", marginTop: 20, letterSpacing: "0.5em" }}>
-            ✦ ✦ ✦
-          </div>
-
-          <div style={{ width: "100%", height: 1, background: "#0a0a0a", marginTop: 20 }} />
+          Terekhin Digital Media
         </div>
 
-        {/* Bottom black bar */}
+        {/* Tagline */}
         <div
           style={{
-            background: "#0a0a0a",
+            color: "#a09070",
+            fontSize: 20,
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            textAlign: "center",
+            marginTop: 28,
+            lineHeight: 1.5,
+          }}
+        >
+          Rigorous Journalism at the Frontier of
+        </div>
+        <div
+          style={{
+            color: "#a09070",
+            fontSize: 20,
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            textAlign: "center",
+            lineHeight: 1.5,
+          }}
+        >
+          Digital Commerce &amp; Machine Intelligence
+        </div>
+
+        {/* Bottom rule */}
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginTop: 40, marginBottom: 28 }}>
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+          <div style={{ height: 3, background: "#f4f0e8" }} />
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+        </div>
+
+        {/* Sections row */}
+        <div
+          style={{
+            display: "flex",
+            gap: 32,
             color: "#f4f0e8",
             fontSize: 13,
-            letterSpacing: "0.22em",
+            letterSpacing: "0.25em",
             textTransform: "uppercase",
-            padding: "10px 48px",
-            display: "flex",
-            justifyContent: "space-between",
+            opacity: 0.6,
           }}
         >
           <span>MarTech</span>
+          <span>|</span>
           <span>Startups</span>
-          <span>Large Language Models</span>
-          <span>Digital Strategy</span>
+          <span>|</span>
+          <span>LLMs</span>
+          <span>|</span>
+          <span>Venture</span>
+          <span>|</span>
           <span>terekhindigital.com</span>
         </div>
       </div>
