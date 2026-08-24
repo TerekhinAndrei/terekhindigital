@@ -5,68 +5,132 @@ export const alt = "Terekhin Digital Media — MarTech · Startups · LLMs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
-export default function Image() {
+export default async function Image() {
+  const playfair = await fetch(
+    "https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2"
+  ).then((r) => r.arrayBuffer())
+
   return new ImageResponse(
     (
       <div
         style={{
-          background: "#111010",
+          background: "#f4f0e8",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "60px 80px",
-          borderTop: "6px solid #f5f0e8",
+          fontFamily: "Playfair, Georgia, serif",
         }}
       >
+        {/* Top black ribbon */}
         <div
           style={{
-            color: "#f5f0e8",
-            fontSize: 80,
-            fontWeight: 900,
-            letterSpacing: "0.08em",
-            textAlign: "center",
+            background: "#0a0a0a",
+            color: "#f4f0e8",
+            fontSize: 15,
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
-            lineHeight: 1.1,
+            padding: "10px 48px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          Terekhin Digital
+          <span>Est. MMXXV — Independent Digital Press</span>
+          <span>Morning Edition</span>
+          <span>Vol. I</span>
         </div>
+
+        {/* Sub-rule */}
+        <div style={{ background: "#0a0a0a", height: 1, margin: "0 0" }} />
+
+        {/* Masthead area */}
         <div
           style={{
-            color: "#a09880",
-            fontSize: 22,
-            marginTop: 24,
-            letterSpacing: "0.35em",
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "0 60px",
+          }}
+        >
+          {/* Thin rule */}
+          <div style={{ width: "100%", height: 1, background: "#0a0a0a", marginBottom: 20 }} />
+
+          {/* Publication name */}
+          <div
+            style={{
+              color: "#0a0a0a",
+              fontSize: 100,
+              fontWeight: 900,
+              letterSpacing: "0.01em",
+              textAlign: "center",
+              lineHeight: 1,
+              fontFamily: "Playfair, Georgia, serif",
+            }}
+          >
+            Terekhin Digital Media
+          </div>
+
+          {/* Double rule */}
+          <div style={{ width: "100%", marginTop: 16, marginBottom: 8, display: "flex", flexDirection: "column", gap: 3 }}>
+            <div style={{ height: 3, background: "#0a0a0a" }} />
+            <div style={{ height: 1, background: "#0a0a0a" }} />
+          </div>
+
+          {/* Tagline */}
+          <div
+            style={{
+              color: "#4a4a4a",
+              fontSize: 20,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              textAlign: "center",
+              marginTop: 6,
+              fontFamily: "Playfair, Georgia, serif",
+            }}
+          >
+            Rigorous Journalism at the Frontier of Digital Commerce &amp; Machine Intelligence
+          </div>
+
+          {/* Ornament */}
+          <div style={{ fontSize: 28, color: "#0a0a0a", marginTop: 18, letterSpacing: "0.4em" }}>
+            ✦ ✦ ✦
+          </div>
+
+          {/* Thin rule */}
+          <div style={{ width: "100%", height: 1, background: "#0a0a0a", marginTop: 18 }} />
+        </div>
+
+        {/* Bottom black bar */}
+        <div
+          style={{
+            background: "#0a0a0a",
+            color: "#f4f0e8",
+            fontSize: 13,
+            letterSpacing: "0.25em",
             textTransform: "uppercase",
+            padding: "9px 48px",
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          MarTech · Startups · LLMs
-        </div>
-        <div
-          style={{
-            width: 60,
-            height: 2,
-            background: "#a09880",
-            marginTop: 28,
-            marginBottom: 28,
-          }}
-        />
-        <div
-          style={{
-            color: "#7a7060",
-            fontSize: 18,
-            maxWidth: 700,
-            textAlign: "center",
-            lineHeight: 1.6,
-          }}
-        >
-          Independent long-form journalism at the frontier of marketing technology, venture-backed startups, and large language models.
+          <span>MarTech</span>
+          <span>·</span>
+          <span>Startups &amp; Venture</span>
+          <span>·</span>
+          <span>Large Language Models</span>
+          <span>·</span>
+          <span>Digital Strategy</span>
+          <span>·</span>
+          <span>terekhindigital.com</span>
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [{ name: "Playfair", data: playfair, style: "normal", weight: 900 }],
+    }
   )
 }
