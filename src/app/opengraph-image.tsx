@@ -5,7 +5,11 @@ export const alt = "Terekhin Digital Media — MarTech · Startups · LLMs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
-export default function Image() {
+export default async function Image() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
+
+  const playfair = await fetch(`${siteUrl}/fonts/playfair-700.woff2`).then((r) => r.arrayBuffer())
+
   return new ImageResponse(
     (
       <div
@@ -17,25 +21,26 @@ export default function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "Georgia, serif",
+          fontFamily: "Playfair, Georgia, serif",
           padding: "0 80px",
         }}
       >
-        {/* Top rule */}
-        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginBottom: 40 }}>
-          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+        {/* Top triple rule */}
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginBottom: 44 }}>
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
           <div style={{ height: 3, background: "#f4f0e8" }} />
-          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
         </div>
 
         {/* Overline */}
         <div
           style={{
-            color: "#a09070",
+            color: "#9a8f7a",
             fontSize: 14,
             letterSpacing: "0.35em",
             textTransform: "uppercase",
-            marginBottom: 24,
+            marginBottom: 20,
+            fontFamily: "Playfair, Georgia, serif",
           }}
         >
           Est. MMXXV — Independent Digital Press
@@ -45,11 +50,11 @@ export default function Image() {
         <div
           style={{
             color: "#f4f0e8",
-            fontSize: 88,
+            fontSize: 86,
             fontWeight: 700,
             lineHeight: 1,
             textAlign: "center",
-            fontFamily: "Georgia, serif",
+            fontFamily: "Playfair, Georgia, serif",
           }}
         >
           Terekhin Digital Media
@@ -58,47 +63,37 @@ export default function Image() {
         {/* Tagline */}
         <div
           style={{
-            color: "#a09070",
-            fontSize: 20,
-            letterSpacing: "0.15em",
+            color: "#9a8f7a",
+            fontSize: 19,
+            letterSpacing: "0.18em",
             textTransform: "uppercase",
             textAlign: "center",
-            marginTop: 28,
-            lineHeight: 1.5,
+            marginTop: 26,
+            lineHeight: 1.6,
+            fontFamily: "Playfair, Georgia, serif",
           }}
         >
-          Rigorous Journalism at the Frontier of
-        </div>
-        <div
-          style={{
-            color: "#a09070",
-            fontSize: 20,
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            textAlign: "center",
-            lineHeight: 1.5,
-          }}
-        >
-          Digital Commerce &amp; Machine Intelligence
+          Rigorous Journalism at the Frontier of Digital Commerce &amp; Machine Intelligence
         </div>
 
-        {/* Bottom rule */}
-        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginTop: 40, marginBottom: 28 }}>
-          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+        {/* Bottom triple rule */}
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginTop: 44, marginBottom: 24 }}>
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
           <div style={{ height: 3, background: "#f4f0e8" }} />
-          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.4 }} />
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
         </div>
 
         {/* Sections row */}
         <div
           style={{
             display: "flex",
-            gap: 32,
+            gap: 28,
             color: "#f4f0e8",
             fontSize: 13,
             letterSpacing: "0.25em",
             textTransform: "uppercase",
-            opacity: 0.6,
+            opacity: 0.5,
+            fontFamily: "Playfair, Georgia, serif",
           }}
         >
           <span>MarTech</span>
@@ -113,6 +108,9 @@ export default function Image() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [{ name: "Playfair", data: playfair, style: "normal", weight: 700 }],
+    }
   )
 }

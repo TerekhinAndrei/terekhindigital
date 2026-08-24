@@ -19,103 +19,102 @@ export default async function Image({ params }: Props) {
   const category = article?.category ?? ""
   const author = article?.author ?? ""
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
+  const playfair = await fetch(`${siteUrl}/fonts/playfair-700.woff2`).then((r) => r.arrayBuffer())
+
   const titleSize = title.length > 80 ? 42 : title.length > 50 ? 52 : 62
 
   return new ImageResponse(
     (
       <div
         style={{
-          background: "#f4f0e8",
+          background: "#0a0a0a",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          fontFamily: "Georgia, serif",
+          fontFamily: "Playfair, Georgia, serif",
+          padding: "44px 64px",
         }}
       >
-        {/* Top ribbon */}
+        {/* Header */}
         <div
           style={{
-            background: "#0a0a0a",
-            color: "#f4f0e8",
-            fontSize: 13,
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            padding: "8px 48px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            color: "#9a8f7a",
+            fontSize: 13,
+            letterSpacing: "0.28em",
+            textTransform: "uppercase",
+            marginBottom: 24,
           }}
         >
           <span>Terekhin Digital Media</span>
-          <span>Est. MMXXV — Independent Digital Press</span>
-          <span>Morning Edition</span>
+          <span>Est. MMXXV</span>
         </div>
 
-        {/* Article content */}
-        <div
-          style={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            padding: "36px 60px 28px",
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "column", gap: 3, marginBottom: 24 }}>
-            <div style={{ height: 3, background: "#0a0a0a" }} />
-            <div style={{ height: 1, background: "#0a0a0a" }} />
-          </div>
+        {/* Top rule */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 28 }}>
+          <div style={{ height: 3, background: "#f4f0e8" }} />
+          <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
+        </div>
 
-          {category ? (
-            <div
-              style={{
-                color: "#4a4a4a",
-                fontSize: 15,
-                letterSpacing: "0.3em",
-                textTransform: "uppercase",
-                marginBottom: 18,
-              }}
-            >
-              {category}
-            </div>
-          ) : null}
-
+        {/* Category kicker */}
+        {category ? (
           <div
             style={{
-              color: "#0a0a0a",
-              fontSize: titleSize,
-              fontWeight: 700,
-              lineHeight: 1.2,
-              fontFamily: "Georgia, serif",
-              flex: 1,
+              color: "#9a8f7a",
+              fontSize: 14,
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              marginBottom: 18,
             }}
           >
-            {title}
+            {category}
           </div>
+        ) : null}
 
-          <div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 3, marginBottom: 16 }}>
-              <div style={{ height: 1, background: "#0a0a0a" }} />
-              <div style={{ height: 3, background: "#0a0a0a" }} />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                color: "#4a4a4a",
-                fontSize: 14,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-              }}
-            >
-              {author ? <span>By {author}</span> : <span />}
-              <span>terekhindigital.com</span>
-            </div>
+        {/* Article title */}
+        <div
+          style={{
+            color: "#f4f0e8",
+            fontSize: titleSize,
+            fontWeight: 700,
+            lineHeight: 1.2,
+            fontFamily: "Playfair, Georgia, serif",
+            flex: 1,
+          }}
+        >
+          {title}
+        </div>
+
+        {/* Bottom rule + byline */}
+        <div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 18 }}>
+            <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
+            <div style={{ height: 3, background: "#f4f0e8" }} />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              color: "#9a8f7a",
+              fontSize: 14,
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+            }}
+          >
+            {author ? <span>By {author}</span> : <span />}
+            <span>terekhindigital.com</span>
           </div>
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [{ name: "Playfair", data: playfair, style: "normal", weight: 700 }],
+    }
   )
 }
