@@ -68,7 +68,7 @@ const i187_martech: Article = {
 
 The announcement carries competitive significance that extends beyond raw numbers. It signals that the market for AI-augmented CRM has consolidated around a small number of platforms more rapidly than analysts anticipated, with the independent point-solution vendors that proliferated between 2022 and 2024 now facing the acquisition-or-attrition dynamic familiar from prior MarTech cycles.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "sm",
   source: "seed",
 }
@@ -104,7 +104,7 @@ const i187_startup_brief: Article = {
 
 The pattern is consistent across verticals. A healthcare AI firm that built audit trails, explainability dashboards, and human oversight workflows into its product architecture from the outset can complete an enterprise procurement process that now routinely includes AI governance questionnaires in a fraction of the time required by competitors who are retrofitting compliance onto existing systems.`,
   category: "Startups",
-  author: "Staff Reporter",
+  author: "J. Harwood",
   size: "xs",
   source: "seed",
 }
@@ -130,7 +130,7 @@ The consolidation has been particularly acute in the middle of the stack — the
 
 The vendors accelerating through this consolidation share certain characteristics. They have invested heavily in data integration, ensuring that the platform's AI models have access to unified customer data rather than siloed slices. They have prioritised explainability — not in a technical sense but in a business sense, ensuring that marketing professionals can understand and trust the recommendations the AI produces. And they have built governance workflows that allow human override without creating the friction that would cause practitioners to circumvent them.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "xl",
   source: "seed",
 }
@@ -166,7 +166,7 @@ const i186_martech: Article = {
   url: "/articles/first-party-data-clean-rooms-2026",
   content: `The organisations that treated the anticipated deprecation of third-party cookies not as a compliance event but as a strategic opportunity have, two years on, accumulated advantages that are proving difficult to replicate at speed. Their data infrastructure — built around identity resolution, clean-room partnerships, and sophisticated consent architectures — now functions as a competitive moat that their less-prepared peers are discovering the hard way.`,
   category: "MarTech",
-  author: "Staff Reporter",
+  author: "H. Terekhin",
   size: "sm",
   source: "seed",
 }
@@ -244,7 +244,7 @@ const i185_martech: Article = {
   url: "/articles/multi-touch-attribution-solved-ai-2026",
   content: `Meridian Analytics has published findings from a twelve-month study conducted with sixty-two enterprise clients, claiming that their probabilistic attribution engine — built on a fine-tuned open-source foundational model — outperforms traditional algorithmic attribution methods by thirty-one per cent on conversion accuracy. The results have attracted both significant interest and pointed scepticism.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "sm",
   source: "seed",
 }
@@ -322,7 +322,7 @@ const i184_martech: Article = {
   url: "/articles/death-of-mql-predictive-ai-demand-gen",
   content: `The marketing-qualified lead — defined by a score derived from behavioural signals that a prospect had passed a threshold of engagement sufficient to warrant sales attention — served as the operational handshake between marketing and sales functions for the better part of two decades. Its replacement by AI-driven intent models is not a marginal improvement in the machinery; it is a reconception of what demand generation is doing.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "sm",
   source: "seed",
 }
@@ -364,7 +364,7 @@ The third force is competitive. Once one player in a category deploys AI-augment
 
 The implications for the broader creative services ecosystem are complicated. The major holding company advertising agencies — WPP, Publicis, IPG — are simultaneously experiencing client pressure to match the cost economics of in-house GenStudio deployments and positioning themselves as the human intelligence layer that AI-generated content requires to achieve cultural resonance. Both pressures are real; the resolution of the tension between them will define the agency model for the next decade.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "xl",
   source: "seed",
 }
@@ -400,7 +400,7 @@ const i183_startup: Article = {
   url: "/articles/cdp-landscape-consolidation-2026",
   content: `The customer data platform, as a distinct software category with a distinct vendor ecosystem, is in the late stages of a familiar enterprise software trajectory: the functionality it pioneered is being absorbed by the platforms it was designed to complement, while the standalone vendors that built the category face the choice between acquisition and the slow erosion of the addressable market they once owned.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "sm",
   source: "seed",
 }
@@ -416,7 +416,7 @@ const i183_llm: Article = {
   url: "/articles/prompt-engineering-discipline-2026",
   content: `Prompt engineering — the practice of crafting inputs to language models in ways that reliably elicit high-quality outputs — occupies a peculiar position in the current technological landscape. It is simultaneously a specialised discipline in high demand, a set of skills being codified into formal curricula at universities and corporate training programmes, and a practice that the most capable current models are progressively rendering unnecessary through their improved ability to infer intent from ambiguous instructions.`,
   category: "LLMs",
-  author: "Staff Reporter",
+  author: "A. Pilgrim",
   size: "xs",
   source: "seed",
 }
@@ -472,7 +472,7 @@ Informational queries — how something works, what something is, how to evaluat
 
 The implications for brand strategy extend beyond search budgets. The queries that drove upper-funnel traffic were often the most important mechanism by which brands established authority in the minds of early-stage buyers. Losing that traffic does not merely reduce visitor counts; it removes a touchpoint that shaped purchase consideration before intent was fully formed.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "H. Terekhin",
   size: "md",
   source: "seed",
 }
@@ -666,7 +666,7 @@ The confirmed speaker roster includes the chief marketing officers of four Fortu
 
 Registration for the full conference is open at the standard rate through September 15, with a reduced rate for in-house practitioners as distinct from vendor representatives.`,
   category: "Events",
-  author: "Staff Reporter",
+  author: "Events Desk",
   size: "sm",
   source: "seed",
 }
@@ -684,7 +684,7 @@ const i188_event2: Article = {
 
 The two-day programme includes dedicated tracks on consent architecture under the Act's requirements for AI-powered marketing systems, the implications of the transparency obligations for personalisation engines, and — in what promises to be the most attended session — a panel of enforcement officials from three EU member state data protection authorities who will address, with varying degrees of frankness, what they are actually looking for in the first wave of AI Act investigations.`,
   category: "Events",
-  author: "Staff Reporter",
+  author: "Events Desk",
   size: "xs",
   source: "seed",
 }
