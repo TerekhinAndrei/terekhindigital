@@ -1,13 +1,21 @@
 import { ImageResponse } from "next/og"
 import { playfairB64 } from "@/lib/og-font"
 
-export const runtime = "nodejs"
 export const alt = "Terekhin Digital Media — MarTech · Startups · LLMs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
+function b64ToArrayBuffer(b64: string): ArrayBuffer {
+  const binaryStr = atob(b64)
+  const bytes = new Uint8Array(binaryStr.length)
+  for (let i = 0; i < binaryStr.length; i++) {
+    bytes[i] = binaryStr.charCodeAt(i)
+  }
+  return bytes.buffer
+}
+
 export default function Image() {
-  const fontData = Buffer.from(playfairB64, "base64")
+  const fontData = b64ToArrayBuffer(playfairB64)
 
   return new ImageResponse(
     (
@@ -24,77 +32,31 @@ export default function Image() {
           padding: "0 80px",
         }}
       >
-        {/* Top triple rule */}
         <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginBottom: 44 }}>
           <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
           <div style={{ height: 3, background: "#f4f0e8" }} />
           <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
         </div>
 
-        {/* Overline */}
-        <div
-          style={{
-            color: "#9a8f7a",
-            fontSize: 14,
-            letterSpacing: "0.35em",
-            textTransform: "uppercase",
-            marginBottom: 20,
-            fontFamily: "Playfair, Georgia, serif",
-          }}
-        >
+        <div style={{ color: "#9a8f7a", fontSize: 14, letterSpacing: "0.35em", textTransform: "uppercase", marginBottom: 20 }}>
           Est. MMXXV — Independent Digital Press
         </div>
 
-        {/* Publication name */}
-        <div
-          style={{
-            color: "#f4f0e8",
-            fontSize: 86,
-            fontWeight: 700,
-            lineHeight: 1,
-            textAlign: "center",
-            fontFamily: "Playfair, Georgia, serif",
-          }}
-        >
+        <div style={{ color: "#f4f0e8", fontSize: 86, fontWeight: 700, lineHeight: 1, textAlign: "center" }}>
           Terekhin Digital Media
         </div>
 
-        {/* Tagline */}
-        <div
-          style={{
-            color: "#9a8f7a",
-            fontSize: 19,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            textAlign: "center",
-            marginTop: 26,
-            lineHeight: 1.6,
-            fontFamily: "Playfair, Georgia, serif",
-          }}
-        >
+        <div style={{ color: "#9a8f7a", fontSize: 19, letterSpacing: "0.18em", textTransform: "uppercase", textAlign: "center", marginTop: 26, lineHeight: 1.6 }}>
           Rigorous Journalism at the Frontier of Digital Commerce &amp; Machine Intelligence
         </div>
 
-        {/* Bottom triple rule */}
         <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 5, marginTop: 44, marginBottom: 24 }}>
           <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
           <div style={{ height: 3, background: "#f4f0e8" }} />
           <div style={{ height: 1, background: "#f4f0e8", opacity: 0.35 }} />
         </div>
 
-        {/* Sections row */}
-        <div
-          style={{
-            display: "flex",
-            gap: 28,
-            color: "#f4f0e8",
-            fontSize: 13,
-            letterSpacing: "0.25em",
-            textTransform: "uppercase",
-            opacity: 0.5,
-            fontFamily: "Playfair, Georgia, serif",
-          }}
-        >
+        <div style={{ display: "flex", gap: 28, color: "#f4f0e8", fontSize: 13, letterSpacing: "0.25em", textTransform: "uppercase", opacity: 0.5 }}>
           <span>MarTech</span>
           <span>|</span>
           <span>Startups</span>
