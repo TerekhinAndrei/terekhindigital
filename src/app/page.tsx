@@ -552,8 +552,14 @@ export default async function HomePage() {
           </ul>
         </div>
       </footer>
-      <div style={{ background: "var(--ink)", color: "var(--paper)", textAlign: "center", padding: 8, fontFamily: "var(--font-old-standard), serif", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase" }}>
-        &copy; MMXXVI Terekhin Digital Media &mdash; All Rights Reserved &mdash; An Independent Digital Publication
+      <div style={{ background: "var(--ink)", color: "var(--paper)", padding: 8, fontFamily: "var(--font-old-standard), serif", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
+        <span>&copy; MMXXVI Terekhin Digital Media &mdash; All Rights Reserved &mdash; An Independent Digital Publication</span>
+        <a href="https://rankcaster.ai" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.7, flexShrink: 0, lineHeight: 0 }}>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcSet="https://rankcaster.ai/badge-dark.svg" />
+            <img src="https://rankcaster.ai/badge-light.svg" alt="AI Visibility tracked by RankCaster AI" width={110} height={18} style={{ display: "block" }} />
+          </picture>
+        </a>
       </div>
     </>
   )

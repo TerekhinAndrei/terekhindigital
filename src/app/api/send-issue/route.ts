@@ -27,6 +27,8 @@ async function handleRequest(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: "RESEND_API_KEY or RESEND_AUDIENCE_ID not configured" }, { status: 503 })
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
   // Only send when today's issue is live. Date is compared in UTC.
   const today = new Date().toISOString().slice(0, 10)
   if (LATEST_ISSUE.date !== today) {
@@ -38,9 +40,7 @@ async function handleRequest(req: NextRequest): Promise<NextResponse> {
     })
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY)
   const from = process.env.RESEND_FROM_EMAIL ?? "Terekhin Digital Media <digest@terekhindigital.com>"
-
   const html = renderIssueEmail(LATEST_ISSUE)
 
   const { data, error } = await resend.broadcasts.create({
