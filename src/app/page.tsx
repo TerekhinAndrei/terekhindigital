@@ -384,7 +384,7 @@ export default async function HomePage() {
           <>
             <SectionRule label="The Digital Desk — Opinion" />
             <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 16, marginBottom: 24 }}>
-              <article style={{ maxWidth: 720 }}>
+              <article>
                 <div className="kicker" style={{ fontStyle: "italic" }}>Commentary &bull; {opinionArticles[0].author ?? "A. Terekhin"}</div>
                 <Link href={`/articles/${opinionArticles[0].slug}`} style={{ textDecoration: "none" }}>
                   <h2 className="headline-lg" style={{ marginBottom: 10 }}>{opinionArticles[0].title}</h2>
@@ -410,7 +410,7 @@ export default async function HomePage() {
         {dataArticles.length > 0 && (
           <>
             <SectionRule label="Data &amp; Analysis" />
-            <div style={{ display: "grid", gridTemplateColumns: dataArticles.length === 1 ? "1fr" : "2fr 1fr", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }} id="data">
+            <div style={{ display: "grid", gridTemplateColumns: dataArticles.length === 1 ? "1fr" : "2fr 1fr", alignItems: "start", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }} id="data">
               {dataArticles.map((a, i) => (
                 <article key={a.slug} style={{ paddingRight: i < dataArticles.length - 1 ? 12 : 0, borderRight: i < dataArticles.length - 1 ? "1px solid var(--rule)" : "none", paddingLeft: i > 0 ? 12 : 0 }}>
                   <div className="kicker">Data &amp; Analysis</div>
@@ -441,7 +441,7 @@ export default async function HomePage() {
         {eventArticles.length > 0 && (
           <>
             <SectionRule label="Events &amp; Conferences" />
-            <div style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(eventArticles.length, 4)}, 1fr)`, gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }} id="events">
+            <div style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(eventArticles.length, 4)}, 1fr)`, alignItems: "start", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }} id="events">
               {eventArticles.map((a, i) => (
                 <div key={a.slug} style={{ borderRight: i < eventArticles.length - 1 ? "1px solid var(--rule)" : "none", paddingRight: 12, paddingLeft: i > 0 ? 12 : 0 }}>
                   <div className="kicker">Events</div>
@@ -461,7 +461,7 @@ export default async function HomePage() {
 
         {/* ── ISSUE ARCHIVE ── */}
         <SectionRule label="Recent Issues" />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", alignItems: "start", gap: "0 var(--col-gap)", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
           {ISSUES.map((iss) => (
             <div
               key={iss.number}
