@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og"
-import { readFileSync } from "fs"
-import { join } from "path"
+import { playfairB64 } from "@/lib/og-font"
 import { fetchArticle } from "@/lib/api"
 import { getArticleBySlug } from "@/lib/seed"
 
@@ -20,8 +19,7 @@ export default async function Image({ params }: Props) {
   const category = article?.category ?? ""
   const author = article?.author ?? ""
 
-  const playfair = readFileSync(join(process.cwd(), "public/fonts/playfair-700.woff2"))
-
+  const fontData = Buffer.from(playfairB64, "base64")
   const titleSize = title.length > 80 ? 42 : title.length > 50 ? 52 : 62
 
   return new ImageResponse(
@@ -114,7 +112,7 @@ export default async function Image({ params }: Props) {
     ),
     {
       ...size,
-      fonts: [{ name: "Playfair", data: playfair, style: "normal", weight: 700 }],
+      fonts: [{ name: "Playfair", data: fontData, style: "normal", weight: 700 }],
     }
   )
 }

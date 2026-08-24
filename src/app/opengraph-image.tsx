@@ -1,13 +1,12 @@
 import { ImageResponse } from "next/og"
-import { readFileSync } from "fs"
-import { join } from "path"
+import { playfairB64 } from "@/lib/og-font"
 
 export const alt = "Terekhin Digital Media — MarTech · Startups · LLMs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
 export default function Image() {
-  const playfair = readFileSync(join(process.cwd(), "public/fonts/playfair-700.woff2"))
+  const fontData = Buffer.from(playfairB64, "base64")
 
   return new ImageResponse(
     (
@@ -109,7 +108,7 @@ export default function Image() {
     ),
     {
       ...size,
-      fonts: [{ name: "Playfair", data: playfair, style: "normal", weight: 700 }],
+      fonts: [{ name: "Playfair", data: fontData, style: "normal", weight: 700 }],
     }
   )
 }
