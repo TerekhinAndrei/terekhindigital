@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og"
+import { readFileSync } from "fs"
+import { join } from "path"
 import { fetchArticle } from "@/lib/api"
 import { getArticleBySlug } from "@/lib/seed"
 
-export const runtime = "edge"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -19,8 +20,7 @@ export default async function Image({ params }: Props) {
   const category = article?.category ?? ""
   const author = article?.author ?? ""
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
-  const playfair = await fetch(`${siteUrl}/fonts/playfair-700.woff2`).then((r) => r.arrayBuffer())
+  const playfair = readFileSync(join(process.cwd(), "public/fonts/playfair-700.woff2"))
 
   const titleSize = title.length > 80 ? 42 : title.length > 50 ? 52 : 62
 

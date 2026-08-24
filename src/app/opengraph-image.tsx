@@ -1,14 +1,13 @@
 import { ImageResponse } from "next/og"
+import { readFileSync } from "fs"
+import { join } from "path"
 
-export const runtime = "edge"
 export const alt = "Terekhin Digital Media — MarTech · Startups · LLMs"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
-export default async function Image() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
-
-  const playfair = await fetch(`${siteUrl}/fonts/playfair-700.woff2`).then((r) => r.arrayBuffer())
+export default function Image() {
+  const playfair = readFileSync(join(process.cwd(), "public/fonts/playfair-700.woff2"))
 
   return new ImageResponse(
     (
