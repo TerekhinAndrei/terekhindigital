@@ -4,6 +4,12 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "regions": ["fra1"],
+  "crons": [
+    {
+      "path": "/api/send-issue",
+      "schedule": "0 8 * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
