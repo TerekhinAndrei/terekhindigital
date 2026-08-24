@@ -66,7 +66,6 @@ export const metadata: Metadata = {
     title: "Terekhin Digital Media — MarTech · Startups · LLMs",
     description:
       "Independent long-form journalism at the frontier of marketing technology, venture-backed startups, and large language models.",
-    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "Terekhin Digital Media" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -74,7 +73,6 @@ export const metadata: Metadata = {
     creator: "@terekhindigital",
     title: "Terekhin Digital Media",
     description: "Independent journalism on MarTech, Startups, and LLMs.",
-    images: ["/og-default.jpg"],
   },
   alternates: {
     canonical: SITE_URL,

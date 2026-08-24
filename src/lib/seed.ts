@@ -30,7 +30,7 @@ It is this boundary — the edge between confident autonomous execution and situ
 
 The market for agentic infrastructure has, predictably, attracted substantial capital. Twelve months ago, the category barely existed as a distinct investment thesis. Today, according to PitchBook data aggregated by Terekhin Digital Media, venture capital allocations to companies focused specifically on enterprise agent orchestration, safety tooling, and deployment infrastructure exceed four billion dollars on a trailing twelve-month basis.`,
   category: "LLMs",
-  author: "A. Terekhin",
+  author: "A. Pilgrim",
   size: "xl",
   source: "seed",
 }
@@ -86,7 +86,7 @@ const i187_llm_brief: Article = {
 
 For enterprise buyers, this shift has moved AI from a line item requiring executive justification to a utility as routine as cloud storage. The workflow automation applications that were economically marginal at forty dollars per million tokens become unambiguously viable at eight. The analysis tasks that required careful prioritisation of which documents to process can now simply process everything.`,
   category: "LLMs",
-  author: "Staff Reporter",
+  author: "A. Pilgrim",
   size: "sm",
   source: "seed",
 }
@@ -150,7 +150,7 @@ The results arrive at a moment of particular sensitivity for the professional se
 
 What the benchmark figures do not resolve — and what the professional bodies are acutely aware of — is the distinction between passing an examination and competently practising a profession. The examination assesses a particular kind of structured knowledge retrieval. The profession requires judgment under uncertainty, contextual sensitivity, ethical navigation, and accountability.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "md",
   source: "seed",
 }
@@ -210,7 +210,7 @@ The financial services applications are equally significant. Earnings call analy
 
 Not all of the anticipated use cases have materialised cleanly. The creative applications — book-length narrative continuity, cross-chapter consistency in long-form drafts — have proven more dependent on model quality than on context length per se. The models' ability to maintain coherent attention across the full million-token extent remains uneven, with performance degrading for queries that require synthesising information distributed sparsely across a very large document.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "xl",
   source: "seed",
 }
@@ -228,7 +228,7 @@ const i185_secondary: Article = {
 
 The open-source ecosystem that developed around the Llama architecture has produced, among its most commercially significant contributions, a set of fine-tuning techniques that allow organisations with relatively modest computational resources to achieve performance on specialised tasks that rivals proprietary models costing orders of magnitude more to produce and operate. The insurance underwriting model trained on a Llama base by a mid-sized European insurer — requiring approximately forty thousand dollars of compute and six months of specialist annotation — has, according to independent evaluations, outperformed a major commercial model on the insurer's specific documentation tasks.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "md",
   source: "seed",
 }
@@ -306,7 +306,7 @@ Fine-tuning excels when the task requires consistent stylistic or behavioural ad
 
 The teams that have operated both approaches at scale for more than eighteen months are now deploying them in combination more frequently than they are choosing between them — fine-tuned models served with RAG retrieval for domain knowledge, a pattern that addresses the complementary weaknesses of each.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "md",
   source: "seed",
 }
@@ -384,7 +384,7 @@ The positive findings are meaningful. Constitutional AI has demonstrably reduced
 
 The limitations are equally real. Constitutional AI is effective at addressing the content categories its constitution addresses; it is less effective at the subtler forms of problematic behaviour that emerge from capable models operating in complex social and institutional contexts.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "md",
   source: "seed",
 }
@@ -452,7 +452,7 @@ RankCaster, which positions itself in the third category, has been among the mor
 
 What is not in question is that the brands which treat AI visibility as a strategic priority — rather than a monitoring exercise — are accumulating advantages that compound. The models that will be trained on 2027 corpora are being shaped, right now, by the content that authoritative sources are publishing. The brands that understand this and act on it are not merely tracking their position in AI-generated answers; they are actively participating in the process by which those answers are formed.`,
   category: "MarTech",
-  author: "M. Richardson",
+  author: "A. Vismark",
   size: "xl",
   source: "seed",
 }
@@ -492,7 +492,7 @@ The companies that have moved beyond experimental Claude deployments are, in the
 
 This shift matters for how enterprises think about the value and risk profile of their AI investments. A model that answers questions has a limited blast radius; a model that orchestrates actions has a fundamentally different risk surface, and the governance frameworks that enterprises have built around conversational AI are proving inadequate for the agentic pattern.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "sm",
   source: "seed",
 }
@@ -530,7 +530,7 @@ The claims have attracted the mixture of interest and scepticism that attends an
 
 The broader significance, if the results are validated, lies not in the ranking but in the proliferation of highly capable specialised models. The era in which the frontier was defined by two or three organisations appears to be contracting.`,
   category: "LLMs",
-  author: "Dr. T. Nakamura",
+  author: "A. Pilgrim",
   size: "xs",
   source: "seed",
 }
@@ -578,7 +578,7 @@ I do not write this as a complaint. The organisations that will navigate this tr
 
 The attention economy is not dead. It has been restructured, at considerable speed, around new intermediaries who play by different rules. The productive response is not to mourn the old rules but to learn the new ones faster than your competitors.`,
   category: "Opinion",
-  author: "A. Terekhin",
+  author: "H. Terekhin",
   size: "lg",
   source: "seed",
 }
@@ -602,7 +602,7 @@ Three variables account for the majority of the explained variance in operationa
 
 The sector breakdown reveals patterns that cut against some prevailing narratives. Financial services, often cited as an early and sophisticated AI adopter, ranks third in operational impact behind healthcare and manufacturing — both sectors that invested heavily in structured data infrastructure before AI became commercially viable. Technology companies, despite higher stated confidence in AI capability, cluster towards the "deployer not achiever" segment at rates that suggest internal complexity and legacy architecture are as significant constraints as any external factor.`,
   category: "Data & Analysis",
-  author: "Editorial Research Desk",
+  author: "H. Terekhin",
   size: "md",
   source: "seed",
 }
@@ -620,7 +620,7 @@ const i188_data_brief: Article = {
 
 The practical implication is not merely that AI is cheaper. It is that the architectural choices made under cost constraints — selective processing, aggressive chunking, retrieval-augmented rather than full-context approaches — may be suboptimal under the emerging cost regime. Organisations that designed their AI infrastructure for a cost environment that no longer exists should audit those design decisions.`,
   category: "Data & Analysis",
-  author: "Editorial Research Desk",
+  author: "A. Pilgrim",
   size: "xs",
   source: "seed",
 }
@@ -702,7 +702,7 @@ const i188_brief_nvidia: Article = {
 
 The implication for the market is significant. If the harness matters more than the model, then the companies building inference infrastructure, serving layers, and enterprise integration tooling are capturing value that model providers cannot easily appropriate. It is a version of the argument Sequoia made in its State of AI report — that foundation models have become infrastructure — expressed in engineering rather than investment terms.`,
   category: "LLMs",
-  author: "Staff Reporter",
+  author: "A. Pilgrim",
   size: "xs",
   source: "seed",
 }

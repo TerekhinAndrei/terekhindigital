@@ -6,7 +6,7 @@ import BreakingTicker from "@/components/BreakingTicker"
 import SubscribeForm from "@/components/SubscribeForm"
 import { fetchArticles } from "@/lib/api"
 import { LATEST_ISSUE, ISSUES, getAllArticles } from "@/lib/seed"
-import { formatDate, formatDateShort } from "@/lib/utils"
+import { formatDateShort, stripMarkdown } from "@/lib/utils"
 import type { Article } from "@/types"
 
 export const revalidate = 300
@@ -28,16 +28,18 @@ function PullQuote({ children }: { children: React.ReactNode }) {
   return <div className="pull-quote">{children}</div>
 }
 
-function ArticleBody({ content, className = "" }: { content: string; className?: string }) {
-  const paragraphs = content
+function previewParagraphs(content: string, n = 3): string[] {
+  return content
     .split(/\n\n+/)
-    .map((p) => p.trim())
-    .filter(Boolean)
-    .slice(0, 3)
+    .map((p) => stripMarkdown(p.trim()))
+    .filter((p) => p.length > 20)
+    .slice(0, n)
+}
 
+function ArticleBody({ content, className = "" }: { content: string; className?: string }) {
   return (
     <div className={`body-text ${className}`}>
-      {paragraphs.map((p, i) => (
+      {previewParagraphs(content).map((p, i) => (
         <p key={i}>{p}</p>
       ))}
     </div>
@@ -111,7 +113,7 @@ export default async function HomePage() {
             )}
 
             <div className="body-text drop-cap">
-              {lead.content.split(/\n\n+/).slice(0, 3).map((p, i) => <p key={i}>{p.trim()}</p>)}
+              {previewParagraphs(lead.content, 3).map((p, i) => <p key={i}>{p}</p>)}
             </div>
 
             <PullQuote>
@@ -119,7 +121,7 @@ export default async function HomePage() {
             </PullQuote>
 
             <div className="body-text">
-              {lead.content.split(/\n\n+/).slice(3, 5).map((p, i) => <p key={i}>{p.trim()}</p>)}
+              {previewParagraphs(lead.content.split(/\n\n+/).slice(3).join("\n\n"), 2).map((p, i) => <p key={i}>{p}</p>)}
             </div>
           </article>
 
@@ -149,7 +151,7 @@ export default async function HomePage() {
                   </div>
                 )}
                 <div className="body-text">
-                  {secondary[0].content.split(/\n\n+/).slice(0, 2).map((p, i) => <p key={i}>{p.trim()}</p>)}
+                  {previewParagraphs(secondary[0].content, 2).map((p, i) => <p key={i}>{p}</p>)}
                 </div>
               </article>
             )}
@@ -163,7 +165,7 @@ export default async function HomePage() {
                   <h2 className="headline-md" style={{ marginBottom: 8 }}>{secondary[1].title}</h2>
                 </Link>
                 <div className="body-text">
-                  {secondary[1].content.split(/\n\n+/).slice(0, 2).map((p, i) => <p key={i}>{p.trim()}</p>)}
+                  {previewParagraphs(secondary[1].content, 2).map((p, i) => <p key={i}>{p}</p>)}
                 </div>
                 <div className="byline" style={{ marginTop: 8 }}>
                   <span>By {secondary[1].author ?? "Staff Reporter"}</span>
@@ -263,7 +265,7 @@ export default async function HomePage() {
                   </div>
                 )}
                 <div className="body-text drop-cap">
-                  {startupArticles[0].content.split(/\n\n+/).slice(0, 4).map((p, i) => <p key={i}>{p.trim()}</p>)}
+                  {previewParagraphs(startupArticles[0].content, 4).map((p, i) => <p key={i}>{p}</p>)}
                 </div>
               </article>
             )}
@@ -391,7 +393,7 @@ export default async function HomePage() {
                   <p className="deck" style={{ marginBottom: 12, fontStyle: "italic" }}>{opinionArticles[0].teaser}</p>
                 )}
                 <div className="body-text drop-cap">
-                  {opinionArticles[0].content.split(/\n\n+/).slice(0, 3).map((p, i) => <p key={i}>{p.trim()}</p>)}
+                  {previewParagraphs(opinionArticles[0].content, 3).map((p, i) => <p key={i}>{p}</p>)}
                 </div>
                 <div className="byline" style={{ marginTop: 10 }}>
                   <span>{opinionArticles[0].author ?? "A. Terekhin"}, Editor-at-Large</span>

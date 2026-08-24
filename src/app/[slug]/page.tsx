@@ -60,26 +60,49 @@ export default async function SlugPage({ params }: Props) {
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terekhindigital.com"
   const issue = LATEST_ISSUE
 
-  // Prefer JSON-LD from RankCaster (already validated), fall back to generated
-  const jsonLd = article.jsonld ?? {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    headline: article.title,
-    description: article.teaser,
-    datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
-    author: article.author ? { "@type": "Person", name: article.author } : undefined,
-    publisher: {
-      "@type": "NewsMediaOrganization",
-      name: "Terekhin Digital Media",
-      url: SITE_URL,
-    },
-    image: article.imageUrl ? { "@type": "ImageObject", url: article.imageUrl } : undefined,
-    url: `${SITE_URL}/${slug}`,
-    keywords: article.keywords?.join(", "),
-    articleSection: article.category,
-    isAccessibleForFree: true,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/${slug}` },
+  // Build NewsArticle JSON-LD. If RankCaster returned jsonld, extract the Article entity
+  // from @graph (the outer container has no @type which fails schema validators).
+  let jsonLd: Record<string, unknown>
+  const rcGraph = article.jsonld?.["@graph"]
+  if (Array.isArray(rcGraph)) {
+    const { "@type": _t, ...articleEntity } = (rcGraph.find(
+      (x: Record<string, unknown>) => x["@type"] === "Article" || x["@type"] === "NewsArticle"
+    ) ?? {}) as Record<string, unknown>
+    jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      ...articleEntity,
+      url: `${SITE_URL}/${slug}`,
+      isAccessibleForFree: true,
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/${slug}` },
+      publisher: {
+        "@type": "NewsMediaOrganization",
+        name: "Terekhin Digital Media",
+        url: SITE_URL,
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+      },
+    }
+  } else {
+    jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      headline: article.title,
+      description: article.teaser,
+      datePublished: article.publishedAt,
+      dateModified: article.publishedAt,
+      author: article.author ? { "@type": "Person", name: article.author } : undefined,
+      publisher: {
+        "@type": "NewsMediaOrganization",
+        name: "Terekhin Digital Media",
+        url: SITE_URL,
+      },
+      image: article.imageUrl ? { "@type": "ImageObject", url: article.imageUrl } : undefined,
+      url: `${SITE_URL}/${slug}`,
+      keywords: article.keywords?.join(", "),
+      articleSection: article.category,
+      isAccessibleForFree: true,
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/${slug}` },
+    }
   }
 
   return (

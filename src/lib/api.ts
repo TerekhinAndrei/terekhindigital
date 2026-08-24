@@ -24,7 +24,23 @@ export async function fetchArticle(slug: string): Promise<Article | null> {
     })
     if (!res.ok) return null
     const data = await res.json()
-    return { ...data, source: "rankcaster" as const }
+
+    // Extract author from jsonld @graph Article entity (API doesn't return author at top level)
+    let authorName: string | undefined
+    const graph = data.jsonld?.["@graph"]
+    if (Array.isArray(graph)) {
+      const articleEntity = graph.find(
+        (x: Record<string, unknown>) => x["@type"] === "Article" || x["@type"] === "NewsArticle"
+      ) as Record<string, unknown> | undefined
+      const authorObj = articleEntity?.["author"] as Record<string, unknown> | undefined
+      if (typeof authorObj?.["name"] === "string") authorName = authorObj["name"]
+    }
+
+    return {
+      ...data,
+      author: data.author ?? authorName,
+      source: "rankcaster" as const,
+    }
   } catch {
     return null
   }
