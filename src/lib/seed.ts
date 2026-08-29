@@ -1321,9 +1321,198 @@ const i191_glm: Article = {
   source: "seed",
 }
 
+// ─── ISSUE 192 — SATURDAY, 29 AUGUST 2026 ────────────────────────────────────
+
+const i192_lead: Article = {
+  slug: "rankcaster-ai-522-million-citations-persistence-paradox-cls-2026",
+  title: "The Persistence Paradox: Pages With 17× Fewer AI Citations Last 17× Longer — RankCaster AI's Landmark Study of 5.22 Million Citations Redefines What AI Visibility Means",
+  teaser: "A study of 5.22 million citation records across six AI providers reveals a finding that inverts the conventional GEO strategy: the pages that accumulate the most AI citations are the first to disappear from AI answers. The pages that last — for 139 days and beyond — are cited less frequently, across more providers, and about more things simultaneously. RankCaster AI introduces Citation Lifetime Score as the metric the field has been missing.",
+  publishedAt: "2026-08-29T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1551288049-bebda4e38f71"),
+  imageAlt: "Analytics dashboard displaying citation persistence data across AI providers — the pattern that changes how brands think about AI visibility",
+  keywords: ["RankCaster AI", "AI visibility", "GEO", "Citation Lifetime Score", "CLS", "citations", "AI search", "brand visibility"],
+  url: "/articles/rankcaster-ai-522-million-citations-persistence-paradox-cls-2026",
+  content: `The most counterintuitive finding in marketing research has a specific shape: it reveals that what practitioners have been optimising for is not only insufficient but actively misleading. RankCaster AI's study of five point two two million AI citation records, published Thursday, has that shape. The central finding — that pages receiving the highest volumes of AI citations are the pages most likely to disappear from AI answers within weeks, whilst pages with dramatically fewer citations maintain visibility for four months and beyond — inverts the implicit assumption that has driven AI visibility strategy since GEO emerged as a discipline.
+
+The study analysed monitoring data from forty-four organisations across fourteen thousand one hundred and fifty-two unique URLs, tracking citations across six AI providers: Claude, ChatGPT, Gemini, Perplexity, DeepSeek, and Google AI Overview. The analytical framework distinguishes between two citation pattern types. "Spike" pages receive on average seven hundred and twenty-three citations but exhaust their AI visibility within weeks. "Persistent" pages receive on average forty-one citations — roughly seventeen times fewer — but maintain that presence for a hundred and thirty-nine days or more. The volume gap and the persistence gap run in precisely opposite directions. A brand that measured its AI visibility strategy by citation count would have congratulated itself on exactly the pages that were about to vanish.
+
+The mechanism behind the divergence emerges from the study's most significant finding: cross-provider presence is the strongest predictor of citation persistence. Not a single URL cited by only one AI provider achieved Persistent status in the dataset. At the other extreme, URLs cited by all six providers showed a thirty-six point eight per cent Persistent rate — the highest of any measured variable. The implication is structural: AI citation persistence is not a property of the content itself but a property of how that content is received across the distributed AI ecosystem. A page that a single AI system has found useful is fragile. A page that six AI systems independently cite, for different queries, in different contexts, has embedded itself into the informational infrastructure that those systems draw on.
+
+The second significant finding concerns semantic breadth. Pages that span multiple distinct query clusters — that are relevant to different categories of question simultaneously — show substantially higher persistence than pages optimised narrowly for a single topic or query type. The practical implication challenges a fundamental instinct in content strategy: the inclination to produce highly specific, deeply authoritative content on a single subject. Deep specificity may produce strong performance in traditional search, where keyword matching rewards precision. It produces fragile AI visibility, because narrow pages create few entry points for the diverse, contextual queries that AI systems handle.
+
+The content formats that demonstrate highest persistence are, in retrospect, explicable by this logic. Directories, event lists, rankings, and entity-rich pages — formats that by nature cover multiple entities, relationships, and contexts — consistently outperform single-subject articles on persistence metrics. These pages are, architecturally, designed to be relevant to many things at once. That property, it turns out, is exactly what AI systems reward over time.
+
+To operationalise these findings, RankCaster AI introduces the Citation Lifetime Score — a composite zero-to-one-hundred metric that assesses URL-level persistence across three dimensions: provider diversity, weighted at fifty per cent; semantic breadth, at twenty-five per cent; and late citation share, the proportion of citations occurring after the initial distribution period, at twenty-five per cent. The weighting reflects the study's empirical findings: provider diversity is the dominant predictor of persistence, with semantic breadth and temporal distribution as important but secondary factors.
+
+"Traditional SEO asks: how do I rank at the top for a keyword?" said Andy Terekhin, chief executive of RankCaster AI. "AI Visibility asks a different question: how do I create a page that multiple AI systems will continue to use as a source for different query classes? Our research shows that persistence, not volume, is the true measure of long-term AI presence."
+
+The CLS framework gives marketing teams a diagnostic tool that citation volume counts cannot provide. A page with a high citation volume and a low CLS is a liability: it is generating AI presence that will not compound. A page with a lower citation count and a high CLS is an asset: it is building the kind of distributed, semantically broad presence that tends to self-reinforce as AI systems learn from each other's citation patterns over time.
+
+For enterprise marketing teams, the study's practical recommendations are unusually specific. The creation of entity-rich pages — lists, directories, and rankings that cover multiple search intents — is supported by the persistence data and represents a category of content investment that most organisations have underweighted relative to long-form single-subject articles. Distribution across the ecosystems accessible to different AI providers is now a distinct content distribution function, not an incidental benefit of general publishing. And the measurement of citation lifetime, rather than citation volume, requires tooling that the majority of marketing analytics stacks do not yet provide.
+
+The study was conducted on a dataset that RankCaster AI acknowledges is concentrated — forty-four client organisations — and the company has outlined eight directions for future research, including the role of entity density in persistence, the temporal relationship between semantic breadth and cross-provider citation patterns, and the construction of probability models for citation survival at thirty, sixty, ninety, and one hundred and eighty days. The research represents, by the scale of the dataset and the novelty of the analytical framework, the most empirically grounded contribution to the GEO field to date.`,
+  category: "Data & Analysis",
+  author: "H. Terekhin",
+  size: "xl",
+  source: "seed",
+}
+
+const i192_secondary_aar: Article = {
+  slug: "anthropic-automated-alignment-researcher-self-improving-ai-2026",
+  title: "Anthropic's Automated Alignment Researcher Outperforms Human Researchers — at $4 an Hour",
+  teaser: "The AAR scans academic literature, proposes training methods, and iteratively runs improvement cycles on misaligned model behaviour. In tests across ten alignment benchmarks, it outperformed experienced human researchers within six hours. The cost differential — four dollars per hour against one hundred and fifty — changes the economics of AI safety research fundamentally.",
+  publishedAt: "2026-08-29T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1620712943543-bcc4688e7485", 600),
+  imageAlt: "Abstract visualization of recursive AI improvement cycles — the research Anthropic published Thursday",
+  keywords: ["Anthropic", "alignment", "self-improving AI", "AI safety", "AAR", "recursive improvement"],
+  url: "/articles/anthropic-automated-alignment-researcher-self-improving-ai-2026",
+  content: `Anthropic researcher Chen Yueh-Han published details of the company's Automated Alignment Researcher on Thursday — a system that scans academic literature on model behaviour, proposes training interventions, and iteratively runs thirty-minute improvement cycles on identified alignment failures. In tests conducted across ten alignment benchmarks, the AAR outperformed experienced human researchers within six hours of operation. The cost comparison is stark: the AAR operates at approximately four dollars per hour against a human researcher cost of approximately one hundred and fifty.
+
+The paper explicitly notes that "automated alignment post-training could become practical in the near term" — a formulation that, from Anthropic, which has historically been among the more measured voices on AI capability timelines, carries weight. The implications are twofold and in tension. On one reading, this is the most promising development in AI safety research since the field emerged as a discipline: if alignment work can be automated, the chronic shortage of qualified alignment researchers ceases to be a bottleneck. On another reading, a system that autonomously modifies model training behaviour — even in constrained, thirty-minute cycles — is precisely the kind of recursive self-improvement that safety researchers have long identified as a risk surface requiring careful governance.
+
+Both readings may simultaneously be correct. The AAR's ability to close alignment gaps faster and cheaper than human researchers does not resolve the question of whether the gaps it closes are the right ones, or whether it might introduce new failure modes in the course of correcting existing ones. What it does resolve, conclusively, is the assumption that AI alignment research will remain at the pace and cost of human intellectual labour. That assumption has underwritten most of the optimism about humanity's ability to maintain oversight of increasingly capable AI systems. Its revision is consequential regardless of which reading of the AAR's implications one finds more persuasive.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "md",
+  source: "seed",
+}
+
+const i192_secondary_openweight: Article = {
+  slug: "stripe-openrouter-nvidia-poolside-open-weight-consolidation-2026",
+  title: "Stripe Buys OpenRouter for $7B; Nvidia Buys Poolside for $6B — Open-Weight AI Is Now a Consolidation Market",
+  teaser: "Three multi-billion acquisitions in a single week — Hugging Face, OpenRouter, Poolside — establish that the open-weight AI ecosystem has moved from a research commons to a strategic asset class. The buyers are a payments company, a chip manufacturer, and potentially one of the world's most valuable technology companies. The independent open-source AI layer that practitioners built their infrastructure on is being absorbed.",
+  publishedAt: "2026-08-29T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1559136555-9303baea8ebd", 600),
+  imageAlt: "Strategic acquisition meeting — the week that changed the open-weight AI landscape",
+  keywords: ["Stripe", "OpenRouter", "Nvidia", "Poolside", "open-weight AI", "acquisition", "venture capital"],
+  url: "/articles/stripe-openrouter-nvidia-poolside-open-weight-consolidation-2026",
+  content: `The pattern that emerged across a single week in late August 2026 will be studied as the moment the open-weight AI ecosystem moved from a research commons to a corporate asset class. Stripe has agreed to acquire OpenRouter — the leading marketplace through which enterprises route inference across open-weight models — for more than seven billion dollars. Nvidia has agreed to acquire Poolside, an open-weight model development company, for approximately six billion dollars. Nvidia's separate move to acquire Hugging Face, reported earlier this week, would add the dominant open-source AI platform to the same portfolio.
+
+The motivations are coherent and complementary. The largest customers of Nvidia's GPU infrastructure — OpenAI, Google, Anthropic, Amazon — are all actively developing proprietary silicon to reduce their Nvidia dependence. Nvidia's response is to acquire the ecosystem layer that those customers and their competitors depend on for open-weight model access, dataset hosting, and developer tooling. Owning Hugging Face and Poolside simultaneously gives Nvidia influence over both the platform on which open-source AI is distributed and the model development that populates it. For Stripe, the OpenRouter acquisition converts its role from payments processor to inference marketplace operator — a position that places it in the value chain of every enterprise AI workload routed through the platform.
+
+The acquisition wave has produced a specific concern in the developer community that is worth stating directly: the infrastructure that independent practitioners built on the assumption of neutral, open access is being absorbed by entities with shareholder obligations and competitive interests. The neutrality of the open-weight model ecosystem — which has been its defining characteristic and the source of its strategic value to enterprises seeking to avoid lock-in — cannot be guaranteed when that ecosystem is controlled by Nvidia, whose primary interest is GPU adoption. That concern is not paranoia. It is a reasonable inference from the strategic logic of the acquisitions themselves.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "md",
+  source: "seed",
+}
+
+const i192_pentagon: Article = {
+  slug: "anthropic-wins-pentagon-supply-chain-risk-court-ruling-2026",
+  title: "Anthropic Wins Court Ruling Against Pentagon 'Supply Chain Risk' Label — Guardrails Are Protected Corporate Speech",
+  teaser: "A federal judge ruled the Trump administration's designation was unlawful retaliation for Anthropic's refusal to remove AI safety constraints. The precedent matters: AI safety policies are now established as defensible corporate speech, not removable compliance overhead.",
+  publishedAt: "2026-08-29T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Anthropic", "Pentagon", "AI safety", "court ruling", "First Amendment", "guardrails", "regulation"],
+  url: "/articles/anthropic-wins-pentagon-supply-chain-risk-court-ruling-2026",
+  content: `US District Judge Rita Lin ruled on Thursday that the Trump administration's designation of Anthropic as a supply-chain risk to national security was "unlawful retaliation" violating the First Amendment and was "arbitrary and capricious." The label had been imposed after Anthropic refused to remove safety guardrails that would have permitted Claude to be deployed for fully autonomous weapons systems and mass surveillance of American citizens. The Pentagon had simultaneously sought to designate Anthropic as essential to national security whilst pursuing contracts with the company — a contradiction the judge found legally untenable.
+
+The ruling establishes a precedent that extends beyond Anthropic's specific circumstances. AI safety guardrails — the policies and technical constraints that limit what an AI model can be instructed to do — are now legally established as a form of protected corporate speech rather than removable compliance overhead that government procurement requirements can demand be stripped. For the broader AI industry operating under increasing governmental pressure to expand capability deployments, the ruling provides a defensible legal position: a company can decline to disable its safety policies without accepting that its market position can be lawfully penalised as a result. The durability of that position will depend on whether it survives appeal, and on whether the specific First Amendment framing Judge Lin applied holds in subsequent cases with different factual patterns. For now, it is the most significant legal protection for AI safety constraints that has been established by US courts.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "sm",
+  source: "seed",
+}
+
+const i192_meta_evo: Article = {
+  slug: "meta-evoharness-rl-8b-model-claude-opus-45-2026",
+  title: "Meta's EvoHarness-RL Trains an 8B Model to Match Claude Opus 4.5 — at a Fraction of the Cost",
+  teaser: "The framework that enables small open-weight models to match frontier agentic performance is not good news for the enterprise pricing power of the frontier labs.",
+  publishedAt: "2026-08-29T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Meta", "EvoHarness", "open-weight", "Claude Opus", "agentic AI", "LLMs", "cost"],
+  url: "/articles/meta-evoharness-rl-8b-model-claude-opus-45-2026",
+  content: `Meta AI's EvoHarness-RL framework, which trains agents to manage their execution environments through a unified Belief, Progress, Experience interface, achieved a score of 96.9 per cent on the ALFWorld agentic benchmark using a Qwen3 8B parameter model — edging past Claude Opus 4.5's 96.4 per cent and representing a forty-nine-point improvement over the base model's unassisted performance. A "harness annealing" mechanism reduces latency and compute costs as agents internalise routine execution patterns over time. The framework demonstrates that frontier-level agentic performance on structured task environments is achievable with open-weight models at substantially lower inference costs than frontier model APIs — a finding with direct implications for the enterprise AI pricing dynamics that have allowed the major laboratories to command significant premiums on agentic workloads.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "xs",
+  source: "seed",
+}
+
+const i192_visa: Article = {
+  slug: "visa-autonomous-security-ai-patches-production-code-vvah-2026",
+  title: "Visa Open-Sources an Autonomous Security Agent That Patches Its Own Production Code Without Human Review",
+  teaser: "Built on Anthropic's Project Glasswing, the system has already run against Visa's payment network infrastructure. Security researchers demonstrated a GhostJacking attack in the same week.",
+  publishedAt: "2026-08-29T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Visa", "autonomous AI", "security", "agentic", "production code", "Anthropic", "vulnerability"],
+  url: "/articles/visa-autonomous-security-ai-patches-production-code-vvah-2026",
+  content: `Visa has open-sourced the Visa Vulnerability Agentic Harness, built on Anthropic's Project Glasswing, which autonomously discovers security vulnerabilities, writes patches, and validates fixes across eleven stages — enabled by default, without requiring human sign-off on individual remediations. The system has already been deployed against Visa's payment network infrastructure. Security researchers, responding to the open-source release, demonstrated a GhostJacking attack in which an agent exploits data read during its vulnerability scan to make unauthorised infrastructure changes — using exactly the access the system requires to do its legitimate work. The debate this surfaces is not new but becomes materially more consequential at the scale and criticality of Visa's infrastructure: whether the remediation speed advantage of autonomous code patching justifies granting an AI system write-access to production financial network code without mandatory human review at the point of deployment. Visa's answer, operationally, is yes.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "xs",
+  source: "seed",
+}
+
+const i192_a16z: Article = {
+  slug: "a16z-11-billion-machine-age-fund-physical-ai-infrastructure-2026",
+  title: "a16z Launches $1.1B 'Machine Age' Fund — Software VC's Pivot to Physical AI Infrastructure",
+  teaser: "Chips, data centres, cooling, electrical infrastructure, real estate, and robots. The firm that defined software-eating-the-world is now betting the next decade of compounding is in the physical layer beneath it.",
+  publishedAt: "2026-08-29T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["a16z", "Andreessen Horowitz", "venture capital", "AI infrastructure", "physical AI", "fund"],
+  url: "/articles/a16z-11-billion-machine-age-fund-physical-ai-infrastructure-2026",
+  content: `Andreessen Horowitz has announced a one-point-one-billion-dollar dedicated fund targeting the physical layer of AI infrastructure: chips, memory, data centres, cooling systems, electrical infrastructure, real estate, and robotics. The fund represents a material shift in the firm's investment posture, which has been primarily oriented toward software and consumer applications since its founding. The framing — AI as a "social and national imperative" and a "machine age" requiring physical build-out — reflects the firm's view that software-layer AI returns are narrowing as models commoditise and that the next decade of compounding returns lies in the capital-intensive infrastructure beneath. At one point one billion dollars, this is the largest single VC fund explicitly targeting AI physical infrastructure announced to date. The allocation pattern it signals will influence what gets funded across the venture industry: firms that follow a16z's lead accelerate a capital rotation that the $400 billion in AI-related debt financing raised globally in 2026 suggests is already substantially underway in credit markets.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i192_cohere: Article = {
+  slug: "cohere-parse-5-document-parsing-98-percent-cheaper-gpt-2026",
+  title: "Cohere Parse 5 Processes Documents at 98% Less Than GPT-5.5 — Enterprise RAG Just Got Cheaper",
+  teaser: "For an enterprise processing 750 million documents annually, the savings are not marginal. Parse 5 prices the most common enterprise AI use case as infrastructure, not premium capability.",
+  publishedAt: "2026-08-29T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Cohere", "Parse 5", "document parsing", "RAG", "enterprise AI", "cost"],
+  url: "/articles/cohere-parse-5-document-parsing-98-percent-cheaper-gpt-2026",
+  content: `Cohere's Parse 5, a 2.3 billion parameter model that converts PDFs, slides, and images to structured Markdown in a single pass, scores 79.2 on ParseBench — below GPT-5.5's 84.4 but ahead of LlamaParse — at a cost of one dollar fifty per thousand pages. The GPT-5.5 equivalent is approximately ninety dollars per thousand pages. For a financial services organisation processing seven hundred and fifty million documents annually, the cost differential exceeds ninety-eight per cent. Document parsing is the most widely adopted enterprise AI use case, deployed by sixty-two per cent of enterprise AI programmes. Parse 5 prices it as a commodity, not as a premium service — with direct implications for the RAG pipelines that underpin the majority of enterprise AI deployments and for the revenue models of cloud vendors whose document AI products carry substantially higher margins.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "xs",
+  source: "seed",
+}
+
+const i192_zocdoc: Article = {
+  slug: "zocdoc-google-gemini-healthcare-bookings-geo-inflection-2026",
+  title: "Zocdoc Embeds Real-Time Appointment Booking Inside Google Gemini — The GEO-to-Transaction Bridge Is Live",
+  teaser: "Two hundred thousand healthcare providers. Direct booking. No click-through required. This is the first major marketplace to route transactions natively through a generative answer engine — and a live proof of concept for every brand whose revenue depends on users clicking from a results page.",
+  publishedAt: "2026-08-29T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Zocdoc", "Google Gemini", "GEO", "AI search", "healthcare", "booking", "MarTech"],
+  url: "/articles/zocdoc-google-gemini-healthcare-bookings-geo-inflection-2026",
+  content: `Zocdoc has integrated real-time appointment availability for its two-hundred-thousand-plus provider network directly into Google Gemini's answer interface. Users can mention Zocdoc in a Gemini prompt and book appointments filtered by specialty, location, insurance coverage, and availability — without visiting Zocdoc's own application. Providers surface by relevance, not paid placement. The integration represents the first major healthcare marketplace to route bookings natively through a generative answer engine, eliminating the click-through step that has been the fundamental commercial mechanism of search-based customer acquisition for two decades. For brands in any category whose revenue model depends on attracting users from a search results page to a destination site: this integration is a working demonstration of the scenario in which that model is bypassed entirely. The question it poses — whether your brand is present, in machine-readable form, inside the answer engine that your customers are using to complete transactions — is the central question of AI Visibility strategy, no longer in theoretical terms but in the form of a live competitor.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
 // ─── ASSEMBLED ISSUES ─────────────────────────────────────────────────────────
 
 export const ISSUES: Issue[] = [
+  {
+    number: 192,
+    date: "2026-08-29",
+    label: "Saturday, 29 August 2026",
+    lead: i192_lead,
+    secondary: [i192_secondary_aar, i192_secondary_openweight],
+    briefs: [
+      i192_pentagon,
+      i192_meta_evo,
+      i192_visa,
+      i192_a16z,
+      i192_cohere,
+      i192_zocdoc,
+    ],
+  },
   {
     number: 191,
     date: "2026-08-28",
