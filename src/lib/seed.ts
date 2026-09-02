@@ -1807,7 +1807,179 @@ const i194_grindr: Article = {
   source: "seed",
 }
 
+// ─── ISSUE 195 — WEDNESDAY, 2 SEPTEMBER 2026 ─────────────────────────────────
+
+const i195_lead: Article = {
+  slug: "claude-fable-51-mythos-51-75-percent-cache-price-cut-agentic-2026",
+  title: "Claude Fable 5.1 Cuts Cache Pricing by 75% — and the Real Story Is What Anthropic Is Building Toward",
+  teaser: "Anthropic's Fable 5.1 and Mythos 5.1 carry the same underlying model but two different deployment regimes. The 75% cache-read price cut makes long-context agentic workloads commercially viable at enterprise scale. The restricted Mythos release — gated to vetted cybersecurity and life-sciences organisations — is Anthropic's first attempt to demonstrate that frontier capability and responsible deployment can coexist as product decisions rather than as marketing claims.",
+  publishedAt: "2026-09-02T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1677442135703-1787eea5ce01"),
+  imageAlt: "Abstract neural network visualization — the Fable 5.1 release that changed enterprise AI cost calculus",
+  keywords: ["Anthropic", "Claude Fable 5.1", "Mythos 5.1", "pricing", "agentic AI", "enterprise AI", "LLMs", "cache"],
+  url: "/articles/claude-fable-51-mythos-51-75-percent-cache-price-cut-agentic-2026",
+  content: `Anthropic released Claude Fable 5.1 to general availability and Claude Mythos 5.1 in restricted access on Monday, with a pricing change that immediately became the most-discussed AI pricing development since OpenAI's GPT-4 launch. Cache-read pricing for Fable 5.1 drops 75 per cent, from one dollar to twenty-five cents per million tokens. Base rates — ten dollars input, fifty dollars output per million tokens — are unchanged. Anthropic estimates the effective cost reduction at approximately 25 per cent for typical workloads and 45 per cent for highly agentic workloads that depend heavily on cached context. At the benchmark level, the improvements over Fable 5 are significant: Terminal-Bench-Science improves from 24.7 per cent to 52.6 per cent; AutomationBench from 17.1 per cent to 31.4 per cent; CursorBench from 60-something to 73.4 per cent.
+
+The pricing structure matters more than the benchmarks for enterprise adoption. The economics of agentic workloads are fundamentally different from single-prompt use cases: an autonomous agent completing a multi-hour investigation reads and re-reads large context windows repeatedly, accumulating cache costs that can dwarf the base inference cost. At one dollar per million cache-read tokens, the TCO for agentic Claude deployments has been the primary objection from enterprise procurement teams for the past two quarters. At twenty-five cents, that objection has a materially different answer. Anthropic's estimate of 45 per cent cost reduction for highly agentic workloads is not marketing language — it reflects the actual cost structure of agent loops.
+
+The Mythos 5.1 deployment strategy is the more conceptually interesting development. Mythos 5.1 runs the same underlying model as Fable 5.1 but with different safeguard configurations, available only to organisations that have passed a vetting process focused on cybersecurity and life-sciences applications. The rationale is not explained in detail by Anthropic, but the implications are legible: Mythos 5.1 is designed for use cases where the maximum capability of the model is required and the operator can be trusted to manage the risk surface. Life-sciences organisations are deploying it for protein design; one result reported in the release materials is experimentally validated protein binders produced by the model's autonomous research capability.
+
+The dual-release structure attempts something that the frontier AI field has struggled to operationalise: deploying different capability profiles to different classes of operator based on trust level, rather than releasing a single version and relying on post-deployment content policy to constrain misuse. Whether it works as a safety mechanism depends entirely on the quality of the vetting process, which Anthropic has not described publicly. As a product decision, it is the clearest statement yet that Anthropic views responsible deployment as a distribution strategy, not a constraint on distribution.
+
+The practical recommendation for enterprise AI teams is direct: if your Claude workloads involve agentic task completion, long-context reasoning, or repeated retrieval over large document sets, the pricing change makes a new set of use cases commercially viable that were previously uneconomical. Run the numbers against your current token logs. The 45 per cent reduction on highly agentic workloads is not uniformly distributed — it applies precisely to the highest-cost, highest-value use cases, which are exactly the ones enterprises should be prioritising.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "xl",
+  source: "seed",
+}
+
+const i195_secondary_recall: Article = {
+  slug: "google-technion-llms-recall-failure-hallucination-retrieval-not-encoding-2026",
+  title: "LLMs Encode 95% of Facts and Recall 65% — Hallucination Is a Retrieval Problem, Not a Knowledge Problem",
+  teaser: "A Google Research and Technion Institute study of GPT-5 and Gemini-3 finds that frontier models encode nearly everything they are trained on — but fail to retrieve a quarter of it during standard inference. Extended reasoning recovers most of the gap. The finding inverts the dominant assumption behind RAG architecture: most hallucinations do not occur because the model lacks the knowledge.",
+  publishedAt: "2026-09-02T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1507146153580-69a1fe6d8aa1", 600),
+  imageAlt: "Brain neural connections visualization — the recall research that reframes AI hallucination",
+  keywords: ["hallucination", "RAG", "LLMs", "Google Research", "Technion", "retrieval", "AI research", "reasoning"],
+  url: "/articles/google-technion-llms-recall-failure-hallucination-retrieval-not-encoding-2026",
+  content: `A joint study by Google Research and the Technion Institute, published Monday, tested how much of what frontier language models learn during training they can actually access during inference. The results are both reassuring and practically inconvenient. GPT-5 and Gemini-3 encode 95 to 98 per cent of tested facts parametrically — the knowledge is in the model, established during training. But standard inference retrieves only 65 to 74 per cent of that encoded knowledge. The gap — 26 to 34 per cent of encoded facts that cannot be directly recalled — maps closely to observed hallucination rates in structured knowledge tasks.
+
+The mechanism the study proposes is the tip-of-the-tongue phenomenon transposed to artificial systems: the model has the information but fails to surface it through the inference pathway activated by the query. Extended reasoning — chain-of-thought and inference-time compute — recovers 40 to 65 per cent of initially inaccessible facts. The implication is that many hallucinations are not failures of knowledge but failures of retrieval, and that reasoning steps create alternative inference pathways that can access what direct retrieval misses.
+
+This finding is inconvenient for the dominant enterprise AI architecture of 2024-2025: Retrieval Augmented Generation. The standard RAG deployment rationale has been that models hallucinate because they lack the relevant knowledge, so providing that knowledge via external retrieval prevents hallucination. If most hallucinations arise from retrieval failure of knowledge the model already has, then augmenting retrieval with more external documents may not address the root cause. The study's practical recommendations reflect this: avoid reflexively using RAG for all hallucination problems; apply inference-time reasoning selectively to the 10 to 20 per cent of facts that standard retrieval misses; implement query reformulation and verification loops rather than defaulting to external knowledge injection.
+
+A secondary finding compounds the practical challenge: scaling models worsens recall failure rates because larger models encode vastly more facts, creating a larger pool of inaccessible knowledge from which retrieval failures can occur. The models that hallucinate least are not necessarily the ones that know the most; they are the ones whose inference architecture most reliably surfaces what they know. That observation has direct implications for model selection in enterprise deployments where factual reliability is the primary criterion. The biggest model is not automatically the most reliable retriever of its own knowledge.
+
+For enterprise architects building RAG systems, the study does not argue that RAG is wrong — it argues that RAG solves a different problem than hallucination reduction. RAG's genuine value is providing context the model was never trained on, for current events, proprietary documents, or rapidly changing information. For the broader hallucination problem, the study suggests the correct interventions are reasoning elicitation, query reformulation, and verification loops. These are architectural choices that most RAG deployments have not made because the retrieval framing made them seem unnecessary. They are not.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "md",
+  source: "seed",
+}
+
+const i195_secondary_afterquery: Article = {
+  slug: "afterquery-32-billion-yc-fastest-unicorn-expert-knowledge-ai-2026",
+  title: "AfterQuery Is Y Combinator's Fastest-Ever Unicorn at $3.2B — Because AI Needs What the Internet Doesn't Have",
+  teaser: "Two 22-year-olds built a company that encodes expert human reasoning for AI training, went from $300M to $3.2B in five months, and became the fastest startup in YC's history to reach unicorn status. The valuation trajectory is a direct signal about where scarcity lives in the AI stack as model training on internet data commoditises.",
+  publishedAt: "2026-09-02T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1552664730-d307ca884978", 600),
+  imageAlt: "Two young founders working at a laptop — the startup that became YC's fastest unicorn by solving AI's knowledge quality problem",
+  keywords: ["AfterQuery", "Y Combinator", "unicorn", "AI training data", "expert knowledge", "RLHF", "venture capital"],
+  url: "/articles/afterquery-32-billion-yc-fastest-unicorn-expert-knowledge-ai-2026",
+  content: `AfterQuery reached a three-point-two-billion-dollar valuation on Monday, having been valued at three hundred million dollars in an April 2026 Series A — a ten-times increase in under five months, and, per Y Combinator partner Gustaf Alströmer, the fastest path to unicorn status in the accelerator's twenty-year history. The founders are twenty-two and twenty-three years old.
+
+The company's product is not a model, an agent, or a platform. AfterQuery employs knowledge professionals to encode expert reasoning and decision patterns for AI training. Its customers — which include Nvidia, Legora, and Motif Technologies — are purchasing high-quality structured knowledge that internet-scale scraping cannot produce. The premise is specific and, in retrospect, obvious: the largest AI training datasets in existence are built from publicly available internet text, which is long on opinions and short on expert-level disciplinary reasoning across specialised domains. The knowledge that makes a model useful for medical diagnosis, legal analysis, advanced engineering, or financial modelling exists primarily in the heads of practitioners, not in the text they have published online. AfterQuery's model is to extract and structure that knowledge, at scale, through human operators, and sell it as training data.
+
+The valuation jump from three hundred million to three point two billion dollars in five months reflects two converging forces. The first is that the major frontier labs have consumed most of the high-quality public text data that exists, and the next performance gains in specialised domains require curated expert knowledge that cannot be scraped. The second is that enterprise customers are willing to pay for models that perform reliably in high-stakes specialised contexts — not just models that score well on general benchmarks. AfterQuery is positioned at the intersection of both forces.
+
+The narrative that the AI era will eliminate knowledge workers collides directly with AfterQuery's business model. The company's growth rate implies that expert human knowledge is becoming more valuable, not less, as AI scales — because the gap between what language models know from internet text and what they need to know for specialised professional deployment is the gap AfterQuery's human operators fill. That gap exists, and it is large, and it will persist as long as the knowledge needed to train specialist models for high-stakes applications is not publicly available online. The fastest unicorn in YC history is a company that sells the most traditional thing in the knowledge economy: expert human judgment, structured for machine consumption.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "md",
+  source: "seed",
+}
+
+const i195_watermarking: Article = {
+  slug: "anthropic-claude-watermarking-global-seo-content-implications-2026",
+  title: "Anthropic Is Watermarking All Claude Output Globally — and SEO Teams Are Running Tests",
+  teaser: "Claude's word-selection process now embeds a machine-readable signal in every output, worldwide, in response to EU AI Act Article 50. The watermark cannot distinguish edited human-AI collaboration from unedited slop. GEO practitioners are already asking whether Google will treat it as a ranking signal.",
+  publishedAt: "2026-09-02T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Anthropic", "watermarking", "AI content", "SEO", "GEO", "EU AI Act", "content marketing", "Claude"],
+  url: "/articles/anthropic-claude-watermarking-global-seo-content-implications-2026",
+  content: `Anthropic's AI output watermarking — announced August 11 in response to EU AI Act Article 50(2) requirements — is now deployed globally, applying to all Claude outputs regardless of where they are produced. The technology replaces randomness in Claude's word-selection process with choices guided by a secret key; the output reads normally to humans but carries a detectable statistical pattern. There are no hidden characters, no metadata injection, and no user identification. The watermark is present in all Claude-generated text by design, and it cannot distinguish between an AI-generated first draft that a human editor has significantly revised and an unmodified AI-generated piece published without any human involvement.
+
+That inability to distinguish is the technical limitation that has immediate practical consequences for the content marketing industry. The dominant content workflow in enterprise marketing teams — use AI to generate a draft, apply significant human editorial judgment, publish the result — produces output that carries the same watermark as unedited AI content. If detection tools, search engines, or platform algorithms begin reading watermark signals as a proxy for content quality or authenticity, the edited-AI-draft workflow acquires a structural liability that the purely-human-written workflow does not.
+
+The practical question circulating in SEO communities is direct: will Google read this signal? Google has not confirmed that it uses Claude's watermark as a ranking factor, and the company has stated repeatedly that its ranking systems evaluate content quality based on demonstrated helpfulness rather than production method. But Google has also said that AI-generated content is acceptable as long as it meets quality standards — a formulation that leaves room for watermark detection to inform how quality standards are assessed. GEO practitioners are testing whether the degree of human editing degrades the watermark signal sufficiently to affect detection. The early results are not public. The concern is real.
+
+The watermark also affects the AI Visibility question more directly than the organic search question. AI systems that read watermarked content — either as training data or as retrieved context — may develop distinct treatment pathways for content with statistical signals of AI origin. That treatment is not yet documented by any major AI provider. It will be.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "sm",
+  source: "seed",
+}
+
+const i195_astra: Article = {
+  slug: "openai-astra-autonomous-cybersecurity-capability-frontier-2026",
+  title: "OpenAI's Astra Model Benchmarks as a Top-Tier Autonomous Threat Actor — Before Public Release",
+  teaser: "The safety card for OpenAI's unreleased Astra model documents its ability to autonomously compromise computer systems at a level that exceeds prior frontier benchmarks. The pre-release disclosure is itself a pattern worth noting.",
+  publishedAt: "2026-09-02T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["OpenAI", "Astra", "cybersecurity", "AI safety", "offensive AI", "frontier AI", "dual-use"],
+  url: "/articles/openai-astra-autonomous-cybersecurity-capability-frontier-2026",
+  content: `OpenAI's pre-release safety documentation for Astra, its next frontier model, discloses that the model demonstrates autonomous computer-system compromise capability at a level that places it among the most capable AI-based offensive cyber tools evaluated to date. The model is not in general release; the disclosure is part of OpenAI's pre-deployment safety assessment process. The pattern — major lab publishes safety card documenting elevated offensive cyber performance before release — is becoming the de facto transparency mechanism for dual-use capability disclosure. It raises a question the industry has not resolved: at what capability level does pre-release disclosure become insufficient as a risk management approach, and what governance mechanism replaces it? The precedent is that AI models with autonomous offensive cyber capabilities at this benchmark level are assessed, documented, and then released to enterprise customers under acceptable-use policies. Whether that policy framework is adequate for the capability level Astra represents is a question that the safety card alone cannot answer.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "sm",
+  source: "seed",
+}
+
+const i195_air: Article = {
+  slug: "air-50-million-sequoia-greenoaks-ai-agent-security-mcp-2026",
+  title: "AIR Raises $50M to Secure the AI Agent Supply Chain — the SSL Certificate Layer for MCP and Skills",
+  teaser: "Every MCP server, plugin, and skill an enterprise AI agent uses is an unsigned, unvetted trust extension. AIR vets and blocks them. The Unit 8200 founders are applying offensive security expertise to the attack surface that every AI deployment creates.",
+  publishedAt: "2026-09-02T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["AIR", "AI agent security", "MCP", "Sequoia", "Greenoaks", "cybersecurity", "enterprise AI", "startup"],
+  url: "/articles/air-50-million-sequoia-greenoaks-ai-agent-security-mcp-2026",
+  content: `AIR raised fifty million dollars across two seed rounds — ten million led by Sequoia Capital, then forty million led by Greenoaks Capital, closed within weeks of each other — to build continuous vetting and blocking infrastructure for the tools that enterprise AI agents use. The platform discovers all AI agents running inside an organisation, audits the MCP servers, plugins, and skills those agents are connected to, and blocks tools that fail security checks. The threat model: attackers can poison content that AI agents consume, or compromise tool packages that agents invoke, creating supply-chain attack surfaces that traditional endpoint security does not cover. AIR flags approximately 27 per cent of available agent add-ons and skills as potentially risky. Founders Yair Saban and Niv Hoffman are Unit 8200 veterans with offensive cybersecurity backgrounds; angels include Wiz co-founder Yinon Costica and Cognition president Zach Frankel. The Sequoia plus Greenoaks double bet on a two-seed sequence is unusual and reflects the speed at which enterprise AI agent deployments are creating demand for the governance layer AIR provides.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i195_adsense: Article = {
+  slug: "google-adsense-begin-to-render-impressions-february-2027-publishers-2026",
+  title: "Google AdSense Switches to 'Begin-to-Render' Impression Counting in February 2027 — Publishers Should Expect Lower Numbers",
+  teaser: "Impressions will only count when ads successfully start rendering on a user's device. The change aligns AdSense with Ad Manager and means publishers will see fewer total impressions — though genuine viewability may rise.",
+  publishedAt: "2026-09-02T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Google AdSense", "impressions", "publisher revenue", "programmatic", "ad tech", "Begin-to-Render"],
+  url: "/articles/google-adsense-begin-to-render-impressions-february-2027-publishers-2026",
+  content: `From 17 February 2027, Google AdSense will count an impression only when an ad has successfully loaded and begun rendering on a user's device, rather than at the moment it begins downloading. Ads that begin downloading but never render — because the user navigated away, connection speed was insufficient, or the page load failed — will no longer count as impressions. Google warns that publishers "may see a change in total impressions." The expected direction is down. The change aligns AdSense with how Google Ad Manager, and the rest of Google's inventory — native, app, and video — already count impressions, and standardises toward the viewability-as-default model that programmatic advertising has been moving toward for a decade. For display-heavy publishers relying on raw impression volume as a revenue driver, this changes monthly earnings calculations from Q1 2027. CPMs on remaining impressions may rise as inventory quality improves in measurable terms. Publishers have five months to adjust their yield expectations with ad operations teams.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
+const i195_google_reviews: Article = {
+  slug: "google-ads-ai-generated-review-summaries-sponsored-results-brand-safety-2026",
+  title: "Google Is Generating AI Summaries of Brand Reviews Inside Sponsored Search Results — Without Advertiser Approval",
+  teaser: "A new 'What customers love' section, explicitly labelled AI-generated, is appearing in paid search placements, synthesised from store rating data. Brands have no editorial control over what the AI emphasises.",
+  publishedAt: "2026-09-02T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Google Ads", "AI content", "review summaries", "brand safety", "paid search", "GEO", "advertising"],
+  url: "/articles/google-ads-ai-generated-review-summaries-sponsored-results-brand-safety-2026",
+  content: `Google is testing a section labelled "What customers love," explicitly tagged as "AI-generated from the store rating reviews," inside sponsored search results. The summaries synthesise existing store rating review data — no content is generated from scratch — and appear as part of the paid placement without advertiser approval or editorial control over what the AI synthesis chooses to surface or emphasise. Similar AI summaries already appear in hotel panels, local packs, and shopping ads; the extension to standard paid search placements is new. For reputation management practitioners, this creates a distinct risk: a brand's paid ad placement may now include an AI characterisation of customer sentiment that the brand did not review, did not approve, and cannot edit. For brand safety teams, it blurs the line between earned review content and paid ad creative in ways that existing approval workflows do not address. The transparency label is Google's clearest move yet toward mandatory AI disclosure inside paid search — and a signal that AI synthesis of brand reputation signals inside paid placements will become standard, not experimental.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
 export const ISSUES: Issue[] = [
+  {
+    number: 195,
+    date: "2026-09-02",
+    label: "Wednesday, 2 September 2026",
+    lead: i195_lead,
+    secondary: [i195_secondary_recall, i195_secondary_afterquery],
+    briefs: [
+      i195_watermarking,
+      i195_astra,
+      i195_air,
+      i195_adsense,
+      i195_google_reviews,
+    ],
+  },
   {
     number: 194,
     date: "2026-09-01",
