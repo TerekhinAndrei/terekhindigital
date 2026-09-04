@@ -2127,7 +2127,177 @@ const i196_us_copyright: Article = {
   source: "seed",
 }
 
+// ─── ISSUE 197 — FRIDAY, 4 SEPTEMBER 2026 ────────────────────────────────────
+
+const i197_lead: Article = {
+  slug: "openai-gpt6-astra-agi-era-computer-use-enterprise-2026",
+  title: "'Welcome to the AGI Era': OpenAI Launches GPT-6 Astra — a Model That Uses Your Computer the Way You Would",
+  teaser: "OpenAI's GPT-6 Astra navigates browsers, fills CRM records, operates desktop software, and completes multi-step enterprise workflows without custom API integrations. Co-founder Greg Brockman said: 'I do think we're there.' The benchmark scores are exceptional. The missing GDPval figure — OpenAI's own metric for economically valuable real-world work — is the detail that tells you how much of the AGI claim is provable today versus aspirational.",
+  publishedAt: "2026-09-04T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1485827404703-89b55fcc595e"),
+  imageAlt: "Robotic hand touching a keyboard — the GPT-6 Astra launch that OpenAI called the start of the AGI era",
+  keywords: ["OpenAI", "GPT-6", "Astra", "AGI", "agentic AI", "computer use", "enterprise AI", "LLMs"],
+  url: "/articles/openai-gpt6-astra-agi-era-computer-use-enterprise-2026",
+  content: `OpenAI released GPT-6 Astra on Thursday with a claim that no frontier lab has previously made in a product launch: that this represents the arrival of artificial general intelligence. Co-founder Greg Brockman stated at the launch event, "I do think we're there." The company's framing — "Welcome to the AGI era" — is explicit, not hedged.
+
+The model's defining capability is computer use. Astra navigates browsers, fills CRM fields, operates desktop software including engineering tools like KiCad and FreeCAD, creates product listings from voice prompts, converts sketches into functional 3D models, and completes multi-step workflows across applications that have not been specifically integrated with any API. The benchmark scores are exceptional by any prior standard: 98.6 per cent on ARC-AGI-3, 97.6 per cent on FrontierMath Tier 4, 72.6 per cent on OSWorld 2.0 — completing tasks 47 per cent faster per workflow than its predecessor GPT-5.6 Sol. In cybersecurity testing, it reached OpenAI's internal "Critical" threshold and independently found two zero-day vulnerabilities.
+
+Enterprise rollout begins September 5 via the Daybreak programme, followed by ChatGPT Plus, Pro, Business, and Enterprise, and availability on AWS Bedrock and Azure. API pricing is ten dollars per million input tokens and fifty dollars per million output tokens at standard rate; Fast mode doubles those figures. OpenAI's Strawberry programme for agentic enterprise customers has been briefing on Astra for several weeks in advance of the launch.
+
+The computer-use architecture is the competitive differentiator that matters most for enterprise adoption. Previous AI models required custom API integrations with each tool a business uses — a significant deployment barrier that has slowed agentic AI adoption beyond the largest, most technically resourced organisations. Astra's ability to operate software through the visual interface, the way a human operator would, eliminates that barrier. Any enterprise workflow that a human performs on a screen is, in principle, within Astra's capability envelope. The practical implication for marketing operations, sales operations, finance, and any function that relies on desktop software is direct: the cost of automating routine workflow steps drops to the cost of an API call.
+
+The commercial stakes are sharply illustrated by the demonstrated use cases. Creating eBay listings from a voice prompt. Filling Salesforce records from unstructured notes. Updating calendar entries across connected accounts. Operating engineering software to produce design files. These are not research demonstrations — they are the daily tasks of knowledge workers whose time is currently billed at hourly rates that no AI API cost structure approaches. If Astra performs these tasks reliably at scale, the economics of knowledge work change in ways that are difficult to model conservatively.
+
+The missing number is more informative than the numbers present. OpenAI's own GDPval benchmark — introduced in 2025 to measure economically valuable real-world work, specifically designed to be the metric that would establish AGI by OpenAI's own standards — is absent from the Astra launch materials. The ARC-AGI-3 score deserves a footnote: the 98.6 per cent figure used a proprietary evaluation harness; separately, Nvidia achieved 100 per cent using a Claude Opus 5 agent operating the same benchmark, not Astra. The "Critical" cybersecurity threshold finding adds a layer of dual-use concern that Astra's restricted predecessors have already generated this week. None of these caveats diminish what Astra demonstrably does. They do suggest that the AGI claim is a commercial framing choice as much as a technical assessment, and that sceptical enterprise buyers will look for the GDPval number before updating their priors.
+
+For MarTech practitioners, the immediate operational question is how Astra's computer-use capability affects the agency workflow stack. A model that can autonomously navigate a DSP, execute a creative brief in Canva, update a campaign tracker, and file a performance report — without API integration for any of those tools — compresses the billable workflow overhead that agencies and in-house teams currently absorb. The answer to how fast that compression happens depends on reliability at scale, which the first weeks of the Daybreak enterprise rollout will begin to establish.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "xl",
+  source: "seed",
+}
+
+const i197_secondary_crusoe: Article = {
+  slug: "crusoe-3-billion-30-billion-valuation-jane-street-ipo-2026",
+  title: "Crusoe Raises $3B at $30B — Anchored by a $13B Jane Street Contract and a Near-Term IPO",
+  teaser: "A natural-gas crypto miner that pivoted to AI data centres has tripled its valuation in ten months on the back of a single infrastructure contract with the world's largest quantitative trading firm. Goldman and Morgan Stanley are already engaged. Quant finance is quietly becoming one of the largest buyers of AI compute outside hyperscalers — and Crusoe is the proof.",
+  publishedAt: "2026-09-04T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1558494949-ef010cbdcc31", 600),
+  imageAlt: "Data centre corridor — the AI infrastructure investment that anchors Crusoe's $30B valuation",
+  keywords: ["Crusoe", "AI infrastructure", "Jane Street", "venture capital", "IPO", "GPU cloud", "data centre"],
+  url: "/articles/crusoe-3-billion-30-billion-valuation-jane-street-ipo-2026",
+  content: `Crusoe raised three billion dollars on Thursday, co-led by Atreides Management and Valor Equity Partners with participation from Abu Dhabi's Mubadala Capital, at a post-money valuation of thirty billion dollars. Its October 2025 Series E valued the company at ten billion dollars. The ten-month, three-times increase is anchored by a specific commercial event: a just-signed thirteen-billion-dollar, five-year cloud contract with Jane Street to provide GPU and AI infrastructure. Crusoe's existing client roster includes Meta, Microsoft, OpenAI, and Oracle. The company has engaged Goldman Sachs and Morgan Stanley regarding a near-term initial public offering.
+
+The story of Crusoe is, in outline, the most compelling AI infrastructure pivot narrative of the current cycle. The company was founded in 2018 to solve a specific problem in natural gas extraction: the flaring of stranded gas at wellheads, which represents both an environmental waste and a missed energy revenue opportunity. Crusoe built modular data centres that consume flared gas to power computational workloads — initially cryptocurrency mining, then pivoted entirely to AI compute as the economics of that transition became clear. The infrastructure model — purpose-built, energy-efficient, with a direct gas cost advantage over grid-powered data centres — positioned the company well for the AI infrastructure supercycle that began in 2023 and has not slowed.
+
+The Jane Street contract is the detail that reframes the market context. Jane Street is not a technology company, a hyperscaler, or an AI laboratory. It is a quantitative trading firm — the largest by most measures of its type — and it is committing thirteen billion dollars over five years to AI GPU infrastructure. The implication is direct: sophisticated financial firms with strong risk disciplines have underwritten the thesis that AI compute demand, at the scale Jane Street requires, is a five-year capital commitment rather than a quarterly procurement decision. That is as credible a market signal as any public analyst forecast.
+
+The IPO timeline, if it materialises before year-end 2026, would test whether public markets are prepared to value AI infrastructure on the same long-duration, recurring-revenue model that has justified hyperscaler capital expenditure for a decade. Crusoe's thirty-billion-dollar private valuation, at the revenue scale that a thirteen-billion-dollar contract implies, is either a conservative base for a public offering or an optimistic multiple that requires sustained margin delivery to sustain. The Goldman and Morgan Stanley engagement suggests the company and its investors believe the former.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "md",
+  source: "seed",
+}
+
+const i197_secondary_aeo: Article = {
+  slug: "product-pages-24-percent-ai-citations-aeo-pixel-depth-framework-2026",
+  title: "Product Pages Earn 24% of All AI Citations. Reddit Gets 4%. The GEO Playbook Is Wrong About Where to Focus.",
+  teaser: "New citation distribution data from Search Engine Journal inverts the assumption that community content dominates AI retrieval. Structured commercial pages — the ones most brands have neglected in favour of blog posts and Reddit presence — are what AI systems actually cite most. A concurrent AEO framework introduces 'pixel depth' as the metric that replaces search rank: how early in the AI answer does your brand appear?",
+  publishedAt: "2026-09-04T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1432888622747-4eb9a8efeb07", 600),
+  imageAlt: "Analytics screen showing content performance data — the citation distribution that reorients GEO strategy",
+  keywords: ["GEO", "AEO", "AI citations", "product pages", "SEO", "AI search", "content strategy", "pixel depth"],
+  url: "/articles/product-pages-24-percent-ai-citations-aeo-pixel-depth-framework-2026",
+  content: `Research published by Search Engine Journal this week found that product pages are the single largest category of content cited by AI systems, receiving 24 per cent of measured citations across the studied AI platforms. Reddit and YouTube each received approximately 4 per cent — a sharp contrast to their widely cited prominence in AI training data discussions and their disproportionate role in the "Reddit SEO" strategies that GEO practitioners have been pursuing. The finding is significant because it directly contradicts the working assumption that has shaped much of the first-generation GEO investment: that conversational, community-generated content is what AI retrieval systems prefer.
+
+The data is consistent with a structural logic. Product pages are built to answer a specific question — what is this, what does it do, who is it for — with consistent terminology, clear structure, and authoritative sourcing. These are the content characteristics that AI retrieval systems reward. Blog posts, forum threads, and YouTube transcripts are often relevant but structurally inconsistent, with variable terminology, arguable authority signals, and weaker entity definition. The 24 per cent product page figure suggests that AI systems are, in practice, citing the content type that most reliably satisfies their retrieval criteria — not the content type that most resembles the training data mix.
+
+A concurrent framework published via VentureBeat introduces "pixel depth" as the operational metric for AI visibility — the position at which a brand first appears in an AI-generated answer, measured in equivalent screen pixels from the top of the response. The concept replaces search rank as the primary GEO objective: a first-page organic ranking in traditional search is a known position with known click-through rate implications. Pixel depth in an AI answer is the equivalent measure — whether your brand appears in the first sentence of the answer, the third paragraph, or not at all. The commercial implication is that a brand cited sixth in a long AI answer has, for practical purposes, very limited visibility even though it is technically cited.
+
+The accompanying AEO (Answer Engine Optimisation) framework from Contentful identifies four content characteristics that increase AI citability: consistency (identical terminology across all channels, so AI systems do not encounter conflicting entity definitions); clarity (defined terms, focused sections that answer one question at a time); authority (original research or customer data that exists nowhere else); and structure (descriptive headings and logical hierarchies that make content machine-parseable at the section level). The practical audit question proposed by the framework is unambiguous: can an AI system accurately explain your company's purpose in one sentence, using only your published content? If it cannot — because your website, help documentation, and product pages use different terminology for the same thing — you have a measurable AEO gap.
+
+The combined implication of the citation distribution data and the AEO framework is a reallocation of GEO investment priority. Brands that have spent the past eighteen months creating blog content and building Reddit presence to capture AI citations are optimising for the wrong content type. The 24 per cent product page figure suggests that investment in product page clarity, consistency, and structural optimisation produces more AI citation return per hour spent than the same effort applied to community content creation. That is not a universal finding — specific query categories will have different citation distributions — but as a first-order priority signal, it is the most actionable GEO data published this week.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "md",
+  source: "seed",
+}
+
+const i197_water: Article = {
+  slug: "chatgpt-water-usage-sam-altman-ai-environmental-cost-2026",
+  title: "ChatGPT's Water Footprint Is Trending on Google — AI Sustainability Has Left the Niche",
+  teaser: "A single query to a large language model consumes meaningfully more water than a web search. The 'Sam Altman ChatGPT water usage' search term spiked 1,000% on Thursday. When your resource footprint is a trending search term, the public conversation has changed.",
+  publishedAt: "2026-09-04T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["AI sustainability", "ChatGPT", "water usage", "Sam Altman", "environmental impact", "AI infrastructure", "data centres"],
+  url: "/articles/chatgpt-water-usage-sam-altman-ai-environmental-cost-2026",
+  content: `The search term "Sam Altman ChatGPT water usage" spiked over 1,000 per cent on Google Trends on Thursday — the verified highest-velocity technology search of the day, driven by reporting on the water consumption associated with OpenAI's data centre infrastructure. A large language model query consumes approximately ten times more water than a traditional web search, through the cooling systems required to manage the thermal load of GPU clusters operating at sustained high utilisation. At the scale of ChatGPT's usage — estimated at over 200 million active weekly users as of mid-2026 — the aggregate water consumption is a measurable fraction of regional freshwater resources in the areas where data centres are concentrated. AI sustainability has been a concern in research and policy circles for three years. The moment it becomes a trending Google search term driven by mainstream media coverage of a named CEO is the moment it enters the public conversation in a different way — one that has implications for brand perception, regulatory scrutiny, and the social licence that large AI deployments require. For enterprise AI buyers who have begun to face sustainability reporting obligations under European and US ESG frameworks, the water consumption of their AI infrastructure spend is no longer a theoretical line item. It is a number that appears in scope 3 emissions calculations and that is now, demonstrably, a subject of public awareness.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "sm",
+  source: "seed",
+}
+
+const i197_thinking_machines: Article = {
+  slug: "thinking-machines-mira-murati-1-billion-40-billion-accel-nvidia-2026",
+  title: "Thinking Machines Eyes $1B at $40B — Down From the $50B Murati Was Seeking Six Months Ago",
+  teaser: "Accel leads. Nvidia co-invests. Two of the three co-founders have left for OpenAI. The valuation is 400x ARR. The compressed ask from $50B is the signal worth watching.",
+  publishedAt: "2026-09-04T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Thinking Machines", "Mira Murati", "Accel", "Nvidia", "venture capital", "AI startup", "funding"],
+  url: "/articles/thinking-machines-mira-murati-1-billion-40-billion-accel-nvidia-2026",
+  content: `Accel is reportedly in talks to lead a one-billion-dollar funding round for Thinking Machines Lab at a minimum forty-billion-dollar post-money valuation, with Nvidia separately in talks to co-invest approximately two-point-five billion dollars at the same valuation. Thinking Machines reports over one hundred million dollars in annual recurring revenue, generated primarily from usage-based compute fees on its Tinker platform for the open-weight Inkling model. The forty-billion-dollar target is a significant reduction from the fifty-billion-dollar valuation the company had been seeking in late 2025, when Mira Murati left OpenAI and began building. A prior seed round at a twelve-billion-dollar valuation, led by Andreessen Horowitz with participation from Nvidia, GV, Lightspeed, and Conviction Partners, closed in early 2026. Two of the three co-founders — Lilian Weng and Luke Metz — have since returned to OpenAI. The 400-times revenue multiple at the forty-billion-dollar valuation is justified, by investors, on the founder credibility and platform potential of the Tinker compute marketplace rather than on near-term earnings. The valuation compression from fifty billion to forty billion over six months, in a funding environment where AI valuations have generally sustained or increased, is the detail that warrants attention. Whether it reflects broader market re-rating of foundational AI lab valuations, the co-founder departures, or the competitive pressure from the GPT-6 Astra announcement the same week is not yet clear.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i197_oura: Article = {
+  slug: "oura-s1-ipo-16-billion-valuation-2-billion-revenue-2026",
+  title: "Oura Files S-1 for $16B IPO — $2B Revenue Run Rate, 42 Billion Hours of Biometric Data",
+  teaser: "The smart ring company that became the health wearable of choice for the 'quantified self' cohort is filing for public markets at a revenue trajectory that makes the valuation defensible. The class action over sleep-tracking accuracy is the risk disclosure nobody expected.",
+  publishedAt: "2026-09-04T07:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Oura", "IPO", "S-1", "wearables", "health tech", "biometric data", "public markets"],
+  url: "/articles/oura-s1-ipo-16-billion-valuation-2-billion-revenue-2026",
+  content: `Oura filed its S-1 for a US IPO targeting a valuation above sixteen billion dollars — up from its last private valuation of approximately eleven billion dollars in October 2025. Nine-month revenue ending June 2026 was one-point-two billion dollars against six hundred and ninety-seven million in the prior year, putting the company on track for approximately two billion dollars for the full year. The revenue trajectory — five hundred million in 2024, roughly one billion in 2025, roughly two billion in 2026 — is the IPO story's foundation. The company has sold 3.6 million rings in the past year, has approximately five million paid subscribers, and reports 85 per cent twelve-month membership retention. Its core data asset — forty-two billion hours of physiological data across fifty-plus tracked metrics — is described as one of the largest longitudinal biometric datasets in consumer health. A pending class action alleging misrepresentation of sleep-tracking accuracy is the principal risk disclosure. Qualcomm-backed competitor Ultrahuman, which this week raised seventy million dollars to develop a ring with on-device Qualcomm silicon and third-party developer support, enters the market at a three-hundred-and-sixty-five-million-dollar valuation — the same week Oura files to go public at sixteen billion dollars. The competitive dynamic in the smart ring category is, as of this week, considerably more interesting than it was last month.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i197_abliteration: Article = {
+  slug: "abliteration-ai-guardrail-stripped-models-commercial-service-2026",
+  title: "Abliteration.ai Is Selling Guardrail-Stripped AI as a Service — With No KYC and a Red-Teaming Disclaimer",
+  teaser: "The startup, incorporated in March, hosts open-weight models with safety constraints surgically removed at the activation level — not policy-filtered, but behaviourally altered. The stated customers are red-teamers. The access controls are a credit card.",
+  publishedAt: "2026-09-04T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["AI safety", "open-weight models", "guardrails", "red-teaming", "abliteration", "LLM safety", "dual-use"],
+  url: "/articles/abliteration-ai-guardrail-stripped-models-commercial-service-2026",
+  content: `Abliteration.ai, incorporated March 2026, operates a browser and API service that hosts open-weight models with safety guardrails removed at the activation-space level — a technique that does not merely disable content filters but alters the model's underlying disposition toward refusal. The current model hosted is Z.ai's GLM-5.3. The company states its customers are red-teaming operations serving UK and European banks, airlines, and critical infrastructure operators. Its access controls consist of credit card logging; the founder described the company as "still working out" its access control policies. CivAI's Andrew Yoon characterised activation-space guardrail removal as producing what is functionally "a sociopath model" — the comparison is extreme but technically precise: the technique removes not capability restrictions but the trained behavioural orientation that makes a model disinclined to assist with harmful requests. Abliteration.ai is the first documented commercial wrapper around this technique at the API-access level. The red-teaming use case is legitimate; the near-zero access controls convert a legitimate security testing tool into a public API for uninhibited model interaction. The company is in pre-funding discussions. Expect it to accelerate calls for open-weight model liability frameworks and GPU-provider identity verification requirements in EU AI Act secondary legislation.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "xs",
+  source: "seed",
+}
+
+const i197_pubmatic: Article = {
+  slug: "pubmatic-agenticos-rouge-care-5x-roas-agentic-programmatic-2026",
+  title: "PubMatic's AgenticOS Delivered 5x ROAS on a $25K CTV Buy — the First Published Agentic Programmatic Case Study",
+  teaser: "Two AI agents — one for planning, one for buying — ran a CTV campaign without a human trader in the loop. $25,000 in, $125,000 attributable revenue out. The architecture is SSP-native, not DSP-native. That inversion is the editorial detail.",
+  publishedAt: "2026-09-04T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["programmatic", "CTV", "agentic AI", "PubMatic", "AgenticOS", "ROAS", "ad tech", "MarTech"],
+  url: "/articles/pubmatic-agenticos-rouge-care-5x-roas-agentic-programmatic-2026",
+  content: `Wellness brand Rouge Care ran a connected TV awareness campaign through PubMatic's AgenticOS platform, managed by agency Klever Programmatic, with a twenty-five-thousand-dollar budget and attributable revenue above one hundred and twenty-five thousand dollars — a five-hundred per cent return on ad spend against a two-hundred-and-fifty per cent target. The campaign deployed two purpose-built agents in sequence: a planning agent for audience discovery and targeting parameter definition, and a buying agent for execution on PubMatic's sell-side infrastructure. No human trader intervened in the buying loop. This is one of the first publicly documented cases of a fully agentic programmatic buying workflow with verified performance data. The architectural detail that matters most is the sell-side origin: AgenticOS runs on PubMatic's SSP infrastructure, not on a DSP. An SSP-native agency workflow inverts the traditional programmatic value chain in which the buy-side platform holds the intelligence layer and the SSP is a passive inventory source. If SSPs can deploy planning and buying agents that operate directly on their own inventory — bypassing the DSP's optimisation layer — the margin compression implications for demand-side platforms are direct. The Rouge Care case study is a single data point at a modest budget level, but it is the first published number that gives the agentic programmatic thesis a verifiable performance claim.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
 export const ISSUES: Issue[] = [
+  {
+    number: 197,
+    date: "2026-09-04",
+    label: "Friday, 4 September 2026",
+    lead: i197_lead,
+    secondary: [i197_secondary_crusoe, i197_secondary_aeo],
+    briefs: [
+      i197_water,
+      i197_thinking_machines,
+      i197_oura,
+      i197_abliteration,
+      i197_pubmatic,
+    ],
+  },
   {
     number: 196,
     date: "2026-09-03",
