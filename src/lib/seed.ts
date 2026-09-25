@@ -3503,7 +3503,214 @@ const i203_aiuc: Article = {
   source: "seed",
 }
 
+// ─── ISSUE 206 ───
+
+const i206_lead: Article = {
+  slug: "rankcaster-ai-brand-mentions-8058-observations-ai-visibility-study-2026",
+  title: "How to Get AI to Mention Your Brand: RankCaster's 8,058-Observation Study Sets Industry Benchmarks",
+  teaser: "A six-week, four-brand study finds: no signals → 0.5% mention rate; both owned content and external citations active → 58%. Above 21 external citations per week: 61%. One brand fell from 100% to 43% despite no citation loss — competitor entry alone drove the redistribution. The most granular empirical framework for AI visibility published to date.",
+  publishedAt: "2026-09-25T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1551288049-bebda4e38f71"),
+  imageAlt: "Analytics dashboard showing data visualisation — the empirical measurement framework RankCaster applied to 8,058 AI brand mention observations across four brands",
+  keywords: ["RankCaster AI", "AI brand mentions", "GEO", "generative engine optimisation", "AI visibility", "AEO", "citation strategy", "AI search", "brand mentions", "content strategy"],
+  url: "/articles/rankcaster-ai-brand-mentions-8058-observations-ai-visibility-study-2026",
+  content: `A new study from RankCaster AI, based on 8,058 observations across four brands over six weeks in August and September 2026, delivers the most granular empirical framework published to date for understanding what produces AI brand mentions — and what does not.
+
+The central finding, stated by the researchers directly: "AI visibility can be measured and improved through a systematic combination of owned content, external mentions, and strong topical relevance."
+
+**Signal combinations determine baseline mention rates**
+
+The study tracked four signal configurations for each brand: no signals, owned content only, external citations only, and a combination of both. The results document a 116-fold difference between the extremes.
+
+With no signals active, brands appeared in AI-generated responses 0.5 per cent of the time. With owned content alone, that figure reached 35 per cent. External citations alone produced 40 per cent. But with both signal types active simultaneously, mention rates reached 58 per cent — an outcome the data implies reflects compounding rather than additivity. Owned content and external citations are not substitutes; they appear to operate on distinct AI evaluation dimensions and reinforce each other when both are present.
+
+**Citation volume thresholds**
+
+The study stratified brands by weekly external citation volume and mapped corresponding AI mention rates to specific thresholds:
+
+- 0 external citations per week: 0.5 per cent mention rate
+- 1–5 citations per week: 21 per cent
+- 6–20 citations per week: 50 per cent
+- 21+ citations per week: 61 per cent
+
+The step from zero to one-to-five citations per week represents the largest proportional gain — a 42-fold increase in mention rate. The step from the 6–20 range to 21+ adds 11 percentage points. The data implies that the most consequential threshold is the transition from no external citations to some; beyond that, incremental volume continues to deliver meaningful but diminishing returns.
+
+Cross-brand citations were the largest single source in the dataset: 664 to 698 citations per brand across the six-week window. Social media mentions contributed 100 to 120 per brand. The co-citation structure of an industry — competitors, media outlets, and commentators referencing each other — generates a significant share of the citation infrastructure that determines AI visibility for every participant in that space.
+
+**Case evidence: velocity of results**
+
+The study includes longitudinal data from two brands that executed structured content and citation programmes during the observation period. An education centre began the period at 13 external citations per week. Following a targeted programme, it reached 65 citations within three weeks. The study documents the corresponding mention rate trajectory: at 12 citations per week, AI mention rates reached 50 per cent; at 18 citations per week, 67 per cent.
+
+A contractor platform tracked in the same dataset recorded an AI mention share increase from 6.3 per cent to 14.4 per cent — a 130 per cent relative gain — following a comparable programme.
+
+Both cases suggest that the citation thresholds governing mention rates can be crossed within four to six weeks of sustained content activity. AI visibility, on this evidence, is a medium-term programme outcome — not a long-term brand equity accumulation.
+
+**The competitive displacement effect**
+
+The study's most counterintuitive finding documents a brand whose AI mention rate fell from 100 per cent to 43 per cent across the observation period. The researchers' attribution is unambiguous: competitor presence, not citation loss. The brand's own citation volume remained stable throughout; competitor brands accumulated citations in the same topical space, and AI systems redistributed mention share across the enlarged field of alternatives.
+
+This finding directly reframes how brands should define success in AI visibility. A brand can execute its citation programme correctly and still see mention rates fall if competitors enter its topical territory aggressively. AI mention share — rather than mention rate in isolation — is the relevant metric in any competitive category. A 61 per cent mention rate means less if three competitors are now each capturing 40 per cent of the same queries.
+
+**What the dataset establishes**
+
+The RankCaster study is notable for its design as much as its findings. It tracks observable inputs — content output, external citations — against observable outputs (AI mention rates) across multiple brands and extended time periods, enabling the threshold identification and comparative analysis that single-case studies cannot produce. The 8,058 observation count gives the citation-volume thresholds statistical grounding.
+
+The researchers do not attempt to model AI system architectures or reverse-engineer underlying ranking logic. The study treats AI mention rate as a dependent variable and citation signal combinations as independent variables — a methodological choice that produces actionable benchmarks rather than theoretical models. The 21-citations-per-week threshold for 61 per cent mention rates is specific enough to build a programme around.
+
+The full study is available at rankcaster.ai.`,
+  category: "Data & Analysis",
+  author: "H. Terekhin",
+  size: "xl",
+  source: "seed",
+}
+
+const i206_gpt6_pricing: Article = {
+  slug: "openai-gpt-6-sol-luna-anthropic-claude-opus-5-5-same-day-pricing-war-september-2026",
+  title: "OpenAI and Anthropic Release Competing Flagship Models on the Same Day — and Cut Prices by Half",
+  teaser: "22 September: OpenAI launched GPT-6 in two tiers — Sol ($2/$10 per million tokens, deception rate down from 10.4% to 1.3%) and Luna ($0.10/$0.50). Within hours, Anthropic published Claude Opus 5.5 (Terminal-Bench 66.4% vs Fable 5.1's 55.8%, 40% price cut, 1M context). First simultaneous frontier release in the industry's history. GPT-6 generated the largest Google Trends spike in AI model search traffic for the week.",
+  publishedAt: "2026-09-25T07:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1677442135703-1787eea5ce01", 600),
+  imageAlt: "Abstract AI neural network visualisation — the architecture underpinning the GPT-6 and Claude Opus 5.5 models released on the same calendar day",
+  keywords: ["GPT-6", "OpenAI", "Claude Opus 5.5", "Anthropic", "AI pricing", "frontier models", "LLMs", "Sol", "Luna", "AI benchmarks"],
+  url: "/articles/openai-gpt-6-sol-luna-anthropic-claude-opus-5-5-same-day-pricing-war-september-2026",
+  content: `OpenAI launched GPT-6 on 22 September in two production tiers — Sol, its standard long-context reasoning model, and Luna, designed for high-frequency agentic workflows — while Anthropic published Claude Opus 5.5 within hours. It was the first time the two leading frontier AI labs have released competing flagship models on the same calendar day.
+
+GPT-6 Sol is priced at $2 per million input tokens and $10 per million output — approximately 50 per cent below the launch pricing of GPT-5. Luna is priced at $0.10 input and $0.50 output, targeting enterprise agentic deployments where per-task cost governs adoption. OpenAI's published figures for Sol report a deception rate of 1.3 per cent on its standard alignment evaluation suite, compared with 10.4 per cent for its predecessor — the largest single-generation alignment improvement the company has reported.
+
+Claude Opus 5.5 answered with a 40 per cent cost reduction against Opus 5, a Terminal-Bench score of 66.4 per cent (against Fable 5.1's 55.8 per cent on the same evaluation), and a one-million-token context window. Anthropic positioned it as the leading model for autonomous long-context work and multi-step agentic tasks with extended reasoning requirements.
+
+The pricing convergence reflects the compute cost trajectory both labs have signalled for several quarters. Sol's 50 per cent price reduction — combined with the alignment improvement implied by its deception rate — reframes the frontier pricing conversation: the question is no longer whether frontier-quality reasoning is affordable at enterprise scale, but whether organisations have the deployment infrastructure to use it at the volume the economics now support.
+
+GPT-6 generated the largest Google Trends spike in AI model search traffic for the week of 22–25 September.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "md",
+  source: "seed",
+}
+
+const i206_nscale_ipo: Article = {
+  slug: "nscale-3-billion-ipo-nyse-35-billion-ai-compute-infrastructure-2026",
+  title: "Nscale Files for $3 Billion NYSE IPO at $35 Billion, With 85% Revenue in Microsoft and Anthropic Supply Deals",
+  teaser: "Filed 22 September. First major AI infrastructure company to test public market appetite for pure-play compute. Microsoft + Anthropic = 85% of contracted revenue. Nordic hydropower-powered GPU clusters. If it prices at target, Nscale becomes the first European AI infrastructure company to list above $10B — setting the benchmark for the 2027 cohort.",
+  publishedAt: "2026-09-25T07:30:00.000Z",
+  imageUrl: UNSPLASH("photo-1611532736597-de2d4265fba3", 600),
+  imageAlt: "Stock market data screen with financial charts — the public market test Nscale's $35 billion IPO filing will set for AI compute infrastructure valuations",
+  keywords: ["Nscale", "IPO", "NYSE", "AI infrastructure", "compute", "Microsoft", "Anthropic", "GPU", "venture capital", "AI investment"],
+  url: "/articles/nscale-3-billion-ipo-nyse-35-billion-ai-compute-infrastructure-2026",
+  content: `Nscale, the London-based AI compute infrastructure provider, filed for a $3 billion initial public offering on the New York Stock Exchange on 22 September at a stated valuation of $35 billion — the first major AI infrastructure company to test public market appetite for pure-play compute since the sector's private valuation cycle peaked.
+
+The prospectus discloses a revenue model built around long-term supply agreements: Microsoft and Anthropic together account for 85 per cent of Nscale's contracted revenue. The company operates GPU clusters across European data centres with a stated emphasis on low-carbon compute sourced from Nordic hydropower infrastructure.
+
+The $35 billion target represents roughly 11.7 times Nscale's most recent annualised revenue run rate — a multiple consistent with high-growth infrastructure businesses but well below the 20-plus multiples that characterised the peak of the cloud infrastructure cycle. Nscale's bankers are pricing the offering between two competing narratives: the infrastructure scarcity story that sustained private valuations at their current levels, and the public market scepticism about AI revenue concentration that has defined the sector since early 2026.
+
+The 85 per cent customer concentration in Microsoft and Anthropic is the defining risk factor in the filing. It provides revenue certainty through the current contract term; it also raises renegotiation risk at renewal, particularly as both anchor customers are simultaneously building proprietary compute capacity. If either reduces external supply demand, the revenue base contracts sharply — a scenario the prospectus's risk section will need to address directly for institutional buyers.
+
+If the offering prices at its stated target, Nscale becomes the first European AI infrastructure company to list above $10 billion, establishing a valuation benchmark for the cohort of GPU-cloud scale-ups expected to follow in 2027.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "md",
+  source: "seed",
+}
+
+const i206_navier_stokes: Article = {
+  slug: "openai-navier-stokes-millennium-prize-100-math-problems-princeton-verification-2026",
+  title: "OpenAI Announces Solutions to the Navier-Stokes Millennium Problem and Over 100 Unsolved Conjectures",
+  teaser: "21 September: OpenAI's research division produced verified solutions to the Navier-Stokes existence and smoothness Millennium Prize Problem — unsolved since 1900, $1M prize — alongside 100+ previously open mathematical conjectures. Princeton University formed a 12-person independent verification group. The proof uses a novel regularisation technique with no precedent in existing literature.",
+  publishedAt: "2026-09-25T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["OpenAI", "Navier-Stokes", "Millennium Prize", "mathematics", "AI research", "formal mathematics", "Clay Institute", "Princeton", "AI capability"],
+  url: "/articles/openai-navier-stokes-millennium-prize-100-math-problems-princeton-verification-2026",
+  content: `OpenAI's research division announced on 21 September that its latest reasoning systems had produced verified solutions to the Navier-Stokes existence and smoothness problem — one of the seven Clay Mathematics Institute Millennium Prize Problems, with a $1 million prize attached — alongside solutions to more than 100 previously unsolved mathematical conjectures. Princeton University confirmed the formation of a 12-person independent advisory group to conduct external verification of the Navier-Stokes proof.
+
+The Navier-Stokes problem asks whether smooth, physically reasonable solutions always exist for the governing equations of fluid dynamics in three dimensions, or whether singularities — breakdowns in regularity — can emerge in finite time. It has been on the Millennium Prize list since 2000 and resisted resolution despite decades of sustained work from the field's leading mathematicians.
+
+OpenAI published the full proof, derivation steps, and verification code, inviting external scrutiny. Mathematicians quoted in specialist publications noted the proof's reliance on a novel regularisation technique without precedent in the existing literature — suggesting the model developed an original mathematical approach rather than recombining known methods. The announcement establishes that AI reasoning systems can now produce original theoretical contributions at the frontier of formal mathematics — a capability most roadmap assessments published before 2026 placed further out.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "sm",
+  source: "seed",
+}
+
+const i206_comscore: Article = {
+  slug: "comscore-chatgpt-50-percent-market-share-gemini-claude-ai-discovery-splintering-2026",
+  title: "Comscore: ChatGPT's AI Discovery Share Falls from 70% to 50% as Gemini and Claude Gain Ground",
+  teaser: "22 September: ChatGPT's share of AI-driven content discovery fell from 70% to 50% between January and June 2026. Gemini: 17% → 30%; Claude: 2% → 11%. Tripadvisor: 61% of travel research now begins with an AI query — only 21% results in a source citation. Brands optimising for a single AI platform are already behind the structural shift.",
+  publishedAt: "2026-09-25T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Comscore", "ChatGPT", "Gemini", "Claude", "AI discovery", "AI search", "GEO", "AEO", "content distribution", "MarTech"],
+  url: "/articles/comscore-chatgpt-50-percent-market-share-gemini-claude-ai-discovery-splintering-2026",
+  content: `Comscore data published 22 September shows that ChatGPT's share of AI-driven content discovery fell from 70 per cent to 50 per cent between January and June 2026. Gemini rose from 17 per cent to 30 per cent in the same period; Claude rose from 2 per cent to 11 per cent. Brands and publishers that have built AI visibility programmes optimised for a single platform are already operating on a structurally outdated assumption. Tripadvisor data cited in the same release reported that 61 per cent of travel-related research now begins with an AI query — of which only 21 per cent results in a citation back to the originating source, consistent with the zero-click substitution dynamic documented across the sector.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
+const i206_google_safe: Article = {
+  slug: "google-safe-multi-agent-spam-detection-september-2026-update-launched",
+  title: "Google Launches SAFE Multi-Agent Spam System Alongside September 2026 Core Update",
+  teaser: "24 September: Google's SAFE architecture — a network of specialised AI agents detecting 'spirit of policy' violations rather than explicit rule breaches — launched simultaneously with the September spam update. Targets AI-generated content at scale, synthetic link schemes, and manipulative structured data. The dual launch compresses the lag between policy change and enforcement.",
+  publishedAt: "2026-09-25T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Google", "SAFE", "spam detection", "AI agents", "September 2026 update", "SEO", "core update", "Google search", "AI-generated content"],
+  url: "/articles/google-safe-multi-agent-spam-detection-september-2026-update-launched",
+  content: `Google launched SAFE — a multi-agent AI spam detection architecture — simultaneously with the September 2026 spam update on 24 September. SAFE operates across a network of specialised review agents designed to detect "spirit of policy" violations rather than explicit rule breaches, targeting AI-generated content at scale, synthetic link schemes, and manipulative structured data that conforms to the letter of guidelines while circumventing their intent. The dual launch — new detection architecture running alongside an active algorithmic update — compresses the lag between policy change and enforcement. Site owners reporting ranking changes in the 24–26 September window should treat both signals as concurrent causes.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
+const i206_snorkel: Article = {
+  slug: "snorkel-ai-350-million-series-d-3-5-billion-training-data-infrastructure-2026",
+  title: "Snorkel AI Raises $350 Million at $3.5 Billion as Demand for Training Data Infrastructure Grows",
+  teaser: "Series D closed 22 September. 18x ARR growth in 18 months. Andreessen Horowitz, Salesforce Ventures. Programmatic training data infrastructure for enterprise fine-tuning at scale. The round signals growing conviction that the competitive bottleneck in enterprise AI is shifting from model capability to data quality.",
+  publishedAt: "2026-09-25T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Snorkel AI", "training data", "Series D", "a16z", "Salesforce Ventures", "enterprise AI", "fine-tuning", "AI infrastructure", "venture capital"],
+  url: "/articles/snorkel-ai-350-million-series-d-3-5-billion-training-data-infrastructure-2026",
+  content: `Snorkel AI closed a $350 million Series D on 22 September at a $3.5 billion valuation, reporting 18x ARR growth over the prior 18 months. The company provides programmatic training data infrastructure — enabling enterprises to build labelled datasets for domain-specific fine-tuning without manual annotation at scale — and has become a de facto procurement layer for enterprise AI deployment teams. Investors include Andreessen Horowitz and Salesforce Ventures. The round reflects growing capital conviction that the competitive bottleneck in enterprise AI deployment is shifting from model capability to data quality and domain-specific training pipelines.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i206_elevenlabs: Article = {
+  slug: "elevenlabs-22-billion-valuation-600-million-arr-ipo-2028-voice-ai-2026",
+  title: "ElevenLabs Reaches $22 Billion Valuation as Annual Recurring Revenue Hits $600 Million",
+  teaser: "Secondary filing, 24 September. $600M ARR — 10x since its $2.2B Series B in early 2024. IPO target: 2028, conditional on market conditions. Expanded from voice synthesis into real-time translation, audio content generation, and on-device voice AI for consumer hardware. The valuation reflects both category expansion and the premium the market assigns to infrastructure-layer AI.",
+  publishedAt: "2026-09-25T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["ElevenLabs", "voice AI", "audio AI", "IPO", "ARR", "valuation", "AI infrastructure", "venture capital", "Series B"],
+  url: "/articles/elevenlabs-22-billion-valuation-600-million-arr-ipo-2028-voice-ai-2026",
+  content: `ElevenLabs disclosed a $22 billion secondary valuation in a filing on 24 September, alongside an ARR figure of $600 million — representing 10x revenue growth since its $2.2 billion Series B in early 2024. The company confirmed a 2028 IPO target, contingent on market conditions. ElevenLabs has expanded beyond voice synthesis into full audio intelligence: real-time translation, audio content generation, and on-device voice AI for consumer hardware partnerships. The $22 billion valuation reflects both the scale of the audio AI category and the premium public market pricing is beginning to assign infrastructure-layer AI companies approaching the IPO window.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
 export const ISSUES: Issue[] = [
+  {
+    number: 206,
+    date: "2026-09-25",
+    label: "Thursday, 25 September 2026",
+    lead: i206_lead,
+    secondary: [i206_gpt6_pricing, i206_nscale_ipo],
+    briefs: [
+      i206_navier_stokes,
+      i206_comscore,
+      i206_google_safe,
+      i206_snorkel,
+      i206_elevenlabs,
+    ],
+  },
   {
     number: 205,
     date: "2026-09-20",
