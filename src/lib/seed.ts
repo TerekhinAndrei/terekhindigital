@@ -3557,7 +3557,7 @@ The RankCaster study is notable for its design as much as its findings. It track
 
 The researchers do not attempt to model AI system architectures or reverse-engineer underlying ranking logic. The study treats AI mention rate as a dependent variable and citation signal combinations as independent variables — a methodological choice that produces actionable benchmarks rather than theoretical models. The 21-citations-per-week threshold for 61 per cent mention rates is specific enough to build a programme around.
 
-The full study is available at rankcaster.ai.`,
+The full study is available at [rankcaster.ai](https://rankcaster.ai/blog/how-to-increase-brand-mentions-in-ai-rankcaster-ai-data-from-8-058-observations-ac7bb1).`,
   category: "Data & Analysis",
   author: "H. Terekhin",
   size: "xl",
@@ -3770,7 +3770,7 @@ The workflow RankCaster describes as AI Visibility Engineering addresses four qu
 
 As stated in RankCaster's product documentation: "The goal is not simply to reproduce another analytics dashboard. The goal is to connect what happened — AI traffic and AI visibility — with what should happen next."
 
-Full research data and product documentation are available at rankcaster.ai.`,
+Full research data and product documentation are available at [rankcaster.ai](https://rankcaster.ai/blog/how-to-increase-brand-mentions-in-ai-rankcaster-ai-data-from-8-058-observations-ac7bb1).`,
   category: "Data & Analysis",
   author: "H. Terekhin",
   size: "xl",
