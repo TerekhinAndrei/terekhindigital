@@ -3696,6 +3696,215 @@ const i206_elevenlabs: Article = {
   source: "seed",
 }
 
+// ─── ISSUE 208 ───
+
+const i208_lead: Article = {
+  slug: "ai-traffic-attribution-tool-scorecard-rankcaster-attrifast-visiblie-sedestral-2026",
+  title: "AI Traffic Attribution Tool Scorecard 2026: RankCaster, Attrifast, Visiblie, and Sedestral Compared",
+  teaser: "GA4's AI Assistant channel identifies known AI referrers — but it cannot tell you which AI system generated a conversion, why a competitor is recommended instead of you, or what to create next to change that. A four-platform comparison across attribution accuracy, revenue connection, AI visibility, signal intelligence, and proactive marketing capability. The differences are significant enough to determine which tool a marketing team should choose.",
+  publishedAt: "2026-10-01T06:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1460925895917-afdab827c52f"),
+  imageAlt: "Analytics dashboard showing multi-channel attribution data — the measurement challenge that specialised AI traffic attribution tools are built to solve",
+  keywords: ["AI traffic attribution", "RankCaster AI", "Attrifast", "Visiblie", "Sedestral", "GEO", "AEO", "AI Visibility Marketing", "AI search", "GA4"],
+  url: "/articles/ai-traffic-attribution-tool-scorecard-rankcaster-attrifast-visiblie-sedestral-2026",
+  content: `The attribution problem for AI-referred traffic is structurally different from organic search. AI assistants do not pass referrer information consistently across desktop, mobile, and app contexts. Traffic without source data resolves to the "(direct)" category in Google Analytics 4 — and has done so for months before most teams noticed the category filling with unattributable conversions.
+
+GA4 now includes a dedicated AI Assistant channel that separates traffic from ChatGPT, Gemini, Claude, and other known AI sources when source information is correctly passed. The channel is a meaningful step. It is not a solution.
+
+If you cannot reliably determine whether a conversion came from ChatGPT, Gemini, or Perplexity — let alone understand why an AI system recommends a competitor rather than you — you cannot make rational decisions about what content to create next or where to allocate budget. That gap is what AI traffic attribution tools are designed to fill.
+
+According to RankCaster AI's product documentation, a quality AI attribution and analysis platform in 2026 should: identify the specific AI platform rather than grouping all AI referrals into one category; connect AI sessions to subsequent behaviour and business outcomes; track changes in AI traffic and AI visibility on an actionable timeline; and provide proactive tools that help the marketing team influence what happens next. The last requirement is the differentiator. The first three describe analytics. The fourth describes strategy.
+
+**Four-platform comparison**
+
+| Capability | RankCaster AI | Attrifast | Visiblie | Sedestral |
+|---|---|---|---|---|
+| AI traffic attribution | Yes — by specific AI assistant | Yes — by AI source | Correlation and reporting | Not primary focus |
+| Revenue attribution | Yes | Key feature | Correlates visibility to conversions | Not primary focus |
+| AI visibility by platform | Yes | Limited | Yes — ChatGPT, Perplexity, Claude, Gemini | Yes — ChatGPT, Gemini, Perplexity, Google AI |
+| Citation and source tracking | Yes | Yes | Yes | Yes |
+| AI prompt monitoring | Yes | Sources and traffic, not prompts primarily | Yes | Yes |
+| Signal gap discovery | Key capability | Not primary focus | Yes | Partial |
+| Content optimisation / GEO | Yes | Not primary focus | Yes | Key capability |
+| External signals / source authority | Key capability | No | Yes | Yes — including backlink work |
+| Proactive AI Visibility Marketing | Key positioning | No — attribution primary | Yes — managed/agentic GEO | Yes — content and GEO |
+| Traffic → conversion → revenue | Yes | Key capability | Yes | Not primary focus |
+| CMS publishing | Yes | No | Yes | Key capability |
+| Requires website script | No | Depends on implementation | Depends | Depends |
+
+*Sources: Attrifast, Visiblie, Sedestral, RankCaster AI, and Google Analytics documentation. Product capabilities may change.*
+
+**Attrifast: attribution-first**
+
+Attrifast is built around AI traffic attribution and revenue measurement. Its system preserves the path from the AI source through the landing page and subsequent pages to conversion and revenue — connecting AI sessions to business outcomes in a way that measurement-focused teams find immediately useful.
+
+The scope ends at the attribution boundary. Attrifast attributes the session and shows the downstream conversion path. It does not include the higher-funnel workflow focused on creating content and signals to increase the likelihood of future AI visibility. For teams whose primary question is whether AI traffic converts, this distinction may be secondary. For teams trying to understand why a competitor is cited more often, it matters.
+
+Attrifast's documentation currently covers ChatGPT, Perplexity, Claude, Gemini, Copilot, Meta AI, Grok, DeepSeek, Mistral, You.com, and Phind.
+
+**Visiblie: visibility and execution**
+
+Visiblie tracks AI share of voice in ChatGPT, Perplexity, Claude, and Gemini, connects AI citations to traffic and conversions, and includes GEO execution — content, entity signals, structured data, and citations. Agentic workflows identify visibility gaps and act on them.
+
+The more useful comparison with RankCaster is not that Visiblie measures while RankCaster acts. Both platforms have proactive capabilities. The difference is what they act on. Visiblie combines AI visibility monitoring with managed and agentic GEO execution. RankCaster's approach is built around AI signals: creating and publishing content specifically designed to help AI systems find, represent, and recommend a brand more often.
+
+For teams that need to see where AI systems mention their brand and execute content and GEO changes within the same workflow, Visiblie is a substantially broader solution than a conventional AI referral dashboard.
+
+**Sedestral: content and SEO**
+
+Sedestral combines AI visibility monitoring with a broader SEO and content workflow, analysing how brands, competitors, and sources appear in AI responses. The AI visibility system covers ChatGPT, Gemini, Perplexity, and Google AI; it tracks whether the brand is mentioned, how it is described, and which sources are cited.
+
+The proactive component is primarily built around content, SEO, and publishing. The article system analyses AI-generated questions, identifies sites cited in AI responses, and generates GEO optimisation recommendations. The broader workflow includes trusted-source analysis and backlink work. CMS integrations span WordPress, Shopify, PrestaShop, Webflow, Wix, Joomla, and Odoo, as well as HTML export.
+
+For teams whose main constraint is content production and optimisation, Sedestral's combination of AI visibility monitoring, content workflow, source analysis, and publishing integrations makes it worth evaluating.
+
+**RankCaster AI: AI Visibility Marketing**
+
+RankCaster AI's positioning, as stated in its product documentation, is "the first proactive AI Visibility Marketing platform created to help companies improve how AI systems find, represent, and recommend their brands." The core function is creating and publishing what the platform calls AI signals — content designed to increase the likelihood of AI recommendation.
+
+The RankCaster research programme, based on 8,058 observations across four brands over six weeks (covered in Issue 206), found that brands with no signals appeared in AI responses 0.5 per cent of the time; with both owned content and external citations active, that figure reached 58 per cent. The central finding, in the researchers' own words: "AI visibility can be measured and improved through a systematic combination of owned content, external mentions, and strong topical relevance."
+
+The platform analyses why one brand can publish a single piece of content and receive consistent AI-driven traffic for months, while another publishes daily but generates only short-term visibility spikes. The AI Traffic Attribution layer identifies visits from ChatGPT, Claude, Gemini, Perplexity, and other AI assistants as a distinct channel — and connects that attribution data to the AI visibility workflow rather than treating it as a standalone analytics output.
+
+The workflow RankCaster describes as AI Visibility Engineering addresses four questions in sequence: which AI systems are driving traffic? Where is the brand mentioned or cited? Which content and signals are associated with those responses? What needs to be created or changed to increase AI visibility and AI traffic?
+
+As stated in RankCaster's product documentation: "The goal is not simply to reproduce another analytics dashboard. The goal is to connect what happened — AI traffic and AI visibility — with what should happen next."
+
+Full research data and product documentation are available at rankcaster.ai.`,
+  category: "Data & Analysis",
+  author: "H. Terekhin",
+  size: "xl",
+  source: "seed",
+}
+
+const i208_gemini4: Article = {
+  slug: "google-gemini-4-argon-frontier-benchmark-autonomous-cybersecurity-fairwind-2026",
+  title: "Google Releases Gemini 4 Argon — Tops Frontier Benchmarks and Targets Autonomous Cybersecurity",
+  teaser: "30 September: Google's Gemini 4 Argon leads the Vals AI benchmark index over OpenAI GPT-6 Astra and Anthropic Fable and Opus. Autonomous capability: independently identify, validate, and patch critical software vulnerabilities. Launch restricted to selected cyber partners via Google's Fairwind Program — no public pricing or general availability date. Separately: Gemini app crosses 1 billion monthly active users. Gemini 4 Argon was the leading Google Trends AI topic for the week.",
+  publishedAt: "2026-10-01T07:00:00.000Z",
+  imageUrl: UNSPLASH("photo-1573804633927-bfcbcd909acd", 600),
+  imageAlt: "Data centre server rack with illuminated components — the compute infrastructure underpinning Google's Gemini 4 Argon frontier model release",
+  keywords: ["Gemini 4 Argon", "Google DeepMind", "frontier AI", "AI benchmarks", "cybersecurity", "Fairwind Program", "Vals", "GPT-6 Astra", "AI safety", "enterprise AI"],
+  url: "/articles/google-gemini-4-argon-frontier-benchmark-autonomous-cybersecurity-fairwind-2026",
+  content: `Google released Gemini 4 Argon on 30 September, describing it on the DeepMind blog as "our next era of frontier intelligence" — the company's most capable model to date and, according to the Vals AI benchmarking index, the current leader across frontier model evaluations, outperforming OpenAI GPT-6 Astra and Anthropic's Fable and Opus.
+
+Argon is engineered specifically for complex long-horizon workflows. Its headline capability is autonomous security operations: the model can independently identify, validate, and patch critical software vulnerabilities across large codebases without human sign-off at each step. It also handles long-video visual analysis, chart interpretation, and multi-step reasoning tasks of the kind that typically require human review cycles. Google's own engineering teams are already using Argon internally across daily tasks.
+
+The launch strategy departs from the standard broad-release pattern. Argon is available initially only to selected partners under Google's Fairwind Program — a proactive cyber defence initiative serving governments and enterprises — with no public pricing or general availability date disclosed. The Fairwind gating mirrors the controlled rollout OpenAI used for GPT-6 Astra's initial operator access and signals a deliberate enterprise-first deployment approach for Google's highest-capability tier. For enterprise buyers in financial services, healthcare, and critical infrastructure, the autonomous vulnerability-patching capability is the most significant enterprise AI announcement of this cycle.
+
+Separately, Google confirmed that the Gemini app has reached one billion monthly active users — matching ChatGPT's stated figure and establishing, for the first time, a genuine two-player market at consumer AI scale.
+
+Gemini 4 Argon generated the largest Google Trends spike in AI model search traffic for the week of 29 September – 1 October 2026.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "md",
+  source: "seed",
+}
+
+const i208_google_pilot: Article = {
+  slug: "google-ai-content-pilot-publishers-under-01-percent-ad-revenue-2026",
+  title: "Google's AI Content Pilot Is Paying Most Publishers Under 0.1% of Their Ad Revenue",
+  teaser: "The Information, 29 September: Google's ~100-publisher pilot for content used in Gemini, AI Overviews, and AI Mode shows most participants earning $50,000–$60,000 over several months — under 0.1% of their ad revenue. One early participant earns $1M+ annually; several small outlets have earned under $1,000. Larger publishers are withholding participation. The methodology is opaque. The appellate copyright ruling the same day gives the withholding publishers significantly stronger negotiating ground.",
+  publishedAt: "2026-10-01T07:30:00.000Z",
+  imageUrl: UNSPLASH("photo-1432888622747-4eb9a8efeb07", 600),
+  imageAlt: "Open laptop showing digital content creation tools — the publisher content ecosystem that Google's AI pilot is compensating at below 0.1% of ad revenue",
+  keywords: ["Google", "AI content licensing", "publishers", "Gemini", "AI Overviews", "GEO", "content revenue", "AI search", "zero-click", "fair use"],
+  url: "/articles/google-ai-content-pilot-publishers-under-01-percent-ad-revenue-2026",
+  content: `Reporting by The Information on 29 September has put a concrete figure on what Google's AI content pilot is paying the publishers whose material trains and powers its products. Approximately 100 digital publishers are enrolled in the pilot, which compensates content used in Gemini, AI Overviews, and AI Mode in Search. Most participants are earning $50,000 to $60,000 over several months — figures that, when measured against typical digital publisher ad revenue, amount to under 0.1 per cent of what their content is otherwise worth as an advertising asset.
+
+The distribution is highly uneven. One early participant earns more than $1 million annually. Several small and mid-size outlets have earned under $1,000 over the same period. Niche subject areas — anime, gaming — appear to generate higher payouts, but the methodology Google uses to calculate what constitutes a "significant contribution" is opaque; publishers cannot reverse-engineer the payment logic or predict their next payment.
+
+Larger publishers are withholding participation. The stated reason is commercial: current terms do not reflect the actual value of the content, and entering agreements at nominal rates now risks setting a price floor that limits future negotiating leverage. The strategic calculus is straightforward — once a number is on the table, it is harder to argue for a larger one.
+
+The 0.1 per cent figure is the most concrete data point yet on the gap between what AI systems extract from publisher content and what they return. For practitioners advising media clients on AI licensing strategy, it quantifies the risk of entering pilot agreements on current terms.
+
+The backdrop strengthens the publishers' hand further. The US appellate ruling on 29 September confirming that training AI models on copyright-protected content without licensing agreements constitutes infringement — the Thomson Reuters v. Ross Intelligence decision — means the withholding publishers are holding improved legal precedent at the same time Google is attempting to establish a payment baseline that costs it 0.1 per cent of the value it extracts.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "md",
+  source: "seed",
+}
+
+const i208_sonnet55: Article = {
+  slug: "claude-sonnet-5-5-30-percent-faster-cheaper-anthropic-september-2026",
+  title: "Anthropic Releases Claude Sonnet 5.5: 30% Faster, 30% Cheaper, With Documented Enterprise Gains",
+  teaser: "28 September: Sonnet 5.5 at the same price as Sonnet 5 ($2/$10 per million tokens), 30% faster and up to 30% lower per-task cost. Box: 2.4x faster, 12% fewer tokens. Zendesk: 20% faster ticket processing. Lovable: ⅓ fewer tool calls. Base44: 3.6 iterations per task vs 7.7 for Opus 5. Available on Anthropic, AWS, Google Cloud, Azure. Model ID: claude-sonnet-5-5. Launch overshadowed by Anthropic's S-1 filing the same day.",
+  publishedAt: "2026-10-01T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Claude Sonnet 5.5", "Anthropic", "AI models", "LLMs", "enterprise AI", "API", "AI pricing", "agentic AI", "claude-sonnet-5-5"],
+  url: "/articles/claude-sonnet-5-5-30-percent-faster-cheaper-anthropic-september-2026",
+  content: `Anthropic released Claude Sonnet 5.5 on 28 September at the same price as Sonnet 5 — $2 per million input tokens and $10 per million output — while delivering a 30 per cent speed improvement and reducing per-task cost by up to 30 per cent through faster processing and fewer tool calls per agentic sequence. Early customer performance data released with the announcement documents the improvement in operational terms: Box reported tasks completing 2.4 times faster with 12 per cent fewer tokens; Zendesk recorded 20 per cent faster ticket processing; Slack reported 14 per cent fewer output tokens per interaction; Lovable achieved one-third fewer tool calls and 50 per cent fewer shell executions per task; Base44 completed tasks in 3.6 iterations on average, compared with 7.7 for Opus 5 on equivalent work. The model is available on the Anthropic platform, AWS, Google Cloud, and Microsoft Azure under the identifier \`claude-sonnet-5-5\`. Anthropic also announced that Haiku 5.5 is in development. The launch was largely overshadowed by Anthropic's S-1 IPO filing on the same calendar day — but Sonnet 5.5 is now the most cost-effective Claude model in production for teams running high-volume agentic workflows.`,
+  category: "LLMs",
+  author: "A. Pilgrim",
+  size: "sm",
+  source: "seed",
+}
+
+const i208_cloudflare: Article = {
+  slug: "cloudflare-pay-per-use-monetisation-gateway-ai-publisher-payments-2026",
+  title: "Cloudflare Opens Public Beta for AI Content Monetisation — Charge Per Request or Per Use",
+  teaser: "30 September: Cloudflare's Monetisation Gateway charges AI agents per API/tool/data request via HTTP 402, settled in USDC on Base blockchain (Coinbase). Pay Per Use compensates publishers after AI companies report using their content. US sellers at launch. Arrives the same week The Information revealed Google's pilot pays most publishers under 0.1% of ad revenue — pay-per-crawl infrastructure is now live.",
+  publishedAt: "2026-10-01T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Cloudflare", "AI content monetisation", "publishers", "pay-per-use", "AI agents", "HTTP 402", "GEO", "web monetisation", "content licensing", "USDC"],
+  url: "/articles/cloudflare-pay-per-use-monetisation-gateway-ai-publisher-payments-2026",
+  content: `Cloudflare launched two AI payment products in public beta on 30 September. **Monetisation Gateway** charges AI agents per API, tool, or data request using the HTTP 402 Payment Required protocol; sellers set their own price ($0.001 to $100 per request, fixed or variable), and settlement uses USDC stablecoin on Base blockchain via Coinbase. Cloudflare's BotBase can restrict billing to verified AI bots. **Pay Per Use** allows publishers to receive compensation after an AI company reports using their content — with the AI company defining the use type it will pay for and setting the price. Both products are available to US-based sellers at launch. The infrastructure arrives the same week The Information revealed that Google's AI content pilot is paying most enrolled publishers under 0.1 per cent of their ad revenue — making the gap between what's on offer under voluntary licensing and what pay-per-crawl infrastructure could support clearly visible for the first time.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
+const i208_chatgpt_ads: Article = {
+  slug: "chatgpt-ads-ctr-brazil-191-percent-us-073-percent-livestamp-first-party-data-2026",
+  title: "ChatGPT Ads Cross 1% CTR in Four Markets — US and UK Trail at 0.73% and 0.74%",
+  teaser: "Graphite's State of ChatGPT Ads report (29 September, Similarweb panel): Brazil 1.91%, Mexico 1.55%, Japan 1.53%, South Korea 1.21%. English-speaking markets lag: Canada 0.75%, UK 0.74%, US 0.73%. B2B SaaS = 19.9% of impressions; retail largely absent. LiveRamp first-party data targeting launched across 11 markets with bid multipliers 0.1x–10x. No industry benchmark for comparison yet — early Google Display CTRs were in the 1% range.",
+  publishedAt: "2026-10-01T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["ChatGPT Ads", "CTR", "AI advertising", "OpenAI", "LiveRamp", "first-party data", "programmatic", "MarTech", "digital advertising", "B2B SaaS"],
+  url: "/articles/chatgpt-ads-ctr-brazil-191-percent-us-073-percent-livestamp-first-party-data-2026",
+  content: `The first multi-market CTR benchmark for ChatGPT advertising, published by Graphite on 29 September using Similarweb panel data, shows engagement rates diverging sharply by region. Top markets: Brazil 1.91 per cent, Mexico 1.55 per cent, Japan 1.53 per cent, South Korea 1.21 per cent. English-speaking markets trail: Canada 0.75 per cent, UK 0.74 per cent, US 0.73 per cent, Australia 0.67 per cent, New Zealand 0.60 per cent. The data covers between 5 and 25 weeks per market from February through mid-September 2026. B2B SaaS accounts for 19.9 per cent of impressions; retail is largely absent due to format incompatibility with conversational ad units. Only Jotform and Resume.io remained in the top 10 advertiser list across all 20 weeks, indicating high creative and campaign churn. LiveRamp simultaneously launched first-party data targeting across 11 markets on ChatGPT Ads, with bid multipliers ranging from 0.1× to 10×. No industry-standard benchmark exists for comparison; early Google Display CTRs ran in the 1 per cent range — suggesting the top ChatGPT markets are already operating at comparable engagement.`,
+  category: "MarTech",
+  author: "H. Terekhin",
+  size: "xs",
+  source: "seed",
+}
+
+const i208_instinct: Article = {
+  slug: "instinct-1-billion-series-c-10-billion-consumer-ai-agent-sequoia-benchmark-2026",
+  title: "Instinct Raises $1 Billion at $10 Billion Valuation — Four Times Its Valuation From One Month Earlier",
+  teaser: "Series C led by Sequoia, Benchmark, and Coatue (28 September). One month prior: $2.5B valuation. What Instinct does: consumer AI agent that makes restaurant bookings, purchases, pays bills, cancels subscriptions, places grocery orders, and makes phone calls — via its own phone number. Launched invite-only August 2026. No ARR disclosed. Investment predicated entirely on growth trajectory. Direct competitor: Meta's Muse.",
+  publishedAt: "2026-10-01T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Instinct", "consumer AI agent", "Series C", "Sequoia", "Benchmark Capital", "Coatue", "agentic AI", "AI assistant", "venture capital", "Meta Muse"],
+  url: "/articles/instinct-1-billion-series-c-10-billion-consumer-ai-agent-sequoia-benchmark-2026",
+  content: `Instinct, the consumer AI agent that executes real-world tasks — travel and restaurant bookings, purchases, bill payments, subscription cancellations, grocery orders, and phone calls via its own dedicated phone number — raised $1 billion in a Series C on 28 September at a $10 billion post-money valuation, led by Sequoia Capital, Benchmark Capital, and Coatue Management. One month earlier, the company had raised $2.5 billion at a $2.5 billion valuation — making the 4x step-up in a single month extraordinary even by 2026 standards. Instinct launched as an invite-only service in August 2026, operating without a mobile app via its own phone number and cloud computer. No ARR has been disclosed; the investment is predicated on rapid organic adoption and growth trajectory rather than revenue. Its direct competitor is Meta's Muse AI assistant.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
+const i208_reco: Article = {
+  slug: "reco-55-million-21000-shadow-agents-fortune-100-ai-agent-security-2026",
+  title: "Reco Raises $55 Million After Finding 21,000 Unauthorised Agents Running on a Single Fortune 100 Network",
+  teaser: "Series C extension (29 September). Total raised: $140M. AT&T Ventures co-leads as a customer-investor. Reco maps AI agents, apps, people, accounts, and permissions across 280+ SaaS integrations — and uses browser/network signals to find agents not in any integration catalogue. At one Fortune 100 client, Reco found 21,000 previously unknown agents. At least 24 vendors now compete in the AI agent security market.",
+  publishedAt: "2026-10-01T08:00:00.000Z",
+  imageUrl: null,
+  imageAlt: null,
+  keywords: ["Reco", "AI agent security", "enterprise AI", "shadow agents", "AT&T Ventures", "Series C", "SaaS security", "agentic AI", "AI governance", "venture capital"],
+  url: "/articles/reco-55-million-21000-shadow-agents-fortune-100-ai-agent-security-2026",
+  content: `AI agent security startup Reco closed a $55 million Series C extension on 29 September, bringing total funding to $140 million. The round was co-led by AT&T Ventures — investing as a customer-turned-backer — alongside Forestay Capital and Quadrille Capital. Reco's platform uses a context graph to discover and inventory AI agents across enterprise networks, mapping each agent's access to applications, data, and permissions across 280-plus SaaS integrations; it supplements direct integrations with browser and network signal analysis to identify agents operating outside any catalogue. The company's most striking field finding: at one Fortune 100 client, Reco identified 21,000 previously unknown agents running on the corporate network. ARR is in the double-digit millions, expected to triple in 2026; financial services accounts for approximately 40 per cent of revenue. At least 24 vendors now compete in the AI agent security market — a category that did not meaningfully exist 18 months ago.`,
+  category: "Venture",
+  author: "P. Castellan",
+  size: "xs",
+  source: "seed",
+}
+
 // ─── ISSUE 207 ───
 
 const i207_lead: Article = {
@@ -3877,6 +4086,20 @@ const i207_eliseai: Article = {
 }
 
 export const ISSUES: Issue[] = [
+  {
+    number: 208,
+    date: "2026-10-01",
+    label: "Thursday, 1 October 2026",
+    lead: i208_lead,
+    secondary: [i208_gemini4, i208_google_pilot],
+    briefs: [
+      i208_sonnet55,
+      i208_cloudflare,
+      i208_chatgpt_ads,
+      i208_instinct,
+      i208_reco,
+    ],
+  },
   {
     number: 207,
     date: "2026-09-30",
